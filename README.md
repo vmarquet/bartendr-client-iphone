@@ -21,6 +21,16 @@ Planning
   [moodle](http://learning.esiea.fr/course/view.php?id=114)
 
 
+Outils
+======
+
+* [repo git serveur](https://github.com/vmarquet/bartendr-server)
+* [repo git app iOS](https://github.com/vmarquet/bartendr-iphone)
+* [Google drive](https://drive.google.com/folderview?id=0B31-CIvNW1LddUh2TDR2dFRUZDg&usp=sharing)
+    * [carnet de bord](https://docs.google.com/document/d/1W5y5b67vsxV-OWjjCv3ynAZ-iVZyKB47eH1HxgX0gTk/edit?usp=sharing)
+* [dropbox](https://www.dropbox.com/sh/msamrpxkaoui7ee/AABq-7guhfGODuuogzNg-yNLa?dl=0)
+
+
 Liens
 =====
 Quelques liens peut-être utiles:
@@ -33,11 +43,3 @@ Quelques liens peut-être utiles:
     * [côté serveur: IPN (Instant Payment Notification)](https://developer.paypal.com/webapps/developer/docs/classic/products/instant-payment-notification/)
     * [côté serveur: IPN: voir l'exemple "A Sample IPN Message and Response"](https://developer.paypal.com/docs/classic/ipn/integration-guide/IPNIntro/)
 
-
-Outils
-======
-
-* [repo git serveur](https://github.com/vmarquet/bartendr-server)
-* [repo git app iOS](https://github.com/vmarquet/bartendr-iphone)
-* [Google drive](https://drive.google.com/folderview?id=0B31-CIvNW1LddUh2TDR2dFRUZDg&usp=sharing)
-* [dropbox](https://www.dropbox.com/sh/msamrpxkaoui7ee/AABq-7guhfGODuuogzNg-yNLa?dl=0)
