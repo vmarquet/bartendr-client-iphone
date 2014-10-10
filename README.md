@@ -43,3 +43,16 @@ Quelques liens peut-être utiles:
     * [côté serveur: IPN (Instant Payment Notification)](https://developer.paypal.com/webapps/developer/docs/classic/products/instant-payment-notification/)
     * [côté serveur: IPN: voir l'exemple "A Sample IPN Message and Response"](https://developer.paypal.com/docs/classic/ipn/integration-guide/IPNIntro/)
 
+
+Installation de Rails
+=====================
+* installer [Homebrew](http://http://brew.sh/) (voir la ligne de commande en bas de la page)
+* `brew install rbenv ruby-build`  # outils pour Ruby
+* `rbenv install 2.1.3` : installation de Ruby 2.1.3
+* `rbenv global  2.1.3` : utilisation de cette version par défaut
+* `sudo gem update --system` : installer la dernière version de Rubygems
+* `gem install bundler foreman pg rails thin --no-rdoc --no-ri` : gems nécéssaires
+* installer [NodeJS](http://nodejs.org) (cliquer sur "INSTALL")
+* tester l'installation en créant un nouveau projet: `rails new helloworld`
+
+
