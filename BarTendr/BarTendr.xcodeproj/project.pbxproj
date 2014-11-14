@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		377920B81A1608C800D89997 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 377920B71A1608C800D89997 /* main.m */; };
+		377920BB1A1608C800D89997 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 377920BA1A1608C800D89997 /* AppDelegate.m */; };
+		377920BE1A1608C800D89997 /* BarTendr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 377920BC1A1608C800D89997 /* BarTendr.xcdatamodeld */; };
+		377920C11A1608C800D89997 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 377920C01A1608C800D89997 /* ViewController.m */; };
+		377920C41A1608C800D89997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377920C21A1608C800D89997 /* Main.storyboard */; };
+		377920C61A1608C800D89997 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377920C51A1608C800D89997 /* Images.xcassets */; };
+		377920C91A1608C800D89997 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 377920C71A1608C800D89997 /* LaunchScreen.xib */; };
+		377920D51A1608C800D89997 /* BarTendrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 377920D41A1608C800D89997 /* BarTendrTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		377920CF1A1608C800D89997 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 377920AA1A1608C800D89997 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 377920B11A1608C800D89997;
+			remoteInfo = BarTendr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		377920B21A1608C800D89997 /* BarTendr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarTendr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		377920B61A1608C800D89997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		377920B71A1608C800D89997 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		377920B91A1608C800D89997 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		377920BA1A1608C800D89997 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		377920BD1A1608C800D89997 /* BarTendr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BarTendr.xcdatamodel; sourceTree = "<group>"; };
+		377920BF1A1608C800D89997 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		377920C01A1608C800D89997 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		377920C31A1608C800D89997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		377920C51A1608C800D89997 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		377920C81A1608C800D89997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		377920CE1A1608C800D89997 /* BarTendrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarTendrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		377920D31A1608C800D89997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		377920D41A1608C800D89997 /* BarTendrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarTendrTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		377920AF1A1608C800D89997 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		377920CB1A1608C800D89997 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		377920A91A1608C800D89997 = {
+			isa = PBXGroup;
+			children = (
+				377920B41A1608C800D89997 /* BarTendr */,
+				377920D11A1608C800D89997 /* BarTendrTests */,
+				377920B31A1608C800D89997 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		377920B31A1608C800D89997 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				377920B21A1608C800D89997 /* BarTendr.app */,
+				377920CE1A1608C800D89997 /* BarTendrTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		377920B41A1608C800D89997 /* BarTendr */ = {
+			isa = PBXGroup;
+			children = (
+				377920B91A1608C800D89997 /* AppDelegate.h */,
+				377920BA1A1608C800D89997 /* AppDelegate.m */,
+				377920BF1A1608C800D89997 /* ViewController.h */,
+				377920C01A1608C800D89997 /* ViewController.m */,
+				377920C21A1608C800D89997 /* Main.storyboard */,
+				377920C51A1608C800D89997 /* Images.xcassets */,
+				377920C71A1608C800D89997 /* LaunchScreen.xib */,
+				377920BC1A1608C800D89997 /* BarTendr.xcdatamodeld */,
+				377920B51A1608C800D89997 /* Supporting Files */,
+			);
+			path = BarTendr;
+			sourceTree = "<group>";
+		};
+		377920B51A1608C800D89997 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				377920B61A1608C800D89997 /* Info.plist */,
+				377920B71A1608C800D89997 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		377920D11A1608C800D89997 /* BarTendrTests */ = {
+			isa = PBXGroup;
+			children = (
+				377920D41A1608C800D89997 /* BarTendrTests.m */,
+				377920D21A1608C800D89997 /* Supporting Files */,
+			);
+			path = BarTendrTests;
+			sourceTree = "<group>";
+		};
+		377920D21A1608C800D89997 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				377920D31A1608C800D89997 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		377920B11A1608C800D89997 /* BarTendr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 377920D81A1608C800D89997 /* Build configuration list for PBXNativeTarget "BarTendr" */;
+			buildPhases = (
+				377920AE1A1608C800D89997 /* Sources */,
+				377920AF1A1608C800D89997 /* Frameworks */,
+				377920B01A1608C800D89997 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BarTendr;
+			productName = BarTendr;
+			productReference = 377920B21A1608C800D89997 /* BarTendr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		377920CD1A1608C800D89997 /* BarTendrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 377920DB1A1608C800D89997 /* Build configuration list for PBXNativeTarget "BarTendrTests" */;
+			buildPhases = (
+				377920CA1A1608C800D89997 /* Sources */,
+				377920CB1A1608C800D89997 /* Frameworks */,
+				377920CC1A1608C800D89997 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				377920D01A1608C800D89997 /* PBXTargetDependency */,
+			);
+			name = BarTendrTests;
+			productName = BarTendrTests;
+			productReference = 377920CE1A1608C800D89997 /* BarTendrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		377920AA1A1608C800D89997 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Patouz;
+				TargetAttributes = {
+					377920B11A1608C800D89997 = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = TQ4QLT966J;
+					};
+					377920CD1A1608C800D89997 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 377920B11A1608C800D89997;
+					};
+				};
+			};
+			buildConfigurationList = 377920AD1A1608C800D89997 /* Build configuration list for PBXProject "BarTendr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 377920A91A1608C800D89997;
+			productRefGroup = 377920B31A1608C800D89997 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				377920B11A1608C800D89997 /* BarTendr */,
+				377920CD1A1608C800D89997 /* BarTendrTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		377920B01A1608C800D89997 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				377920C41A1608C800D89997 /* Main.storyboard in Resources */,
+				377920C91A1608C800D89997 /* LaunchScreen.xib in Resources */,
+				377920C61A1608C800D89997 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		377920CC1A1608C800D89997 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		377920AE1A1608C800D89997 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				377920BB1A1608C800D89997 /* AppDelegate.m in Sources */,
+				377920BE1A1608C800D89997 /* BarTendr.xcdatamodeld in Sources */,
+				377920C11A1608C800D89997 /* ViewController.m in Sources */,
+				377920B81A1608C800D89997 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		377920CA1A1608C800D89997 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				377920D51A1608C800D89997 /* BarTendrTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		377920D01A1608C800D89997 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 377920B11A1608C800D89997 /* BarTendr */;
+			targetProxy = 377920CF1A1608C800D89997 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		377920C21A1608C800D89997 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				377920C31A1608C800D89997 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		377920C71A1608C800D89997 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				377920C81A1608C800D89997 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		377920D61A1608C800D89997 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		377920D71A1608C800D89997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		377920D91A1608C800D89997 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = BarTendr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		377920DA1A1608C800D89997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = BarTendr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		377920DC1A1608C800D89997 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BarTendrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarTendr.app/BarTendr";
+			};
+			name = Debug;
+		};
+		377920DD1A1608C800D89997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BarTendrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarTendr.app/BarTendr";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		377920AD1A1608C800D89997 /* Build configuration list for PBXProject "BarTendr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				377920D61A1608C800D89997 /* Debug */,
+				377920D71A1608C800D89997 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		377920D81A1608C800D89997 /* Build configuration list for PBXNativeTarget "BarTendr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				377920D91A1608C800D89997 /* Debug */,
+				377920DA1A1608C800D89997 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		377920DB1A1608C800D89997 /* Build configuration list for PBXNativeTarget "BarTendrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				377920DC1A1608C800D89997 /* Debug */,
+				377920DD1A1608C800D89997 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		377920BC1A1608C800D89997 /* BarTendr.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				377920BD1A1608C800D89997 /* BarTendr.xcdatamodel */,
+			);
+			currentVersion = 377920BD1A1608C800D89997 /* BarTendr.xcdatamodel */;
+			path = BarTendr.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 377920AA1A1608C800D89997 /* Project object */;
+}
