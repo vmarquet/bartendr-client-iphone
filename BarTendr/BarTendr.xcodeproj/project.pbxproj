@@ -7,52 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		377920B81A1608C800D89997 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 377920B71A1608C800D89997 /* main.m */; };
-		377920BB1A1608C800D89997 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 377920BA1A1608C800D89997 /* AppDelegate.m */; };
-		377920BE1A1608C800D89997 /* BarTendr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 377920BC1A1608C800D89997 /* BarTendr.xcdatamodeld */; };
-		377920C11A1608C800D89997 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 377920C01A1608C800D89997 /* ViewController.m */; };
-		377920C41A1608C800D89997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377920C21A1608C800D89997 /* Main.storyboard */; };
-		377920C61A1608C800D89997 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377920C51A1608C800D89997 /* Images.xcassets */; };
-		377920C91A1608C800D89997 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 377920C71A1608C800D89997 /* LaunchScreen.xib */; };
-		377920D51A1608C800D89997 /* BarTendrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 377920D41A1608C800D89997 /* BarTendrTests.m */; };
+		37EAC7F11A1643D600360744 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC7F01A1643D600360744 /* main.m */; };
+		37EAC7F41A1643D600360744 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC7F31A1643D600360744 /* AppDelegate.m */; };
+		37EAC7F71A1643D600360744 /* BarTendr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC7F51A1643D600360744 /* BarTendr.xcdatamodeld */; };
+		37EAC7FA1A1643D600360744 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC7F91A1643D600360744 /* ViewController.m */; };
+		37EAC7FD1A1643D600360744 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37EAC7FB1A1643D600360744 /* Main.storyboard */; };
+		37EAC7FF1A1643D600360744 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37EAC7FE1A1643D600360744 /* Images.xcassets */; };
+		37EAC8021A1643D600360744 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37EAC8001A1643D600360744 /* LaunchScreen.xib */; };
+		37EAC80E1A1643D600360744 /* BarTendrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC80D1A1643D600360744 /* BarTendrTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		377920CF1A1608C800D89997 /* PBXContainerItemProxy */ = {
+		37EAC8081A1643D600360744 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 377920AA1A1608C800D89997 /* Project object */;
+			containerPortal = 37EAC7E31A1643D500360744 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 377920B11A1608C800D89997;
+			remoteGlobalIDString = 37EAC7EA1A1643D600360744;
 			remoteInfo = BarTendr;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		377920B21A1608C800D89997 /* BarTendr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarTendr.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		377920B61A1608C800D89997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		377920B71A1608C800D89997 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		377920B91A1608C800D89997 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		377920BA1A1608C800D89997 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		377920BD1A1608C800D89997 /* BarTendr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BarTendr.xcdatamodel; sourceTree = "<group>"; };
-		377920BF1A1608C800D89997 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		377920C01A1608C800D89997 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		377920C31A1608C800D89997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		377920C51A1608C800D89997 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		377920C81A1608C800D89997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		377920CE1A1608C800D89997 /* BarTendrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarTendrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		377920D31A1608C800D89997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		377920D41A1608C800D89997 /* BarTendrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarTendrTests.m; sourceTree = "<group>"; };
+		37EAC7EB1A1643D600360744 /* BarTendr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarTendr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37EAC7EF1A1643D600360744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37EAC7F01A1643D600360744 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37EAC7F21A1643D600360744 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		37EAC7F31A1643D600360744 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		37EAC7F61A1643D600360744 /* BarTendr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BarTendr.xcdatamodel; sourceTree = "<group>"; };
+		37EAC7F81A1643D600360744 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		37EAC7F91A1643D600360744 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		37EAC7FC1A1643D600360744 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37EAC7FE1A1643D600360744 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		37EAC8011A1643D600360744 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		37EAC8071A1643D600360744 /* BarTendrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarTendrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37EAC80C1A1643D600360744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37EAC80D1A1643D600360744 /* BarTendrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarTendrTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		377920AF1A1608C800D89997 /* Frameworks */ = {
+		37EAC7E81A1643D600360744 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		377920CB1A1608C800D89997 /* Frameworks */ = {
+		37EAC8041A1643D600360744 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,62 +62,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		377920A91A1608C800D89997 = {
+		37EAC7E21A1643D500360744 = {
 			isa = PBXGroup;
 			children = (
-				377920B41A1608C800D89997 /* BarTendr */,
-				377920D11A1608C800D89997 /* BarTendrTests */,
-				377920B31A1608C800D89997 /* Products */,
+				37EAC7ED1A1643D600360744 /* BarTendr */,
+				37EAC80A1A1643D600360744 /* BarTendrTests */,
+				37EAC7EC1A1643D600360744 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		377920B31A1608C800D89997 /* Products */ = {
+		37EAC7EC1A1643D600360744 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				377920B21A1608C800D89997 /* BarTendr.app */,
-				377920CE1A1608C800D89997 /* BarTendrTests.xctest */,
+				37EAC7EB1A1643D600360744 /* BarTendr.app */,
+				37EAC8071A1643D600360744 /* BarTendrTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		377920B41A1608C800D89997 /* BarTendr */ = {
+		37EAC7ED1A1643D600360744 /* BarTendr */ = {
 			isa = PBXGroup;
 			children = (
-				377920B91A1608C800D89997 /* AppDelegate.h */,
-				377920BA1A1608C800D89997 /* AppDelegate.m */,
-				377920BF1A1608C800D89997 /* ViewController.h */,
-				377920C01A1608C800D89997 /* ViewController.m */,
-				377920C21A1608C800D89997 /* Main.storyboard */,
-				377920C51A1608C800D89997 /* Images.xcassets */,
-				377920C71A1608C800D89997 /* LaunchScreen.xib */,
-				377920BC1A1608C800D89997 /* BarTendr.xcdatamodeld */,
-				377920B51A1608C800D89997 /* Supporting Files */,
+				37EAC7F21A1643D600360744 /* AppDelegate.h */,
+				37EAC7F31A1643D600360744 /* AppDelegate.m */,
+				37EAC7F81A1643D600360744 /* ViewController.h */,
+				37EAC7F91A1643D600360744 /* ViewController.m */,
+				37EAC7FB1A1643D600360744 /* Main.storyboard */,
+				37EAC7FE1A1643D600360744 /* Images.xcassets */,
+				37EAC8001A1643D600360744 /* LaunchScreen.xib */,
+				37EAC7F51A1643D600360744 /* BarTendr.xcdatamodeld */,
+				37EAC7EE1A1643D600360744 /* Supporting Files */,
 			);
 			path = BarTendr;
 			sourceTree = "<group>";
 		};
-		377920B51A1608C800D89997 /* Supporting Files */ = {
+		37EAC7EE1A1643D600360744 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				377920B61A1608C800D89997 /* Info.plist */,
-				377920B71A1608C800D89997 /* main.m */,
+				37EAC7EF1A1643D600360744 /* Info.plist */,
+				37EAC7F01A1643D600360744 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		377920D11A1608C800D89997 /* BarTendrTests */ = {
+		37EAC80A1A1643D600360744 /* BarTendrTests */ = {
 			isa = PBXGroup;
 			children = (
-				377920D41A1608C800D89997 /* BarTendrTests.m */,
-				377920D21A1608C800D89997 /* Supporting Files */,
+				37EAC80D1A1643D600360744 /* BarTendrTests.m */,
+				37EAC80B1A1643D600360744 /* Supporting Files */,
 			);
 			path = BarTendrTests;
 			sourceTree = "<group>";
 		};
-		377920D21A1608C800D89997 /* Supporting Files */ = {
+		37EAC80B1A1643D600360744 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				377920D31A1608C800D89997 /* Info.plist */,
+				37EAC80C1A1643D600360744 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -125,13 +125,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		377920B11A1608C800D89997 /* BarTendr */ = {
+		37EAC7EA1A1643D600360744 /* BarTendr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 377920D81A1608C800D89997 /* Build configuration list for PBXNativeTarget "BarTendr" */;
+			buildConfigurationList = 37EAC8111A1643D600360744 /* Build configuration list for PBXNativeTarget "BarTendr" */;
 			buildPhases = (
-				377920AE1A1608C800D89997 /* Sources */,
-				377920AF1A1608C800D89997 /* Frameworks */,
-				377920B01A1608C800D89997 /* Resources */,
+				37EAC7E71A1643D600360744 /* Sources */,
+				37EAC7E81A1643D600360744 /* Frameworks */,
+				37EAC7E91A1643D600360744 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -139,47 +139,46 @@
 			);
 			name = BarTendr;
 			productName = BarTendr;
-			productReference = 377920B21A1608C800D89997 /* BarTendr.app */;
+			productReference = 37EAC7EB1A1643D600360744 /* BarTendr.app */;
 			productType = "com.apple.product-type.application";
 		};
-		377920CD1A1608C800D89997 /* BarTendrTests */ = {
+		37EAC8061A1643D600360744 /* BarTendrTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 377920DB1A1608C800D89997 /* Build configuration list for PBXNativeTarget "BarTendrTests" */;
+			buildConfigurationList = 37EAC8141A1643D600360744 /* Build configuration list for PBXNativeTarget "BarTendrTests" */;
 			buildPhases = (
-				377920CA1A1608C800D89997 /* Sources */,
-				377920CB1A1608C800D89997 /* Frameworks */,
-				377920CC1A1608C800D89997 /* Resources */,
+				37EAC8031A1643D600360744 /* Sources */,
+				37EAC8041A1643D600360744 /* Frameworks */,
+				37EAC8051A1643D600360744 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				377920D01A1608C800D89997 /* PBXTargetDependency */,
+				37EAC8091A1643D600360744 /* PBXTargetDependency */,
 			);
 			name = BarTendrTests;
 			productName = BarTendrTests;
-			productReference = 377920CE1A1608C800D89997 /* BarTendrTests.xctest */;
+			productReference = 37EAC8071A1643D600360744 /* BarTendrTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		377920AA1A1608C800D89997 /* Project object */ = {
+		37EAC7E31A1643D500360744 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Patouz;
 				TargetAttributes = {
-					377920B11A1608C800D89997 = {
+					37EAC7EA1A1643D600360744 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = TQ4QLT966J;
 					};
-					377920CD1A1608C800D89997 = {
+					37EAC8061A1643D600360744 = {
 						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 377920B11A1608C800D89997;
+						TestTargetID = 37EAC7EA1A1643D600360744;
 					};
 				};
 			};
-			buildConfigurationList = 377920AD1A1608C800D89997 /* Build configuration list for PBXProject "BarTendr" */;
+			buildConfigurationList = 37EAC7E61A1643D500360744 /* Build configuration list for PBXProject "BarTendr" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -187,29 +186,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 377920A91A1608C800D89997;
-			productRefGroup = 377920B31A1608C800D89997 /* Products */;
+			mainGroup = 37EAC7E21A1643D500360744;
+			productRefGroup = 37EAC7EC1A1643D600360744 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				377920B11A1608C800D89997 /* BarTendr */,
-				377920CD1A1608C800D89997 /* BarTendrTests */,
+				37EAC7EA1A1643D600360744 /* BarTendr */,
+				37EAC8061A1643D600360744 /* BarTendrTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		377920B01A1608C800D89997 /* Resources */ = {
+		37EAC7E91A1643D600360744 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				377920C41A1608C800D89997 /* Main.storyboard in Resources */,
-				377920C91A1608C800D89997 /* LaunchScreen.xib in Resources */,
-				377920C61A1608C800D89997 /* Images.xcassets in Resources */,
+				37EAC7FD1A1643D600360744 /* Main.storyboard in Resources */,
+				37EAC8021A1643D600360744 /* LaunchScreen.xib in Resources */,
+				37EAC7FF1A1643D600360744 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		377920CC1A1608C800D89997 /* Resources */ = {
+		37EAC8051A1643D600360744 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -219,48 +218,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		377920AE1A1608C800D89997 /* Sources */ = {
+		37EAC7E71A1643D600360744 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				377920BB1A1608C800D89997 /* AppDelegate.m in Sources */,
-				377920BE1A1608C800D89997 /* BarTendr.xcdatamodeld in Sources */,
-				377920C11A1608C800D89997 /* ViewController.m in Sources */,
-				377920B81A1608C800D89997 /* main.m in Sources */,
+				37EAC7F41A1643D600360744 /* AppDelegate.m in Sources */,
+				37EAC7F71A1643D600360744 /* BarTendr.xcdatamodeld in Sources */,
+				37EAC7FA1A1643D600360744 /* ViewController.m in Sources */,
+				37EAC7F11A1643D600360744 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		377920CA1A1608C800D89997 /* Sources */ = {
+		37EAC8031A1643D600360744 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				377920D51A1608C800D89997 /* BarTendrTests.m in Sources */,
+				37EAC80E1A1643D600360744 /* BarTendrTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		377920D01A1608C800D89997 /* PBXTargetDependency */ = {
+		37EAC8091A1643D600360744 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 377920B11A1608C800D89997 /* BarTendr */;
-			targetProxy = 377920CF1A1608C800D89997 /* PBXContainerItemProxy */;
+			target = 37EAC7EA1A1643D600360744 /* BarTendr */;
+			targetProxy = 37EAC8081A1643D600360744 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		377920C21A1608C800D89997 /* Main.storyboard */ = {
+		37EAC7FB1A1643D600360744 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				377920C31A1608C800D89997 /* Base */,
+				37EAC7FC1A1643D600360744 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		377920C71A1608C800D89997 /* LaunchScreen.xib */ = {
+		37EAC8001A1643D600360744 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				377920C81A1608C800D89997 /* Base */,
+				37EAC8011A1643D600360744 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -268,7 +267,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		377920D61A1608C800D89997 /* Debug */ = {
+		37EAC80F1A1643D600360744 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -309,7 +308,7 @@
 			};
 			name = Debug;
 		};
-		377920D71A1608C800D89997 /* Release */ = {
+		37EAC8101A1643D600360744 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -344,33 +343,27 @@
 			};
 			name = Release;
 		};
-		377920D91A1608C800D89997 /* Debug */ = {
+		37EAC8121A1643D600360744 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BarTendr/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		377920DA1A1608C800D89997 /* Release */ = {
+		37EAC8131A1643D600360744 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BarTendr/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		377920DC1A1608C800D89997 /* Debug */ = {
+		37EAC8151A1643D600360744 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -389,7 +382,7 @@
 			};
 			name = Debug;
 		};
-		377920DD1A1608C800D89997 /* Release */ = {
+		37EAC8161A1643D600360744 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -407,45 +400,47 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		377920AD1A1608C800D89997 /* Build configuration list for PBXProject "BarTendr" */ = {
+		37EAC7E61A1643D500360744 /* Build configuration list for PBXProject "BarTendr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				377920D61A1608C800D89997 /* Debug */,
-				377920D71A1608C800D89997 /* Release */,
+				37EAC80F1A1643D600360744 /* Debug */,
+				37EAC8101A1643D600360744 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		377920D81A1608C800D89997 /* Build configuration list for PBXNativeTarget "BarTendr" */ = {
+		37EAC8111A1643D600360744 /* Build configuration list for PBXNativeTarget "BarTendr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				377920D91A1608C800D89997 /* Debug */,
-				377920DA1A1608C800D89997 /* Release */,
+				37EAC8121A1643D600360744 /* Debug */,
+				37EAC8131A1643D600360744 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		377920DB1A1608C800D89997 /* Build configuration list for PBXNativeTarget "BarTendrTests" */ = {
+		37EAC8141A1643D600360744 /* Build configuration list for PBXNativeTarget "BarTendrTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				377920DC1A1608C800D89997 /* Debug */,
-				377920DD1A1608C800D89997 /* Release */,
+				37EAC8151A1643D600360744 /* Debug */,
+				37EAC8161A1643D600360744 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		377920BC1A1608C800D89997 /* BarTendr.xcdatamodeld */ = {
+		37EAC7F51A1643D600360744 /* BarTendr.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				377920BD1A1608C800D89997 /* BarTendr.xcdatamodel */,
+				37EAC7F61A1643D600360744 /* BarTendr.xcdatamodel */,
 			);
-			currentVersion = 377920BD1A1608C800D89997 /* BarTendr.xcdatamodel */;
+			currentVersion = 37EAC7F61A1643D600360744 /* BarTendr.xcdatamodel */;
 			path = BarTendr.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 377920AA1A1608C800D89997 /* Project object */;
+	rootObject = 37EAC7E31A1643D500360744 /* Project object */;
 }

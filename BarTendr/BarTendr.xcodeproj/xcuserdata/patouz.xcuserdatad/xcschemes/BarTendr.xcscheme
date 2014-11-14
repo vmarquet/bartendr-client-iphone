@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "377920B11A1608C800D89997"
+               BlueprintIdentifier = "37EAC7EA1A1643D600360744"
                BuildableName = "BarTendr.app"
                BlueprintName = "BarTendr"
                ReferencedContainer = "container:BarTendr.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "377920CD1A1608C800D89997"
+               BlueprintIdentifier = "37EAC8061A1643D600360744"
                BuildableName = "BarTendrTests.xctest"
                BlueprintName = "BarTendrTests"
                ReferencedContainer = "container:BarTendr.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "377920CD1A1608C800D89997"
+               BlueprintIdentifier = "37EAC8061A1643D600360744"
                BuildableName = "BarTendrTests.xctest"
                BlueprintName = "BarTendrTests"
                ReferencedContainer = "container:BarTendr.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "377920B11A1608C800D89997"
+            BlueprintIdentifier = "37EAC7EA1A1643D600360744"
             BuildableName = "BarTendr.app"
             BlueprintName = "BarTendr"
             ReferencedContainer = "container:BarTendr.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "377920B11A1608C800D89997"
+            BlueprintIdentifier = "37EAC7EA1A1643D600360744"
             BuildableName = "BarTendr.app"
             BlueprintName = "BarTendr"
             ReferencedContainer = "container:BarTendr.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "377920B11A1608C800D89997"
+            BlueprintIdentifier = "37EAC7EA1A1643D600360744"
             BuildableName = "BarTendr.app"
             BlueprintName = "BarTendr"
             ReferencedContainer = "container:BarTendr.xcodeproj">
