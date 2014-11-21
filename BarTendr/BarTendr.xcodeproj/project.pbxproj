@@ -15,6 +15,7 @@
 		37EAC7FF1A1643D600360744 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37EAC7FE1A1643D600360744 /* Images.xcassets */; };
 		37EAC8021A1643D600360744 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37EAC8001A1643D600360744 /* LaunchScreen.xib */; };
 		37EAC80E1A1643D600360744 /* BarTendrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC80D1A1643D600360744 /* BarTendrTests.m */; };
+		643434E81A1F931B005482E3 /* boissonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 643434E71A1F931B005482E3 /* boissonViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		37EAC8071A1643D600360744 /* BarTendrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarTendrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EAC80C1A1643D600360744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37EAC80D1A1643D600360744 /* BarTendrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarTendrTests.m; sourceTree = "<group>"; };
+		643434E61A1F931B005482E3 /* boissonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boissonViewController.h; sourceTree = "<group>"; };
+		643434E71A1F931B005482E3 /* boissonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = boissonViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				37EAC7F21A1643D600360744 /* AppDelegate.h */,
 				37EAC7F31A1643D600360744 /* AppDelegate.m */,
 				37EAC7F81A1643D600360744 /* ViewController.h */,
+				643434E61A1F931B005482E3 /* boissonViewController.h */,
+				643434E71A1F931B005482E3 /* boissonViewController.m */,
 				37EAC7F91A1643D600360744 /* ViewController.m */,
 				37EAC7FB1A1643D600360744 /* Main.storyboard */,
 				37EAC7FE1A1643D600360744 /* Images.xcassets */,
@@ -225,6 +230,7 @@
 			files = (
 				37EAC7F41A1643D600360744 /* AppDelegate.m in Sources */,
 				37EAC7F71A1643D600360744 /* BarTendr.xcdatamodeld in Sources */,
+				643434E81A1F931B005482E3 /* boissonViewController.m in Sources */,
 				37EAC7FA1A1643D600360744 /* ViewController.m in Sources */,
 				37EAC7F11A1643D600360744 /* main.m in Sources */,
 			);
@@ -350,6 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BarTendr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -361,6 +368,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BarTendr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

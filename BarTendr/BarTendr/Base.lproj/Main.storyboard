@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="TWy-AS-ghc">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
@@ -59,6 +60,9 @@
                                 <state key="normal" title="Annuler">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="push" id="DKo-UL-cCa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f6j-ge-mdZ">
                                 <rect key="frame" x="134" y="424" width="52" height="30"/>
@@ -255,10 +259,10 @@
             </objects>
             <point key="canvasLocation" x="2032" y="1941"/>
         </scene>
-        <!--View Controller-->
+        <!--Boisson View Controller-->
         <scene sceneID="Akq-Y2-oMc">
             <objects>
-                <viewController id="Stg-CR-w9X" sceneMemberID="viewController">
+                <viewController id="Stg-CR-w9X" customClass="boissonViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qXg-XK-TXA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -284,16 +288,36 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type de boisson" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q5b-Z2-tct">
-                                <rect key="frame" x="85" y="76" width="150" height="21"/>
+                                <rect key="frame" x="85" y="11" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nwn-L7-Zq6">
+                                <rect key="frame" x="16" y="55" width="288" height="387"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Z3s-ga-yM5">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" tableViewCell="Z3s-ga-yM5" id="91A-Zb-xPB">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Stg-CR-w9X" id="ZhY-yI-CZP"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="2AS-2Z-ilR"/>
+                    <connections>
+                        <outlet property="boissonLabel" destination="q5b-Z2-tct" id="UJb-5w-qZg"/>
+                        <outlet property="tableView" destination="nwn-L7-Zq6" id="oa5-AQ-Tm2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ch1-92-vn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -426,9 +450,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="BgS-C0-W19"/>
-        <segue reference="fYI-V7-HUg"/>
+        <segue reference="Tj2-f7-xia"/>
+        <segue reference="hgl-14-N0m"/>
         <segue reference="FOx-cc-atn"/>
-        <segue reference="JOz-hI-5Z2"/>
+        <segue reference="V2R-nb-SEF"/>
+        <segue reference="d2o-B5-drk"/>
     </inferredMetricsTieBreakers>
 </document>
