@@ -42,7 +42,7 @@
         <!--View Controller-->
         <scene sceneID="y7l-30-EJe">
             <objects>
-                <viewController id="UTh-Pa-ILz" sceneMemberID="viewController">
+                <viewController id="UTh-Pa-ILz" customClass="QRViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e6p-Pw-vD2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,6 +78,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="801-l3-WRM"/>
+                    <connections>
+                        <outlet property="message_QR" destination="CT7-HE-YvN" id="15x-59-gYs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0TM-nX-W6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -450,10 +453,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Tj2-f7-xia"/>
-        <segue reference="hgl-14-N0m"/>
         <segue reference="FOx-cc-atn"/>
-        <segue reference="V2R-nb-SEF"/>
-        <segue reference="d2o-B5-drk"/>
+        <segue reference="fYI-V7-HUg"/>
+        <segue reference="FMN-nw-xcC"/>
+        <segue reference="QHR-pX-5rP"/>
+        <segue reference="DKo-UL-cCa"/>
     </inferredMetricsTieBreakers>
 </document>
