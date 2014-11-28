@@ -17,7 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // affichage en console du n° de la vue
     NSLog(@"Deuxième vue !");
+    
+    // definition de l'url de co comme un string
+    NSString* url = @"https://fabrigli.fr/example.json";
+    NSLog(url);
+    NSURLRequest* request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    
+    
+    
+    
     
 }
 
