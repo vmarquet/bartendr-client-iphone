@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *message_QR;
 
+@property (weak, nonatomic) IBOutlet UILabel *message_json;
+
 @end
