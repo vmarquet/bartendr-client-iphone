@@ -22,9 +22,9 @@
     NSLog(@"Deuxième vue !");
     
     // definition de l'url de co comme un string
-    NSString* url = @"https://fabrigli.fr/example.json";
-    NSLog(url);
-    NSURLRequest* request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    //NSString* url = @"https://fabrigli.fr/example.json";
+    //NSLog(url);
+    //NSURLRequest* request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
     
     
     
