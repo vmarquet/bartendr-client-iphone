@@ -390,17 +390,9 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Stg-CR-w9X" id="ZhY-yI-CZP"/>
+                                    <outlet property="delegate" destination="Stg-CR-w9X" id="4TQ-gU-Qn1"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1t-0e-enb">
-                                <rect key="frame" x="120" y="450" width="81" height="30"/>
-                                <state key="normal" title="Suivant">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="LjG-Tw-pwO" kind="push" id="67R-wt-yka"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hly-ao-Oy2">
                                 <rect key="frame" x="16" y="65" width="51" height="30"/>
                                 <state key="normal" title="Retour">
@@ -417,13 +409,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="aRv-SO-W5k" secondAttribute="trailing" constant="69" id="1uP-dr-PEE"/>
                             <constraint firstItem="hly-ao-Oy2" firstAttribute="top" secondItem="CqW-At-Xtg" secondAttribute="bottom" constant="45" id="2FC-51-D4F"/>
                             <constraint firstItem="nwn-L7-Zq6" firstAttribute="top" secondItem="hly-ao-Oy2" secondAttribute="bottom" constant="55" id="2UA-kv-6UW"/>
-                            <constraint firstItem="9vY-Yj-q4X" firstAttribute="top" secondItem="p1t-0e-enb" secondAttribute="bottom" constant="88" id="7we-2h-i6b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="p1t-0e-enb" secondAttribute="trailing" constant="103" id="8EH-7N-RbD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vTz-la-6Zi" secondAttribute="trailing" constant="170" id="8ih-WY-Vzd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pmA-hQ-uHT" secondAttribute="trailing" constant="69" id="9b4-b1-GyR"/>
                             <constraint firstItem="nwn-L7-Zq6" firstAttribute="top" secondItem="q5b-Z2-tct" secondAttribute="bottom" constant="92" id="AEK-AK-vSV"/>
                             <constraint firstItem="pmA-hQ-uHT" firstAttribute="leading" secondItem="qXg-XK-TXA" secondAttribute="leadingMargin" constant="173" id="AiF-zo-VdG"/>
-                            <constraint firstItem="p1t-0e-enb" firstAttribute="top" secondItem="nwn-L7-Zq6" secondAttribute="bottom" constant="32" id="CNx-74-Emp"/>
                             <constraint firstItem="nwn-L7-Zq6" firstAttribute="trailing" secondItem="qXg-XK-TXA" secondAttribute="trailingMargin" id="Ceh-rA-a0t"/>
                             <constraint firstItem="9vY-Yj-q4X" firstAttribute="top" secondItem="pmA-hQ-uHT" secondAttribute="bottom" constant="50" id="CxB-ir-38C"/>
                             <constraint firstItem="aRv-SO-W5k" firstAttribute="leading" secondItem="hly-ao-Oy2" secondAttribute="trailing" constant="96" id="HLj-3L-8id"/>
@@ -434,7 +423,6 @@
                             <constraint firstItem="vTz-la-6Zi" firstAttribute="top" secondItem="nwn-L7-Zq6" secondAttribute="bottom" constant="70" id="Vxy-cp-Dk4"/>
                             <constraint firstItem="9vY-Yj-q4X" firstAttribute="top" secondItem="vTz-la-6Zi" secondAttribute="bottom" constant="50" id="YJw-cH-b4Y"/>
                             <constraint firstItem="9vY-Yj-q4X" firstAttribute="top" secondItem="nwn-L7-Zq6" secondAttribute="bottom" constant="150" id="Zvt-q0-Gou"/>
-                            <constraint firstItem="p1t-0e-enb" firstAttribute="leading" secondItem="qXg-XK-TXA" secondAttribute="leadingMargin" constant="104" id="beg-1O-s8B"/>
                             <constraint firstItem="q5b-Z2-tct" firstAttribute="top" secondItem="CqW-At-Xtg" secondAttribute="bottom" constant="8" id="c9P-uF-bcf"/>
                             <constraint firstItem="q5b-Z2-tct" firstAttribute="leading" secondItem="qXg-XK-TXA" secondAttribute="leadingMargin" constant="69" id="eBC-uL-L59"/>
                             <constraint firstItem="aRv-SO-W5k" firstAttribute="top" secondItem="q5b-Z2-tct" secondAttribute="bottom" constant="11" id="j0K-p6-0XY"/>
@@ -447,11 +435,12 @@
                     <connections>
                         <outlet property="boissonLabel" destination="q5b-Z2-tct" id="UJb-5w-qZg"/>
                         <outlet property="tableView" destination="nwn-L7-Zq6" id="oa5-AQ-Tm2"/>
+                        <segue destination="LjG-Tw-pwO" kind="push" identifier="toto" id="euJ-Zo-SQX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ch1-92-vn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="311"/>
+            <point key="canvasLocation" x="1649" y="232"/>
         </scene>
         <!--Liste Boisson View Controller-->
         <scene sceneID="jE2-g7-uw1">
@@ -558,6 +547,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="6OV-lo-NbI"/>
                     <connections>
+                        <outlet property="labelTitre" destination="QKE-7n-MEL" id="0cJ-2E-F3U"/>
                         <outlet property="tableView2" destination="rbi-Jq-rwd" id="gBe-Oo-6Z0"/>
                     </connections>
                 </viewController>
@@ -590,9 +580,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="GQP-Kf-GPR"/>
-        <segue reference="qWI-yu-FD3"/>
         <segue reference="o1Y-4D-AGF"/>
+        <segue reference="qWI-yu-FD3"/>
+        <segue reference="GQP-Kf-GPR"/>
         <segue reference="5RL-ew-l2c"/>
     </inferredMetricsTieBreakers>
 </document>

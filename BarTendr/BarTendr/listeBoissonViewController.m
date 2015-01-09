@@ -14,9 +14,15 @@
 
 @implementation listeBoissonViewController
 @synthesize data2;
+@synthesize labelTitre;
+@synthesize boissonType;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    labelTitre.text = boissonType;
+    NSLog(@"boissonType = %@", boissonType);
+    
     // Initialisation de la TableView
     data2 = [[NSMutableArray alloc]initWithObjects:@"Heineken", @"Kronenbourg", @"Grimbergen", @"Leffe Blonde", @"Leffe Ruby", @"Kilkenny", @"Guiness", nil];
 }

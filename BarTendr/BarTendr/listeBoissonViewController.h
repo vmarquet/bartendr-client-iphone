@@ -10,10 +10,14 @@
 
 @interface listeBoissonViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *labelTitre;
+
 @property (weak, nonatomic) IBOutlet UILabel *LabelLB;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView2;
 
 @property (strong, nonatomic) NSMutableArray *data2;
+
+@property (weak, nonatomic) NSString *boissonType;
 
 @end

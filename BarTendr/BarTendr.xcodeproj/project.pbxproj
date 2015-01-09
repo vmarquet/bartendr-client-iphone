@@ -95,8 +95,6 @@
 		37EAC7ED1A1643D600360744 /* BarTendr */ = {
 			isa = PBXGroup;
 			children = (
-				64377AE71A28908B00F2A93C /* listeBoissonViewController.h */,
-				64377AE81A28908B00F2A93C /* listeBoissonViewController.m */,
 				64377AE91A28908B00F2A93C /* recapViewController.h */,
 				64377AEA1A28908B00F2A93C /* recapViewController.m */,
 				37EAC7F21A1643D600360744 /* AppDelegate.h */,
@@ -105,6 +103,8 @@
 				37EAC7F91A1643D600360744 /* ViewController.m */,
 				37CD71C41A1FAC1300A86E85 /* QRViewController.h */,
 				37CD71C51A1FAC1300A86E85 /* QRViewController.m */,
+				64377AE71A28908B00F2A93C /* listeBoissonViewController.h */,
+				64377AE81A28908B00F2A93C /* listeBoissonViewController.m */,
 				643434E61A1F931B005482E3 /* boissonViewController.h */,
 				643434E71A1F931B005482E3 /* boissonViewController.m */,
 				37EAC7FB1A1643D600360744 /* Main.storyboard */,

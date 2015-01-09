@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface boissonViewController : UIViewController<NSURLConnectionDelegate>
+@interface boissonViewController : UIViewController<NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UILabel *boissonLabel;
 
