@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37CD71C61A1FAC1300A86E85 /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CD71C51A1FAC1300A86E85 /* QRViewController.m */; };
+		37DF97211A69522100113402 /* Categorie.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DF97201A69522100113402 /* Categorie.m */; };
 		37EAC7F11A1643D600360744 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC7F01A1643D600360744 /* main.m */; };
 		37EAC7F41A1643D600360744 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC7F31A1643D600360744 /* AppDelegate.m */; };
 		37EAC7F71A1643D600360744 /* BarTendr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC7F51A1643D600360744 /* BarTendr.xcdatamodeld */; };
@@ -34,6 +35,8 @@
 /* Begin PBXFileReference section */
 		37CD71C41A1FAC1300A86E85 /* QRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRViewController.h; sourceTree = "<group>"; };
 		37CD71C51A1FAC1300A86E85 /* QRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRViewController.m; sourceTree = "<group>"; };
+		37DF971F1A69522100113402 /* Categorie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categorie.h; sourceTree = "<group>"; };
+		37DF97201A69522100113402 /* Categorie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categorie.m; sourceTree = "<group>"; };
 		37EAC7EB1A1643D600360744 /* BarTendr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarTendr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EAC7EF1A1643D600360744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37EAC7F01A1643D600360744 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				6491C5771A69176D0028390B /* Globals.h */,
+				37DF971F1A69522100113402 /* Categorie.h */,
+				37DF97201A69522100113402 /* Categorie.m */,
 				64377AE91A28908B00F2A93C /* recapViewController.h */,
 				64377AEA1A28908B00F2A93C /* recapViewController.m */,
 				37EAC7F21A1643D600360744 /* AppDelegate.h */,
@@ -248,6 +253,7 @@
 				37EAC7F41A1643D600360744 /* AppDelegate.m in Sources */,
 				37EAC7F71A1643D600360744 /* BarTendr.xcdatamodeld in Sources */,
 				64377AEC1A28908B00F2A93C /* recapViewController.m in Sources */,
+				37DF97211A69522100113402 /* Categorie.m in Sources */,
 				64377AEB1A28908B00F2A93C /* listeBoissonViewController.m in Sources */,
 				643434E81A1F931B005482E3 /* boissonViewController.m in Sources */,
 				37CD71C61A1FAC1300A86E85 /* QRViewController.m in Sources */,

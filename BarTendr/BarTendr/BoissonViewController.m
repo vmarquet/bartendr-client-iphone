@@ -9,13 +9,13 @@
 #import "boissonViewController.h"
 #import "listeBoissonViewController.h"
 #import "Globals.h"
+#import "Categorie.h"
 
 @interface boissonViewController ()
 
 @property NSMutableData * donnes;
-@property NSDictionary * dictionnaire;
+@property NSArray * dictionnaire;
 @property NSString * stringNext;
-
 @end
 
 @implementation boissonViewController
@@ -24,14 +24,13 @@
 @synthesize labelTable;
 
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     labelTable.text = numberTable;
     
     // Description de l'URL, j'ai mis l'url de Fabrigli pour avoir une liste de categories ^^, on la changera apres :)
-    NSURL * url = [NSURL URLWithString:@"http://binouze.fabrigli.fr/categories.json"];
+    NSURL * url = [NSURL URLWithString:@"http://v-marquet.bitbucket.org/bartendr/menu.json"];
     
     //Création de la requete web à l'aide de NSURLRequest
     NSURLRequest * requete = [NSURLRequest requestWithURL:url];
@@ -46,35 +45,9 @@
     }
     
     // Initialisation de la TableView
-    data = [[NSMutableArray alloc]initWithObjects:@"Bières", @"Vins Rouges", @"Vins Blancs", @"Vins Rosés", @"Cocktails", @"Alcools forts", @"Soda", @"Eau", nil];
+    data = [[NSMutableArray alloc]initWithObjects: @"LOL",@"Bières", @"Vins", @"Vodka",nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)section {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [data count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    if(cell == nil){
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    
-    cell.textLabel.text = [data objectAtIndex:indexPath.row];
-    return cell;
-    
-}
 
 #pragma mark NSURLConnectionDelegate
 // On verifie que la connexion n'a pas FAIL, sinon affichage dans le terminal du message d'erreur obtenu
@@ -107,11 +80,56 @@
         if([NSJSONSerialization isValidJSONObject:_dictionnaire]){
             // On va donc pouvoir "Déserialiser" le JSON, et donc recupérer les infos nécéssaire au remplissage de nos TableView :)
             // Pour le moment je l'affiche dans le terminal (test)
+            
             NSLog(@"%@", _dictionnaire);
+            
+            // PARSING JSON
+            
+               if ([_dictionnaire isKindOfClass:[NSArray class]]){
+                    //Parcours du Json
+                    for (NSDictionary *dictionary in _dictionnaire) {
+                        
+                        Categorie * categorie = [[Categorie alloc] init];
+                        categorie.id_categorie = [[dictionary objectForKey:@"id"]integerValue];
+                        NSLog(@"id = %d",categorie.id_categorie);
+                        categorie.nom_categorie = [dictionary objectForKey:@"name"];
+                        NSLog(@"name = %@", categorie.nom_categorie);
+                        [data addObject:categorie.nom_categorie];
+                }
+                //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
+                   
+                NSLog(@"%@", data);
+            }
         }
     }
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)section {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [data count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    if(cell == nil){
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    cell.textLabel.text = [data objectAtIndex:indexPath.row];
+    return cell;
+    
+}
 
 #pragma mark - Navigation
 

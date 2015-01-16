@@ -11,11 +11,6 @@
 
 @interface QRViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate, NSURLConnectionDelegate>
 
-/*
- @property (weak, nonatomic) IBOutlet UILabel *message_QR;
- @property (weak, nonatomic) IBOutlet UILabel *message_json;
- */
-
 @property (weak, nonatomic) IBOutlet UIView *viewPreview;
 - (IBAction)startStopReading:(id)sender;
 
