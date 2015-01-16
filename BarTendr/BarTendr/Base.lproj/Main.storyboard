@@ -80,7 +80,7 @@
                                     <segue destination="vXZ-lx-hvc" kind="push" id="NEH-dd-opD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Veuillez scanner le QR code présent sur votre table" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CT7-HE-YvN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez scanner le QR code présent sur votre table" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CT7-HE-YvN">
                                 <rect key="frame" x="73" y="50" width="175" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -98,6 +98,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="CT7-HE-YvN" secondAttribute="trailing" constant="56" id="W55-DI-PFC"/>
                             <constraint firstItem="s6G-zr-X74" firstAttribute="top" secondItem="YBI-j5-8SF" secondAttribute="bottom" constant="75" id="Xxl-vV-yYx"/>
                             <constraint firstItem="f6j-ge-mdZ" firstAttribute="leading" secondItem="e6p-Pw-vD2" secondAttribute="leadingMargin" constant="57" id="jc3-pk-yi0"/>
+                            <constraint firstItem="CT7-HE-YvN" firstAttribute="top" secondItem="B2C-f6-b6D" secondAttribute="bottom" constant="30" id="z9s-SN-uvg"/>
                             <constraint firstItem="s6G-zr-X74" firstAttribute="top" secondItem="f6j-ge-mdZ" secondAttribute="bottom" constant="75" id="zel-V3-NLH"/>
                         </constraints>
                     </view>
@@ -155,12 +156,6 @@
                                     <segue destination="Stg-CR-w9X" kind="push" id="gyI-96-7kZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table n°X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0L-FB-fM1">
-                                <rect key="frame" x="170" y="110" width="72" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Récapitulatif de  votre commande" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4s-Xr-jHz">
                                 <rect key="frame" x="69" y="28" width="173" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -173,6 +168,12 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table n°X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0L-FB-fM1">
+                                <rect key="frame" x="170" y="110" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -200,6 +201,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="3ir-Y2-om9"/>
                     <connections>
+                        <outlet property="labelTable" destination="S0L-FB-fM1" id="g6W-Uz-v3r"/>
                         <outlet property="tableView3" destination="cNT-dz-ouL" id="bD6-Ld-Aa9"/>
                     </connections>
                 </viewController>
@@ -471,12 +473,6 @@
                                     <outlet property="dataSource" destination="LjG-Tw-pwO" id="aGG-1x-ms6"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table n°X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fl-Qb-68s">
-                                <rect key="frame" x="172" y="72" width="72" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohC-FF-y7m">
                                 <rect key="frame" x="16" y="68" width="46" height="30"/>
                                 <state key="normal" title="Retour">
@@ -517,6 +513,12 @@
                                     <outlet property="dataSource" destination="LjG-Tw-pwO" id="C2C-c8-tws"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table n°X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fl-Qb-68s">
+                                <rect key="frame" x="172" y="72" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -544,6 +546,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="6OV-lo-NbI"/>
                     <connections>
+                        <outlet property="labelTable" destination="6Fl-Qb-68s" id="FOI-Gr-Rhy"/>
                         <outlet property="labelTitre" destination="QKE-7n-MEL" id="0cJ-2E-F3U"/>
                         <outlet property="tableView2" destination="rbi-Jq-rwd" id="gBe-Oo-6Z0"/>
                     </connections>
@@ -577,9 +580,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="NEH-dd-opD"/>
-        <segue reference="GQP-Kf-GPR"/>
-        <segue reference="wkm-bX-F7h"/>
+        <segue reference="gyI-96-7kZ"/>
         <segue reference="ZBa-Da-He9"/>
+        <segue reference="GQP-Kf-GPR"/>
+        <segue reference="NEH-dd-opD"/>
     </inferredMetricsTieBreakers>
 </document>

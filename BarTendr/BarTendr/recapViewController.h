@@ -14,4 +14,6 @@
 
 @property (strong, nonatomic) NSMutableArray *data3;
 
+@property (weak, nonatomic) IBOutlet UILabel *labelTable;
+
 @end

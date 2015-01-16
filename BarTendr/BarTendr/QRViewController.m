@@ -8,12 +8,12 @@
 
 #import "QRViewController.h"
 #import "boissonViewController.h"
+#import "Globals.h"
 
 @import AVFoundation;
 
 @interface QRViewController ()
 @property (nonatomic) BOOL isReading;
-@property NSString * stringNext;
 
 @property (nonatomic, strong) AVCaptureSession *captureSession;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *videoPreviewLayer;
@@ -93,7 +93,7 @@
         AVMetadataMachineReadableCodeObject *metadataObj = [metadataObjects objectAtIndex:0];
         if ([[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode]) {
             NSLog(@"%@", [metadataObj stringValue]);
-            _stringNext = [metadataObj stringValue];
+            numberTable = [metadataObj stringValue];
             
             [self performSelectorOnMainThread:@selector(stopReading) withObject:nil waitUntilDone:NO];
             _isReading = NO;
@@ -121,8 +121,7 @@
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
      if([segue.identifier isEqualToString:@"numberTable"]){
-         boissonViewController *controller_table = [segue destinationViewController];
-         controller_table.numberTable = _stringNext;
+         [segue destinationViewController];
      }
  }
  

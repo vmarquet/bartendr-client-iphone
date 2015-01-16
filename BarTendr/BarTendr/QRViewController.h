@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface QRViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate, NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface QRViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate, NSURLConnectionDelegate>
 
 /*
  @property (weak, nonatomic) IBOutlet UILabel *message_QR;

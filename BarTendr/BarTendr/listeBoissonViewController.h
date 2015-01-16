@@ -20,4 +20,7 @@
 
 @property (weak, nonatomic) NSString *boissonType;
 
+@property (weak, nonatomic) IBOutlet UILabel *labelTable;
+
+
 @end

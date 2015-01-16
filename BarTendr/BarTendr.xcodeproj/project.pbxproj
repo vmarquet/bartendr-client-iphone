@@ -54,6 +54,7 @@
 		64377AE81A28908B00F2A93C /* listeBoissonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = listeBoissonViewController.m; sourceTree = "<group>"; };
 		64377AE91A28908B00F2A93C /* recapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recapViewController.h; sourceTree = "<group>"; };
 		64377AEA1A28908B00F2A93C /* recapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recapViewController.m; sourceTree = "<group>"; };
+		6491C5771A69176D0028390B /* Globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +96,7 @@
 		37EAC7ED1A1643D600360744 /* BarTendr */ = {
 			isa = PBXGroup;
 			children = (
+				6491C5771A69176D0028390B /* Globals.h */,
 				64377AE91A28908B00F2A93C /* recapViewController.h */,
 				64377AEA1A28908B00F2A93C /* recapViewController.m */,
 				37EAC7F21A1643D600360744 /* AppDelegate.h */,

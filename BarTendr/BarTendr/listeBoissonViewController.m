@@ -7,6 +7,7 @@
 //
 
 #import "listeBoissonViewController.h"
+#import "Globals.h"
 
 @interface listeBoissonViewController ()
 
@@ -16,10 +17,12 @@
 @synthesize data2;
 @synthesize labelTitre;
 @synthesize boissonType;
+@synthesize labelTable;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    labelTable.text = numberTable;
     labelTitre.text = boissonType;
     NSLog(@"boissonType = %@", boissonType);
     

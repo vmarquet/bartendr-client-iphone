@@ -7,6 +7,7 @@
 //
 
 #import "recapViewController.h"
+#import "Globals.h"
 
 @interface recapViewController ()
 
@@ -14,9 +15,13 @@
 
 @implementation recapViewController
 @synthesize data3;
+@synthesize labelTable;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    labelTable.text = numberTable;
+    
     // TableView
     data3 = [[NSMutableArray alloc]initWithObjects: @"Grimbergen x1", @"Leffe Blonde x1", @"Kilkenny x1", @"Guiness x2", nil];
 }

@@ -8,6 +8,7 @@
 
 #import "boissonViewController.h"
 #import "listeBoissonViewController.h"
+#import "Globals.h"
 
 @interface boissonViewController ()
 
@@ -21,11 +22,13 @@
 @synthesize data;
 @synthesize boissonLabel;
 @synthesize labelTable;
-@synthesize numberTable;
 
 
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    labelTable.text = numberTable;
     
     // Description de l'URL, j'ai mis l'url de Fabrigli pour avoir une liste de categories ^^, on la changera apres :)
     NSURL * url = [NSURL URLWithString:@"http://binouze.fabrigli.fr/categories.json"];
@@ -42,12 +45,8 @@
         NSLog(@"FAIL TO CONNECT");
     }
     
-    labelTable.text = numberTable;
-    
     // Initialisation de la TableView
     data = [[NSMutableArray alloc]initWithObjects:@"Bières", @"Vins Rouges", @"Vins Blancs", @"Vins Rosés", @"Cocktails", @"Alcools forts", @"Soda", @"Eau", nil];
-    
-    [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
