@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ExpendingCell.h"
 
-@interface listeBoissonViewController : UIViewController
+@interface listeBoissonViewController : UIViewController<NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UILabel *labelTitre;
 
@@ -22,5 +23,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labelTable;
 
+@property NSInteger SelectedIndex;
 
 @end

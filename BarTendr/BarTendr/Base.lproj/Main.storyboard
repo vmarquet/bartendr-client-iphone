@@ -513,6 +513,7 @@ BarTendr !</string>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="LjG-Tw-pwO" id="C2C-c8-tws"/>
+                                    <outlet property="delegate" destination="LjG-Tw-pwO" id="gi5-YU-RCU"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table n°X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fl-Qb-68s">

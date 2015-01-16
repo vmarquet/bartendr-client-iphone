@@ -18,9 +18,12 @@
 @synthesize labelTitre;
 @synthesize boissonType;
 @synthesize labelTable;
+@synthesize SelectedIndex;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    SelectedIndex = -1;
     
     labelTable.text = numberTable;
     labelTitre.text = boissonType;
@@ -39,32 +42,57 @@
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView2 numberOfRowsInSection:(NSInteger)section2 {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section2 {
     return [data2 count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath2 {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier2 = @"Cell2";
-    UITableViewCell *cell2 = [tableView2 dequeueReusableCellWithIdentifier:CellIdentifier2 forIndexPath:indexPath2];
+    static NSString *CellIdentifier = @"expendingCell";
+    ExpendingCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if(cell2 == nil){
-        cell2 = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier2];
+    if(cell == nil){
+        NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"ExpendingCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
     
-    cell2.textLabel.text = [data2 objectAtIndex:indexPath2.row];
-    return cell2;
+    cell.titleCell.text = [data2 objectAtIndex:indexPath.row];
+    return cell;
     
 }
 
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if(SelectedIndex == indexPath.row){
+        return 128;
+    }
+    else {
+        return 54;
+    }
 }
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSLog(@"Row at Index > %d: %@", indexPath.row, data2[indexPath.row]);
+    
+    if(SelectedIndex == indexPath.row){
+        SelectedIndex = -1;
+        [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        return;
+    }
+    
+    if(SelectedIndex != -1){
+        SelectedIndex = indexPath.row;
+        NSIndexPath *prevPath = [NSIndexPath indexPathForRow:SelectedIndex inSection:0];
+        [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:prevPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    
+    SelectedIndex = indexPath.row;
+    NSLog(@"SelectedIndex = %d", SelectedIndex);
+    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+}
+
 
 
 @end
