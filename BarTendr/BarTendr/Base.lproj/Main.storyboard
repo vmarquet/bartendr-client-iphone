@@ -68,15 +68,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Stg-CR-w9X" kind="push" id="wkm-bX-F7h"/>
+                                    <segue destination="Stg-CR-w9X" kind="push" identifier="numberTable" id="wkm-bX-F7h"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SCAN QR CODE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LA-Oo-5Ll">
-                                <rect key="frame" x="73" y="272" width="175" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBI-j5-8SF">
                                 <rect key="frame" x="195" y="463" width="53" height="30"/>
                                 <state key="normal" title="Annuler">
@@ -86,12 +80,16 @@
                                     <segue destination="vXZ-lx-hvc" kind="push" id="NEH-dd-opD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez scanner le QR code présent sur votre table" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CT7-HE-YvN">
-                                <rect key="frame" x="73" y="73" width="175" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Veuillez scanner le QR code présent sur votre table" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CT7-HE-YvN">
+                                <rect key="frame" x="73" y="50" width="175" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3m-sb-jIw">
+                                <rect key="frame" x="32" y="163" width="256" height="241"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -100,14 +98,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="CT7-HE-YvN" secondAttribute="trailing" constant="56" id="W55-DI-PFC"/>
                             <constraint firstItem="s6G-zr-X74" firstAttribute="top" secondItem="YBI-j5-8SF" secondAttribute="bottom" constant="75" id="Xxl-vV-yYx"/>
                             <constraint firstItem="f6j-ge-mdZ" firstAttribute="leading" secondItem="e6p-Pw-vD2" secondAttribute="leadingMargin" constant="57" id="jc3-pk-yi0"/>
-                            <constraint firstItem="CT7-HE-YvN" firstAttribute="top" secondItem="B2C-f6-b6D" secondAttribute="bottom" constant="53" id="mm9-1u-6uq"/>
                             <constraint firstItem="s6G-zr-X74" firstAttribute="top" secondItem="f6j-ge-mdZ" secondAttribute="bottom" constant="75" id="zel-V3-NLH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="801-l3-WRM"/>
                     <connections>
-                        <outlet property="message_QR" destination="CT7-HE-YvN" id="15x-59-gYs"/>
-                        <outlet property="message_json" destination="4LA-Oo-5Ll" id="G0m-z1-fT7"/>
+                        <outlet property="viewPreview" destination="g3m-sb-jIw" id="mxr-Vk-5lO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0TM-nX-W6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -434,6 +430,7 @@
                     <navigationItem key="navigationItem" id="2AS-2Z-ilR"/>
                     <connections>
                         <outlet property="boissonLabel" destination="q5b-Z2-tct" id="UJb-5w-qZg"/>
+                        <outlet property="labelTable" destination="aRv-SO-W5k" id="p0e-Av-7hH"/>
                         <outlet property="tableView" destination="nwn-L7-Zq6" id="oa5-AQ-Tm2"/>
                         <segue destination="LjG-Tw-pwO" kind="push" identifier="toto" id="euJ-Zo-SQX"/>
                     </connections>
@@ -486,7 +483,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Stg-CR-w9X" kind="push" id="qWI-yu-FD3"/>
+                                    <segue destination="Stg-CR-w9X" kind="push" identifier="return_numberTable" id="qWI-yu-FD3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Es-8j-EmM">
@@ -580,9 +577,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="o1Y-4D-AGF"/>
-        <segue reference="qWI-yu-FD3"/>
+        <segue reference="NEH-dd-opD"/>
         <segue reference="GQP-Kf-GPR"/>
-        <segue reference="5RL-ew-l2c"/>
+        <segue reference="wkm-bX-F7h"/>
+        <segue reference="ZBa-Da-He9"/>
     </inferredMetricsTieBreakers>
 </document>

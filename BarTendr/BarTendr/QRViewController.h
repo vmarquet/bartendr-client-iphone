@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface QRViewController : UIViewController
+@interface QRViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate, NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource>
 
-@property (weak, nonatomic) IBOutlet UILabel *message_QR;
+/*
+ @property (weak, nonatomic) IBOutlet UILabel *message_QR;
+ @property (weak, nonatomic) IBOutlet UILabel *message_json;
+ */
 
-@property (weak, nonatomic) IBOutlet UILabel *message_json;
+@property (weak, nonatomic) IBOutlet UIView *viewPreview;
+- (IBAction)startStopReading:(id)sender;
 
 @end

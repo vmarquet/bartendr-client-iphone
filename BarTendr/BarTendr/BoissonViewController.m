@@ -20,6 +20,8 @@
 @implementation boissonViewController
 @synthesize data;
 @synthesize boissonLabel;
+@synthesize labelTable;
+@synthesize numberTable;
 
 
 
@@ -39,6 +41,8 @@
     else{
         NSLog(@"FAIL TO CONNECT");
     }
+    
+    labelTable.text = numberTable;
     
     // Initialisation de la TableView
     data = [[NSMutableArray alloc]initWithObjects:@"Bières", @"Vins Rouges", @"Vins Blancs", @"Vins Rosés", @"Cocktails", @"Alcools forts", @"Soda", @"Eau", nil];
