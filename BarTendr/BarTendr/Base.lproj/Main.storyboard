@@ -18,9 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI3-hQ-tOR">
-                                <rect key="frame" x="121" y="372" width="79" height="30"/>
-                                <state key="normal" title="Cliquez ici !">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yy-st-Eni">
+                                <rect key="frame" x="16" y="48" width="288" height="48"/>
+                                <string key="text">Bienvenue sur 
+BarTendr !</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2CO-rM-jT3">
+                                <rect key="frame" x="68" y="135" width="185" height="189"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI3-hQ-tOR">
+                                <rect key="frame" x="26" y="383" width="269" height="30"/>
+                                <state key="normal" title="Poursuivre ma commande">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -28,20 +38,12 @@
                                     <segue destination="UTh-Pa-ILz" kind="push" id="Z10-ni-TVd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenue  sur  BarTendr !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yy-st-Eni">
-                                <rect key="frame" x="54" y="75" width="213" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="dI3-hQ-tOR" secondAttribute="trailing" constant="104" id="BeG-SP-eAG"/>
-                            <constraint firstItem="7Yy-st-Eni" firstAttribute="top" secondItem="mK1-Rq-y5F" secondAttribute="bottom" constant="55" id="Eij-by-q6V"/>
-                            <constraint firstItem="7Yy-st-Eni" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="38" id="Kg7-PD-Ztt"/>
-                            <constraint firstItem="dI3-hQ-tOR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="105" id="S0p-zD-OXa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7Yy-st-Eni" secondAttribute="trailing" constant="37" id="pG1-wE-jhV"/>
-                            <constraint firstItem="W4j-yr-YoP" firstAttribute="top" secondItem="dI3-hQ-tOR" secondAttribute="bottom" constant="166" id="tUg-1B-usw"/>
+                            <constraint firstItem="7Yy-st-Eni" firstAttribute="top" secondItem="mK1-Rq-y5F" secondAttribute="bottom" constant="28" id="0Zo-t3-B9u"/>
+                            <constraint firstItem="7Yy-st-Eni" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="PJb-Dy-DqN"/>
+                            <constraint firstItem="7Yy-st-Eni" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="ba2-8t-JNL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bMj-fx-gTN"/>
@@ -574,15 +576,18 @@
             <point key="canvasLocation" x="202" y="312.99999999999994"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo.png" width="672" height="664"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gyI-96-7kZ"/>
-        <segue reference="ZBa-Da-He9"/>
-        <segue reference="GQP-Kf-GPR"/>
+        <segue reference="qWI-yu-FD3"/>
+        <segue reference="o1Y-4D-AGF"/>
         <segue reference="NEH-dd-opD"/>
+        <segue reference="Z10-ni-TVd"/>
     </inferredMetricsTieBreakers>
 </document>
