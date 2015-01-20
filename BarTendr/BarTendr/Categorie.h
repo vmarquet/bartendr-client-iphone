@@ -10,12 +10,12 @@
 
 @interface Categorie : NSObject {
     
-    int id_categorie;
+    long id_categorie;
     NSString *nom_categorie;
     
 }
 
-@property (nonatomic) int id_categorie;
+@property (nonatomic) long id_categorie;
 @property (nonatomic, retain) NSString *nom_categorie;
 
 @end

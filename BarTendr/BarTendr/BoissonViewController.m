@@ -16,6 +16,7 @@
 @property NSMutableData * donnes;
 @property NSArray * dictionnaire;
 @property NSString * stringNext;
+@property UIAlertView *alert;
 @end
 
 @implementation boissonViewController
@@ -28,6 +29,10 @@
     [super viewDidLoad];
     
     labelTable.text = numberTable;
+    
+    // Affichage d'un petit Pop-Up d'attente, a finaliser ...
+    _alert = [[UIAlertView alloc] initWithTitle:@"Downloading content\nPlease Wait..."message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
+    [_alert show];
     
     // Description de l'URL, j'ai mis l'url de Fabrigli pour avoir une liste de categories ^^, on la changera apres :)
     NSURL * url = [NSURL URLWithString:@"http://v-marquet.bitbucket.org/bartendr/menu.json"];
@@ -91,7 +96,7 @@
                         
                         Categorie * categorie = [[Categorie alloc] init];
                         categorie.id_categorie = [[dictionary objectForKey:@"id"]integerValue];
-                        NSLog(@"id = %d",categorie.id_categorie);
+                        NSLog(@"id = %ld",categorie.id_categorie);
                         categorie.nom_categorie = [dictionary objectForKey:@"name"];
                         NSLog(@"name = %@", categorie.nom_categorie);
                         [data addObject:categorie.nom_categorie];
@@ -99,6 +104,7 @@
                 //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
                    
                 NSLog(@"%@", data);
+                   [_alert dismissWithClickedButtonIndex:0 animated:YES];
             }
         }
     }
@@ -143,7 +149,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
    
-    NSLog(@"Row Selected > %d: %@", indexPath.item, data[indexPath.item]);
+    NSLog(@"Row Selected > %ld: %@", (long)indexPath.item, data[indexPath.item]);
     _stringNext = data[indexPath.item];
     
     [self performSegueWithIdentifier:@"toto" sender:self.view];

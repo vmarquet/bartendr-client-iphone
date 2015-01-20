@@ -12,5 +12,4 @@
 
 @synthesize id_categorie, nom_categorie;
 
-
 @end

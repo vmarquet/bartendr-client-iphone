@@ -9,3 +9,4 @@
 #import <UIKit/UIKit.h>
 
 extern NSString * numberTable;
+extern NSArray * data;

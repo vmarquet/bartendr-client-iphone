@@ -24,12 +24,82 @@
     
     // TableView
     data3 = [[NSMutableArray alloc]initWithObjects: @"Grimbergen x1", @"Leffe Blonde x1", @"Kilkenny x1", @"Guiness x2", nil];
+    
+    
+    
+    
+    /* TEST ENVOI AU SERVEUR c'est moche je c ....*/
+     
+     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+     NSMutableDictionary *dict2 = [[NSMutableDictionary alloc]init];
+     NSMutableDictionary *article1 = [[NSMutableDictionary alloc]init];
+     NSMutableDictionary *article2 = [[NSMutableDictionary alloc]init];
+     [article1 setValue:@1 forKey:@"article_id"];
+     [article1 setValue:@"Sans glaçon" forKey:@"comments"];
+     
+     [article2 setValue:@4 forKey:@"article_id"];
+     [article2 setValue:@"Avec glaçon" forKey:@"comments"];
+     
+     NSMutableArray * liste = [[NSMutableArray alloc]initWithObjects:article1,article2, nil];
+     
+     [dict setValue:@10 forKey:@"table"];
+     [dict setValue:liste forKey:@"item_attributes"];
+     [dict2 setValue:dict forKey:@"order"];
+     
+     NSError *error = nil;
+     NSData *json;
+     NSURL *url = [NSURL URLWithString:@"http://mabite.fr/orders.json"];
+     
+     // Dictionary convertable to JSON ?
+     if ([NSJSONSerialization isValidJSONObject:dict])
+     {
+     // Serialize the dictionary
+     json = [NSJSONSerialization dataWithJSONObject:dict2 options:NSJSONWritingPrettyPrinted error:&error];
+     
+     // If no errors, let's view the JSON
+     if (json != nil && error == nil)
+     {
+         NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
+         NSLog(@"%@", jsonString);
+         NSData *postData = [jsonString dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+         NSMutableURLRequest *requestData = [[NSMutableURLRequest alloc] init];
+     
+         NSString *number = [[NSString alloc] initWithFormat:@"%d", postData.length];
+     
+         [requestData setURL:url];
+     
+         [requestData setHTTPMethod:@"POST"];
+         [requestData setValue:number forHTTPHeaderField:@"Content-Length"];
+         [requestData setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+         [requestData setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+         [requestData setHTTPBody:postData];
+
+         NSURLConnection *conn = [[NSURLConnection alloc]initWithRequest:requestData delegate:self];
+         if(conn) {
+             NSLog(@"Connection Successful");
+         } else {
+             NSLog(@"Connection could not be made");
+         }
+        }
+     }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+// This method receives the error report in case of connection is not made to server.
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
+    NSLog(@"Erreur ===>  %@  <====== Fin Erreur", error);
+}
+
+// This method is used to process the data after connection has made successfully.
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection{
+    NSLog(@"Fini de transmettre les données");
+    
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)section3 {
     return 1;
