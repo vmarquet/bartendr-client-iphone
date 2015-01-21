@@ -15,5 +15,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *descCell;
 @property (strong, nonatomic) IBOutlet UILabel *descLabelCell;
 @property (strong, nonatomic) IBOutlet UILabel *priceLabelCell;
+@property (strong, nonatomic) IBOutlet UIButton *addButton;
+
+- (IBAction)buttonTapped:(UIButton *)sender;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CategoryCell.h"
 
 @interface boissonViewController : UIViewController<NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource>
 

@@ -57,6 +57,7 @@
     }
     
     cell.titleCell.text = [data2 objectAtIndex:indexPath.row];
+    cell.descLabelCell.text = @"Ceci est un test de description de boisson, ça doit être assez long pour être significatif !";
     return cell;
     
 }
@@ -64,7 +65,7 @@
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if(SelectedIndex == indexPath.row){
-        return 128;
+        return 140;
     }
     else {
         return 54;

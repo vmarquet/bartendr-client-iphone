@@ -441,7 +441,7 @@ BarTendr !</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ch1-92-vn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649" y="232"/>
+            <point key="canvasLocation" x="1637" y="311"/>
         </scene>
         <!--Liste Boisson View Controller-->
         <scene sceneID="jE2-g7-uw1">
@@ -586,9 +586,9 @@ BarTendr !</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="ZBa-Da-He9"/>
         <segue reference="qWI-yu-FD3"/>
-        <segue reference="o1Y-4D-AGF"/>
+        <segue reference="GQP-Kf-GPR"/>
         <segue reference="NEH-dd-opD"/>
-        <segue reference="Z10-ni-TVd"/>
     </inferredMetricsTieBreakers>
 </document>

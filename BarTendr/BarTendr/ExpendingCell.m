@@ -20,4 +20,13 @@
     // Configure the view for the selected state
 }
 
+-(void)buttonPressed {
+    NSLog(@"Button Pressed!");
+}
+
+- (IBAction)buttonTapped:(UIButton *)sender
+{
+    NSLog(@"Button Tapped!");
+}
+
 @end

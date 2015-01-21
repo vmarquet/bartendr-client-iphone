@@ -24,6 +24,8 @@
 		64BA91E61A697C2600BD9EFC /* biere.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64BA91E21A697C2600BD9EFC /* biere.jpg */; };
 		64BA91E71A697C2600BD9EFC /* ExpendingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BA91E41A697C2600BD9EFC /* ExpendingCell.m */; };
 		64BA91E81A697C2600BD9EFC /* ExpendingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64BA91E51A697C2600BD9EFC /* ExpendingCell.xib */; };
+		64F66C9D1A6FDD830075BA5A /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F66C9C1A6FDD830075BA5A /* CategoryCell.xib */; };
+		64F66CA01A6FDDB10075BA5A /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F66C9F1A6FDDB10075BA5A /* CategoryCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,9 @@
 		64BA91E31A697C2600BD9EFC /* ExpendingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpendingCell.h; sourceTree = "<group>"; };
 		64BA91E41A697C2600BD9EFC /* ExpendingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpendingCell.m; sourceTree = "<group>"; };
 		64BA91E51A697C2600BD9EFC /* ExpendingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpendingCell.xib; sourceTree = "<group>"; };
+		64F66C9C1A6FDD830075BA5A /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		64F66C9E1A6FDDB10075BA5A /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
+		64F66C9F1A6FDDB10075BA5A /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +115,7 @@
 			children = (
 				64BA91EA1A697C5B00BD9EFC /* Images */,
 				64BA91E91A697C4200BD9EFC /* ExpendingCell */,
+				64F66C9B1A6FDD510075BA5A /* CategoryCell */,
 				6491C5771A69176D0028390B /* Globals.h */,
 				37DF971F1A69522100113402 /* Categorie.h */,
 				37DF97201A69522100113402 /* Categorie.m */,
@@ -177,6 +183,16 @@
 				6491C5A91A6974A10028390B /* logo.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		64F66C9B1A6FDD510075BA5A /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				64F66C9C1A6FDD830075BA5A /* CategoryCell.xib */,
+				64F66C9E1A6FDDB10075BA5A /* CategoryCell.h */,
+				64F66C9F1A6FDDB10075BA5A /* CategoryCell.m */,
+			);
+			name = CategoryCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6491C5AA1A6974A10028390B /* logo.png in Resources */,
+				64F66C9D1A6FDD830075BA5A /* CategoryCell.xib in Resources */,
 				64BA91E61A697C2600BD9EFC /* biere.jpg in Resources */,
 				64BA91E81A697C2600BD9EFC /* ExpendingCell.xib in Resources */,
 				37EAC7FD1A1643D600360744 /* Main.storyboard in Resources */,
@@ -290,6 +307,7 @@
 				37DF97211A69522100113402 /* Categorie.m in Sources */,
 				64377AEB1A28908B00F2A93C /* listeBoissonViewController.m in Sources */,
 				643434E81A1F931B005482E3 /* boissonViewController.m in Sources */,
+				64F66CA01A6FDDB10075BA5A /* CategoryCell.m in Sources */,
 				37CD71C61A1FAC1300A86E85 /* QRViewController.m in Sources */,
 				37EAC7FA1A1643D600360744 /* ViewController.m in Sources */,
 				37EAC7F11A1643D600360744 /* main.m in Sources */,
