@@ -20,6 +20,8 @@
 @synthesize labelTable;
 @synthesize SelectedIndex;
 
+int indexSelected;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -56,16 +58,26 @@
         cell = [nib objectAtIndex:0];
     }
     
+    indexSelected = indexPath.row;
+    
     cell.titleCell.text = [data2 objectAtIndex:indexPath.row];
     cell.descLabelCell.text = @"Ceci est un test de description de boisson, ça doit être assez long pour être significatif !";
+    //listen for clicks
+    [cell.addButton addTarget:self action:@selector(buttonPressed)
+     forControlEvents:UIControlEventTouchUpInside];
+
     return cell;
     
+}
+
+-(void)buttonPressed {
+    NSLog(@"Button %d Pressed!", indexSelected);
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if(SelectedIndex == indexPath.row){
-        return 140;
+        return 180;
     }
     else {
         return 54;

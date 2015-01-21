@@ -294,19 +294,13 @@ BarTendr !</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krb-Em-cjj">
-                                <rect key="frame" x="133" y="472" width="54" height="30"/>
-                                <state key="normal" title="Quitter">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remerciements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bc5-Wi-jtO">
                                 <rect key="frame" x="74" y="35" width="173" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2y-3A-KtG">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2y-3A-KtG">
                                 <rect key="frame" x="61" y="434" width="198" height="30"/>
                                 <state key="normal" title="Passer une autre commande">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -320,14 +314,10 @@ BarTendr !</string>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="bc5-Wi-jtO" secondAttribute="trailing" constant="57" id="3ai-xV-Mi9"/>
                             <constraint firstItem="vZN-cZ-7bJ" firstAttribute="trailing" secondItem="RnI-KW-fn3" secondAttribute="trailingMargin" id="DDh-Ba-let"/>
-                            <constraint firstItem="Krb-Em-cjj" firstAttribute="leading" secondItem="RnI-KW-fn3" secondAttribute="leadingMargin" constant="117" id="Duf-8B-t99"/>
                             <constraint firstItem="i2B-0X-ZLc" firstAttribute="top" secondItem="vZN-cZ-7bJ" secondAttribute="bottom" constant="244" id="HEr-Vd-ta7"/>
                             <constraint firstItem="bc5-Wi-jtO" firstAttribute="top" secondItem="D7V-tZ-ZPf" secondAttribute="bottom" constant="15" id="V2F-hH-qnu"/>
-                            <constraint firstItem="Krb-Em-cjj" firstAttribute="top" secondItem="x2y-3A-KtG" secondAttribute="bottom" constant="8" id="atB-fr-o8f"/>
                             <constraint firstItem="bc5-Wi-jtO" firstAttribute="leading" secondItem="RnI-KW-fn3" secondAttribute="leadingMargin" constant="58" id="bHy-LH-ZxN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="x2y-3A-KtG" secondAttribute="trailing" constant="45" id="gzd-Na-9fW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Krb-Em-cjj" secondAttribute="trailing" constant="117" id="j1A-mT-ut9"/>
-                            <constraint firstItem="i2B-0X-ZLc" firstAttribute="top" secondItem="Krb-Em-cjj" secondAttribute="bottom" constant="66" id="lk6-ZT-7rS"/>
                             <constraint firstItem="vZN-cZ-7bJ" firstAttribute="leading" secondItem="RnI-KW-fn3" secondAttribute="leadingMargin" id="mgz-4a-o6i"/>
                             <constraint firstItem="x2y-3A-KtG" firstAttribute="leading" secondItem="RnI-KW-fn3" secondAttribute="leadingMargin" constant="45" id="ruM-c2-SsS"/>
                         </constraints>
@@ -589,6 +579,6 @@ BarTendr !</string>
         <segue reference="ZBa-Da-He9"/>
         <segue reference="qWI-yu-FD3"/>
         <segue reference="GQP-Kf-GPR"/>
-        <segue reference="NEH-dd-opD"/>
+        <segue reference="5RL-ew-l2c"/>
     </inferredMetricsTieBreakers>
 </document>
