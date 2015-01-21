@@ -64,7 +64,7 @@
          NSData *postData = [jsonString dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
          NSMutableURLRequest *requestData = [[NSMutableURLRequest alloc] init];
      
-         NSString *number = [[NSString alloc] initWithFormat:@"%d", postData.length];
+         NSString *number = [[NSString alloc] initWithFormat:@"%lu", (unsigned long)postData.length];
      
          [requestData setURL:url];
      
@@ -97,7 +97,6 @@
 // This method is used to process the data after connection has made successfully.
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
     NSLog(@"Fini de transmettre les données");
-    
 }
 
 
