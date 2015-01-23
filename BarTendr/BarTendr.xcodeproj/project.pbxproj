@@ -27,6 +27,7 @@
 		64BA91E81A697C2600BD9EFC /* ExpendingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64BA91E51A697C2600BD9EFC /* ExpendingCell.xib */; };
 		64F66C9D1A6FDD830075BA5A /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F66C9C1A6FDD830075BA5A /* CategoryCell.xib */; };
 		64F66CA01A6FDDB10075BA5A /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F66C9F1A6FDDB10075BA5A /* CategoryCell.m */; };
+		64F66CA81A72A8690075BA5A /* Commande.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F66CA71A72A8690075BA5A /* Commande.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		64F66C9C1A6FDD830075BA5A /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		64F66C9E1A6FDDB10075BA5A /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
 		64F66C9F1A6FDDB10075BA5A /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
+		64F66CA61A72A8690075BA5A /* Commande.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Commande.h; sourceTree = "<group>"; };
+		64F66CA71A72A8690075BA5A /* Commande.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Commande.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				371E54F31A724C1500F15643 /* Article.m */,
 				37DF971F1A69522100113402 /* Categorie.h */,
 				37DF97201A69522100113402 /* Categorie.m */,
+				64F66CA61A72A8690075BA5A /* Commande.h */,
+				64F66CA71A72A8690075BA5A /* Commande.m */,
 				64377AE91A28908B00F2A93C /* recapViewController.h */,
 				64377AEA1A28908B00F2A93C /* recapViewController.m */,
 				37EAC7F21A1643D600360744 /* AppDelegate.h */,
@@ -310,6 +315,7 @@
 				64BA91E71A697C2600BD9EFC /* ExpendingCell.m in Sources */,
 				64377AEC1A28908B00F2A93C /* recapViewController.m in Sources */,
 				37DF97211A69522100113402 /* Categorie.m in Sources */,
+				64F66CA81A72A8690075BA5A /* Commande.m in Sources */,
 				64377AEB1A28908B00F2A93C /* listeBoissonViewController.m in Sources */,
 				643434E81A1F931B005482E3 /* boissonViewController.m in Sources */,
 				64F66CA01A6FDDB10075BA5A /* CategoryCell.m in Sources */,
