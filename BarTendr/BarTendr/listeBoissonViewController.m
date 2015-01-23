@@ -19,6 +19,7 @@
 @synthesize boissonType;
 @synthesize labelTable;
 @synthesize SelectedIndex;
+@synthesize idCategorie;
 
 int indexSelected;
 
@@ -26,10 +27,10 @@ int indexSelected;
     [super viewDidLoad];
     
     SelectedIndex = -1;
-    
     labelTable.text = numberTable;
     labelTitre.text = boissonType;
     NSLog(@"boissonType = %@", boissonType);
+    NSLog(@"%u", idCategorie);
     
     // Initialisation de la TableView
     data2 = [[NSMutableArray alloc]initWithObjects:@"Heineken", @"Kronenbourg", @"Grimbergen", @"Leffe Blonde", @"Leffe Ruby", @"Kilkenny", @"Guiness", nil];

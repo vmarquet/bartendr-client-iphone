@@ -21,6 +21,8 @@
 
 @property (weak, nonatomic) NSString *boissonType;
 
+@property (nonatomic) unsigned int idCategorie;
+
 @property (weak, nonatomic) IBOutlet UILabel *labelTable;
 
 @property NSInteger SelectedIndex;

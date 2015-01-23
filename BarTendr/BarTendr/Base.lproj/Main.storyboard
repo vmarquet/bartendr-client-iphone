@@ -421,22 +421,6 @@ poursuivre votre commande</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nwn-L7-Zq6">
-                                <rect key="frame" x="16" y="103" width="288" height="377"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Z3s-ga-yM5">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" tableViewCell="Z3s-ga-yM5" id="91A-Zb-xPB">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="Stg-CR-w9X" id="ZhY-yI-CZP"/>
-                                    <outlet property="delegate" destination="Stg-CR-w9X" id="4TQ-gU-Qn1"/>
-                                </connections>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hly-ao-Oy2">
                                 <rect key="frame" x="16" y="65" width="51" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.60292025719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -471,6 +455,22 @@ poursuivre votre commande</string>
                                     <segue destination="JEw-Um-rsJ" kind="push" id="ZBa-Da-He9"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nwn-L7-Zq6">
+                                <rect key="frame" x="16" y="103" width="288" height="377"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Z3s-ga-yM5">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" tableViewCell="Z3s-ga-yM5" id="91A-Zb-xPB">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Stg-CR-w9X" id="ZhY-yI-CZP"/>
+                                    <outlet property="delegate" destination="Stg-CR-w9X" id="4TQ-gU-Qn1"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -682,9 +682,9 @@ poursuivre votre commande</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="CY5-fc-PIY"/>
-        <segue reference="gyI-96-7kZ"/>
         <segue reference="GQP-Kf-GPR"/>
+        <segue reference="gyI-96-7kZ"/>
+        <segue reference="ZBa-Da-He9"/>
         <segue reference="5RL-ew-l2c"/>
     </inferredMetricsTieBreakers>
 </document>

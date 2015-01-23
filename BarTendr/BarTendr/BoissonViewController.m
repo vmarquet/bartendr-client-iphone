@@ -15,7 +15,8 @@
 
 @property NSMutableData * donnes;
 @property NSArray * dictionnaire;
-@property NSString * stringNext;
+@property NSString * nomCat;
+@property unsigned int idCat;
 @property UIAlertView *alert;
 @end
 
@@ -31,7 +32,7 @@
     labelTable.text = numberTable;
     
     // Affichage d'un petit Pop-Up d'attente, a finaliser ...
-    _alert = [[UIAlertView alloc] initWithTitle:@"Downloading content\nPlease Wait..."message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
+    _alert = [[UIAlertView alloc] initWithTitle:@"Téléchargement en cours.\nVeuillez patienter..."message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
     [_alert show];
     
     // Description de l'URL, j'ai mis l'url de Fabrigli pour avoir une liste de categories ^^, on la changera apres :)
@@ -50,7 +51,7 @@
     }
     
     // Initialisation de la TableView
-    data = [[NSMutableArray alloc]initWithObjects: @"LOL",@"Bières", @"Vins", @"Vodka",nil];
+    data = [[NSMutableArray alloc]initWithObjects:nil];
 }
 
 
@@ -86,25 +87,21 @@
             // On va donc pouvoir "Déserialiser" le JSON, et donc recupérer les infos nécéssaire au remplissage de nos TableView :)
             // Pour le moment je l'affiche dans le terminal (test)
             
-            NSLog(@"%@", _dictionnaire);
+            NSLog(@"Mon JSON : \n %@", _dictionnaire);
             
             // PARSING JSON
             
                if ([_dictionnaire isKindOfClass:[NSArray class]]){
                     //Parcours du Json
                     for (NSDictionary *dictionary in _dictionnaire) {
-                        
                         Categorie * categorie = [[Categorie alloc] init];
                         categorie.id_categorie = [[dictionary objectForKey:@"id"]integerValue];
-                        NSLog(@"id = %ld",categorie.id_categorie);
                         categorie.nom_categorie = [dictionary objectForKey:@"name"];
-                        NSLog(@"name = %@", categorie.nom_categorie);
                         [data addObject:categorie.nom_categorie];
-                        NSLog(@"%@", data);
                 }
                 //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
-                   
-                NSLog(@"%@", data);
+                   [self.tableView reloadData];
+                NSLog(@"Ma Liste de données : %@", data);
                    [_alert dismissWithClickedButtonIndex:0 animated:YES];
             }
         }
@@ -145,17 +142,20 @@
     if([segue.identifier isEqualToString:@"toto"]){
         //UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
         listeBoissonViewController *controller = [segue destinationViewController];
-        controller.boissonType = _stringNext;
+        controller.boissonType = _nomCat;
+        controller.idCategorie = _idCat;
+        NSLog(@"%d",_idCat);
+        
     }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
    
     NSLog(@"Row Selected > %ld: %@", (long)indexPath.item, data[indexPath.item]);
-    _stringNext = data[indexPath.item];
+    _nomCat = data[indexPath.item];
+    _idCat = (unsigned int) indexPath.item;
     
     [self performSegueWithIdentifier:@"toto" sender:self.view];
-    //boissonLabel.text = data[indexPath.item];
 }
 
 
