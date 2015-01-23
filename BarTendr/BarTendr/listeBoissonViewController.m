@@ -8,8 +8,12 @@
 
 #import "listeBoissonViewController.h"
 #import "Globals.h"
+#import "Categorie.h"
 
 @interface listeBoissonViewController ()
+@property UIAlertView *alert;
+@property NSMutableData * donnes;
+@property NSArray * dictionnaire;
 
 @end
 
@@ -32,8 +36,89 @@ int indexSelected;
     NSLog(@"boissonType = %@", boissonType);
     NSLog(@"%u", idCategorie);
     
+    // Affichage d'un petit Pop-Up d'attente, a finaliser ...
+    _alert = [[UIAlertView alloc] initWithTitle:@"Téléchargement en cours.\nVeuillez patienter..."message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
+    [_alert show];
+    
+    NSInteger rowPressed = idCategorie;
+    
+    // Description de l'URL, j'ai mis l'url de Fabrigli pour avoir une liste de categories ^^, on la changera apres :)
+    NSString * url = [NSString stringWithFormat:@"http://v-marquet.bitbucket.org/bartendr/categories/%d.json", rowPressed];
+    
+    NSURL *urll = [NSURL URLWithString:url];
+    
+    //Création de la requete web à l'aide de NSURLRequest
+    NSURLRequest * requete = [NSURLRequest requestWithURL:urll];
+    
+    // Connexion
+    NSURLConnection * connexion = [[NSURLConnection alloc] initWithRequest:requete delegate:self];
+    if(connexion !=nil){
+        NSLog(@"OK, Connected");
+    }
+    else{
+        NSLog(@"FAIL TO CONNECT");
+    }
+    
+    // Initialisation de la TableView
+    data2 = [[NSMutableArray alloc]initWithObjects:nil];
+    
+    /*
     // Initialisation de la TableView
     data2 = [[NSMutableArray alloc]initWithObjects:@"Heineken", @"Kronenbourg", @"Grimbergen", @"Leffe Blonde", @"Leffe Ruby", @"Kilkenny", @"Guiness", nil];
+     */
+}
+
+#pragma mark NSURLConnectionDelegate
+// On verifie que la connexion n'a pas FAIL, sinon affichage dans le terminal du message d'erreur obtenu
+- (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"Erreur ===>  %@  <====== Fin Erreur", error);
+    
+}
+// Verification pour voir si on a reçu une réponse
+- (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    _donnes = [[NSMutableData alloc] init];
+}
+// On regarde si on reçoit des données ^^
+- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)dat {
+    if(_donnes!= nil){
+        [_donnes appendData:dat];
+    }
+}
+// On test pour voir si on a bien fini de recevoir les données //
+// Ensuite on traite les données reçu afin d'avoir un "vrai" json et on l'affiche dans le terminal
+- (void) connectionDidFinishLoading : (NSURLConnection *) connection {
+    
+    if(_donnes){
+        NSError * erreur = nil;
+        _dictionnaire = [NSJSONSerialization JSONObjectWithData:_donnes options:NSJSONReadingMutableContainers error:&erreur];
+        // on verifie que cela ne génère pas d'erreur
+        if(erreur!=nil){
+            NSLog(@"Erreur lors de la création du JSON!");
+        }
+        // On test pour voir si notre dictionnaire est bien un JSON
+        if([NSJSONSerialization isValidJSONObject:_dictionnaire]){
+            // On va donc pouvoir "Déserialiser" le JSON, et donc recupérer les infos nécéssaire au remplissage de nos TableView :)
+            // Pour le moment je l'affiche dans le terminal (test)
+            
+            NSLog(@"Mon JSON : \n %@", _dictionnaire);
+            
+            // PARSING JSON
+            
+            if ([_dictionnaire isKindOfClass:[NSArray class]]){
+                //Parcours du Json
+                for (NSDictionary *dictionary in _dictionnaire) {
+                    Categorie * categorie = [[Categorie alloc] init];
+                    categorie.id_categorie = [[dictionary objectForKey:@"id"]integerValue];
+                    categorie.nom_categorie = [dictionary objectForKey:@"name"];
+                    [data2 addObject:categorie.nom_categorie];
+                }
+                //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
+                [self.tableView2 reloadData];
+                NSLog(@"Ma Liste de données : %@", data2);
+                [_alert dismissWithClickedButtonIndex:0 animated:YES];
+            }
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
