@@ -28,9 +28,17 @@ BarTendr !</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2CO-rM-jT3">
                                 <rect key="frame" x="68" y="135" width="185" height="189"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sys-Ab-kk1">
+                                <rect key="frame" x="26" y="387" width="269" height="49"/>
+                                <string key="text">Touchez l'écran pour
+poursuivre votre commande</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI3-hQ-tOR">
-                                <rect key="frame" x="26" y="383" width="269" height="30"/>
-                                <state key="normal" title="Poursuivre ma commande">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -64,24 +72,6 @@ BarTendr !</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6j-ge-mdZ">
-                                <rect key="frame" x="73" y="463" width="52" height="30"/>
-                                <state key="normal" title="Suivant">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Stg-CR-w9X" kind="push" identifier="numberTable" id="wkm-bX-F7h"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBI-j5-8SF">
-                                <rect key="frame" x="195" y="463" width="53" height="30"/>
-                                <state key="normal" title="Annuler">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="push" id="NEH-dd-opD"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez scanner le QR code présent sur votre table" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CT7-HE-YvN">
                                 <rect key="frame" x="73" y="50" width="175" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -89,19 +79,32 @@ BarTendr !</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3m-sb-jIw">
-                                <rect key="frame" x="32" y="163" width="256" height="241"/>
+                                <rect key="frame" x="32" y="152" width="256" height="241"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6j-ge-mdZ">
+                                <rect key="frame" x="134" y="416" width="52" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.60292025719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Suivant">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Stg-CR-w9X" kind="push" identifier="numberTable" id="wkm-bX-F7h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="YBI-j5-8SF" secondAttribute="trailing" constant="56" id="BlV-RT-lBh"/>
                             <constraint firstItem="CT7-HE-YvN" firstAttribute="leading" secondItem="e6p-Pw-vD2" secondAttribute="leadingMargin" constant="57" id="Tmc-56-T04"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CT7-HE-YvN" secondAttribute="trailing" constant="56" id="W55-DI-PFC"/>
-                            <constraint firstItem="s6G-zr-X74" firstAttribute="top" secondItem="YBI-j5-8SF" secondAttribute="bottom" constant="75" id="Xxl-vV-yYx"/>
-                            <constraint firstItem="f6j-ge-mdZ" firstAttribute="leading" secondItem="e6p-Pw-vD2" secondAttribute="leadingMargin" constant="57" id="jc3-pk-yi0"/>
                             <constraint firstItem="CT7-HE-YvN" firstAttribute="top" secondItem="B2C-f6-b6D" secondAttribute="bottom" constant="30" id="z9s-SN-uvg"/>
-                            <constraint firstItem="s6G-zr-X74" firstAttribute="top" secondItem="f6j-ge-mdZ" secondAttribute="bottom" constant="75" id="zel-V3-NLH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="801-l3-WRM"/>
@@ -126,16 +129,24 @@ BarTendr !</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLa-cq-yMB">
-                                <rect key="frame" x="181" y="502" width="61" height="30"/>
+                                <rect key="frame" x="187" y="502" width="61" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.60292025719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Payer">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="nMZ-dg-Bvj" kind="push" id="lwM-k9-lDk"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cNT-dz-ouL">
-                                <rect key="frame" x="33" y="184" width="255" height="277"/>
+                                <rect key="frame" x="16" y="125" width="288" height="348"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell3" id="RXz-xz-yfg">
@@ -150,10 +161,18 @@ BarTendr !</string>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55J-av-jnx">
-                                <rect key="frame" x="16" y="106" width="46" height="30"/>
+                                <rect key="frame" x="16" y="87" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.60292025719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Retour">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="Stg-CR-w9X" kind="push" id="gyI-96-7kZ"/>
                                 </connections>
@@ -164,41 +183,52 @@ BarTendr !</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShN-c3-cla">
-                                <rect key="frame" x="69" y="502" width="56" height="30"/>
-                                <state key="normal" title="Modifier">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table n°X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0L-FB-fM1">
-                                <rect key="frame" x="170" y="110" width="72" height="21"/>
+                                <rect key="frame" x="170" y="91" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShN-c3-cla">
+                                <rect key="frame" x="69" y="502" width="56" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.60292025719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Modifier">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="S0L-FB-fM1" firstAttribute="top" secondItem="X4s-Xr-jHz" secondAttribute="bottom" constant="34" id="438-dy-8dS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sLa-cq-yMB" secondAttribute="trailing" constant="56" id="0oD-qs-orB"/>
+                            <constraint firstItem="cNT-dz-ouL" firstAttribute="top" secondItem="55J-av-jnx" secondAttribute="bottom" constant="8" id="7Io-Mv-wlK"/>
+                            <constraint firstItem="cNT-dz-ouL" firstAttribute="top" secondItem="S0L-FB-fM1" secondAttribute="bottom" constant="13" id="8cV-X9-yMN"/>
+                            <constraint firstItem="S0L-FB-fM1" firstAttribute="top" secondItem="X4s-Xr-jHz" secondAttribute="bottom" constant="15" id="Aeg-XY-W1V"/>
                             <constraint firstItem="Gn6-KL-SeL" firstAttribute="top" secondItem="ShN-c3-cla" secondAttribute="bottom" constant="36" id="EAc-Ve-9DN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ShN-c3-cla" secondAttribute="trailing" constant="179" id="FZM-Pt-LnX"/>
                             <constraint firstItem="Gn6-KL-SeL" firstAttribute="top" secondItem="sLa-cq-yMB" secondAttribute="bottom" constant="36" id="FnN-nK-pF9"/>
                             <constraint firstItem="X4s-Xr-jHz" firstAttribute="top" secondItem="aFG-Mf-IRl" secondAttribute="bottom" constant="8" id="GRX-EG-aBK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="55J-av-jnx" secondAttribute="trailing" constant="242" id="GsL-5t-Rcx"/>
                             <constraint firstItem="55J-av-jnx" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" id="IsG-qA-D67"/>
-                            <constraint firstItem="55J-av-jnx" firstAttribute="top" secondItem="aFG-Mf-IRl" secondAttribute="bottom" constant="86" id="KW9-aO-hll"/>
                             <constraint firstItem="ShN-c3-cla" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" constant="53" id="Lui-9c-JiL"/>
-                            <constraint firstItem="sLa-cq-yMB" firstAttribute="top" secondItem="cNT-dz-ouL" secondAttribute="bottom" constant="41" id="N82-j5-BH1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sLa-cq-yMB" secondAttribute="trailing" constant="62" id="Q3Y-0p-oLp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X4s-Xr-jHz" secondAttribute="trailing" constant="62" id="RRW-f7-nYa"/>
-                            <constraint firstItem="sLa-cq-yMB" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" constant="165" id="aXB-FJ-yCZ"/>
+                            <constraint firstItem="ShN-c3-cla" firstAttribute="top" secondItem="cNT-dz-ouL" secondAttribute="bottom" constant="29" id="XZT-G8-iJk"/>
+                            <constraint firstItem="cNT-dz-ouL" firstAttribute="top" secondItem="X4s-Xr-jHz" secondAttribute="bottom" constant="49" id="cOM-Dy-lAH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S0L-FB-fM1" secondAttribute="trailing" constant="62" id="d2M-D9-sSi"/>
                             <constraint firstItem="X4s-Xr-jHz" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" constant="53" id="dRx-6o-QnR"/>
-                            <constraint firstItem="cNT-dz-ouL" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" constant="17" id="etL-ST-YeA"/>
-                            <constraint firstItem="ShN-c3-cla" firstAttribute="top" secondItem="cNT-dz-ouL" secondAttribute="bottom" constant="41" id="i0F-W1-Y9f"/>
-                            <constraint firstItem="S0L-FB-fM1" firstAttribute="leading" secondItem="55J-av-jnx" secondAttribute="trailing" constant="108" id="imB-yV-woK"/>
-                            <constraint firstItem="cNT-dz-ouL" firstAttribute="top" secondItem="55J-av-jnx" secondAttribute="bottom" constant="48" id="j7w-hP-2sg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cNT-dz-ouL" secondAttribute="trailing" constant="16" id="jIG-Ho-ZQe"/>
-                            <constraint firstItem="cNT-dz-ouL" firstAttribute="top" secondItem="S0L-FB-fM1" secondAttribute="bottom" constant="53" id="qRB-EH-29q"/>
+                            <constraint firstItem="Gn6-KL-SeL" firstAttribute="top" secondItem="cNT-dz-ouL" secondAttribute="bottom" constant="95" id="fRD-dN-mBE"/>
+                            <constraint firstItem="sLa-cq-yMB" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" constant="171" id="gIS-j5-vaN"/>
+                            <constraint firstItem="cNT-dz-ouL" firstAttribute="trailing" secondItem="zzi-zr-MWg" secondAttribute="trailingMargin" id="isv-Fr-jJT"/>
+                            <constraint firstItem="sLa-cq-yMB" firstAttribute="top" secondItem="cNT-dz-ouL" secondAttribute="bottom" constant="29" id="mhE-Ft-AL7"/>
+                            <constraint firstItem="cNT-dz-ouL" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" id="q97-BD-OGZ"/>
+                            <constraint firstItem="cNT-dz-ouL" firstAttribute="top" secondItem="aFG-Mf-IRl" secondAttribute="bottom" constant="105" id="t8a-Tm-HKu"/>
+                            <constraint firstItem="55J-av-jnx" firstAttribute="top" secondItem="aFG-Mf-IRl" secondAttribute="bottom" constant="67" id="v5R-dk-I20"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3ir-Y2-om9"/>
@@ -224,10 +254,18 @@ BarTendr !</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxC-vC-2kv">
-                                <rect key="frame" x="134" y="469" width="53" height="30"/>
+                                <rect key="frame" x="76" y="500" width="53" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.60292025719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Annuler">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="JEw-Um-rsJ" kind="push" id="CY5-fc-PIY"/>
                                 </connections>
@@ -238,33 +276,41 @@ BarTendr !</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE7-Xd-44h">
-                                <rect key="frame" x="120" y="431" width="81" height="30"/>
-                                <state key="normal" title="Suivant">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="3PJ-s6-hMN" kind="push" id="Qmi-i0-Do0"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paiement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXW-ry-wgO">
                                 <rect key="frame" x="116" y="42" width="89" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE7-Xd-44h">
+                                <rect key="frame" x="174" y="500" width="81" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.60292025719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Suivant">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="3PJ-s6-hMN" kind="push" id="Qmi-i0-Do0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XXW-ry-wgO" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="100" id="5cE-JF-IZm"/>
-                            <constraint firstItem="CE7-Xd-44h" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="104" id="5oe-wb-gPQ"/>
                             <constraint firstItem="t0n-AF-nPf" firstAttribute="top" secondItem="Rfm-Jc-LmZ" secondAttribute="bottom" constant="235" id="Dgb-09-gfQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CE7-Xd-44h" secondAttribute="trailing" constant="49" id="Iiq-J7-Khn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GxC-vC-2kv" secondAttribute="trailing" constant="175" id="LVR-jh-6B7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XXW-ry-wgO" secondAttribute="trailing" constant="99" id="Lkd-La-Ep4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CE7-Xd-44h" secondAttribute="trailing" constant="103" id="U5X-l9-6JJ"/>
-                            <constraint firstItem="GxC-vC-2kv" firstAttribute="top" secondItem="CE7-Xd-44h" secondAttribute="bottom" constant="8" id="Xcg-ac-fUG"/>
-                            <constraint firstItem="t0n-AF-nPf" firstAttribute="top" secondItem="GxC-vC-2kv" secondAttribute="bottom" constant="69" id="key-0I-U8e"/>
-                            <constraint firstItem="GxC-vC-2kv" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="118" id="mfW-Cl-sre"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GxC-vC-2kv" secondAttribute="trailing" constant="117" id="ojA-1U-zjy"/>
+                            <constraint firstItem="t0n-AF-nPf" firstAttribute="top" secondItem="GxC-vC-2kv" secondAttribute="bottom" constant="38" id="ReY-pC-Ld1"/>
+                            <constraint firstItem="GxC-vC-2kv" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="60" id="fhP-MW-Nu1"/>
+                            <constraint firstItem="CE7-Xd-44h" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="158" id="k1s-8n-BCM"/>
+                            <constraint firstItem="t0n-AF-nPf" firstAttribute="top" secondItem="CE7-Xd-44h" secondAttribute="bottom" constant="38" id="mjr-bD-FPM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Rfm-Jc-LmZ" secondAttribute="trailing" constant="49" id="p8b-VP-81H"/>
                             <constraint firstItem="Rfm-Jc-LmZ" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="50" id="rhd-vN-bcg"/>
                             <constraint firstItem="XXW-ry-wgO" firstAttribute="top" secondItem="xsJ-Lv-7Mk" secondAttribute="bottom" constant="22" id="wkP-sZ-1SR"/>
@@ -300,11 +346,19 @@ BarTendr !</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2y-3A-KtG">
-                                <rect key="frame" x="61" y="434" width="198" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2y-3A-KtG">
+                                <rect key="frame" x="61" y="500" width="198" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.60292025719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Passer une autre commande">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="vXZ-lx-hvc" kind="push" id="5RL-ew-l2c"/>
                                 </connections>
@@ -319,6 +373,7 @@ BarTendr !</string>
                             <constraint firstItem="bc5-Wi-jtO" firstAttribute="leading" secondItem="RnI-KW-fn3" secondAttribute="leadingMargin" constant="58" id="bHy-LH-ZxN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="x2y-3A-KtG" secondAttribute="trailing" constant="45" id="gzd-Na-9fW"/>
                             <constraint firstItem="vZN-cZ-7bJ" firstAttribute="leading" secondItem="RnI-KW-fn3" secondAttribute="leadingMargin" id="mgz-4a-o6i"/>
+                            <constraint firstItem="i2B-0X-ZLc" firstAttribute="top" secondItem="x2y-3A-KtG" secondAttribute="bottom" constant="38" id="nSc-YL-puh"/>
                             <constraint firstItem="x2y-3A-KtG" firstAttribute="leading" secondItem="RnI-KW-fn3" secondAttribute="leadingMargin" constant="45" id="ruM-c2-SsS"/>
                         </constraints>
                     </view>
@@ -341,19 +396,18 @@ BarTendr !</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTz-la-6Zi">
-                                <rect key="frame" x="85" y="488" width="49" height="30"/>
+                                <rect key="frame" x="85" y="505" width="49" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.60292025719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Panier">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmA-hQ-uHT">
-                                <rect key="frame" x="189" y="488" width="46" height="30"/>
-                                <state key="normal" title="Payer">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="JEw-Um-rsJ" kind="push" id="ZBa-Da-He9"/>
-                                </connections>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type de boisson" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-Z2-tct">
                                 <rect key="frame" x="85" y="28" width="150" height="30"/>
@@ -368,7 +422,7 @@ BarTendr !</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nwn-L7-Zq6">
-                                <rect key="frame" x="16" y="150" width="288" height="268"/>
+                                <rect key="frame" x="16" y="103" width="288" height="377"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Z3s-ga-yM5">
@@ -385,40 +439,65 @@ BarTendr !</string>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hly-ao-Oy2">
                                 <rect key="frame" x="16" y="65" width="51" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.60292025719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Retour">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="UTh-Pa-ILz" kind="push" id="GQP-Kf-GPR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmA-hQ-uHT">
+                                <rect key="frame" x="189" y="505" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.60292025719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Payer">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="JEw-Um-rsJ" kind="push" id="ZBa-Da-He9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nwn-L7-Zq6" firstAttribute="top" secondItem="aRv-SO-W5k" secondAttribute="bottom" constant="60" id="0bA-YC-HBy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aRv-SO-W5k" secondAttribute="trailing" constant="69" id="1uP-dr-PEE"/>
                             <constraint firstItem="hly-ao-Oy2" firstAttribute="top" secondItem="CqW-At-Xtg" secondAttribute="bottom" constant="45" id="2FC-51-D4F"/>
-                            <constraint firstItem="nwn-L7-Zq6" firstAttribute="top" secondItem="hly-ao-Oy2" secondAttribute="bottom" constant="55" id="2UA-kv-6UW"/>
+                            <constraint firstItem="9vY-Yj-q4X" firstAttribute="top" secondItem="pmA-hQ-uHT" secondAttribute="bottom" constant="33" id="3ag-V2-wHS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hly-ao-Oy2" secondAttribute="trailing" constant="237" id="4Yk-YE-dXF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vTz-la-6Zi" secondAttribute="trailing" constant="170" id="8ih-WY-Vzd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pmA-hQ-uHT" secondAttribute="trailing" constant="69" id="9b4-b1-GyR"/>
-                            <constraint firstItem="nwn-L7-Zq6" firstAttribute="top" secondItem="q5b-Z2-tct" secondAttribute="bottom" constant="92" id="AEK-AK-vSV"/>
                             <constraint firstItem="pmA-hQ-uHT" firstAttribute="leading" secondItem="qXg-XK-TXA" secondAttribute="leadingMargin" constant="173" id="AiF-zo-VdG"/>
+                            <constraint firstItem="nwn-L7-Zq6" firstAttribute="top" secondItem="hly-ao-Oy2" secondAttribute="bottom" constant="8" id="C5l-pl-fto"/>
                             <constraint firstItem="nwn-L7-Zq6" firstAttribute="trailing" secondItem="qXg-XK-TXA" secondAttribute="trailingMargin" id="Ceh-rA-a0t"/>
-                            <constraint firstItem="9vY-Yj-q4X" firstAttribute="top" secondItem="pmA-hQ-uHT" secondAttribute="bottom" constant="50" id="CxB-ir-38C"/>
-                            <constraint firstItem="aRv-SO-W5k" firstAttribute="leading" secondItem="hly-ao-Oy2" secondAttribute="trailing" constant="96" id="HLj-3L-8id"/>
                             <constraint firstItem="vTz-la-6Zi" firstAttribute="leading" secondItem="qXg-XK-TXA" secondAttribute="leadingMargin" constant="69" id="Lgb-ww-TXH"/>
-                            <constraint firstItem="nwn-L7-Zq6" firstAttribute="top" secondItem="CqW-At-Xtg" secondAttribute="bottom" constant="130" id="SLA-vm-dPp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="q5b-Z2-tct" secondAttribute="trailing" constant="69" id="SUL-qx-Skl"/>
+                            <constraint firstItem="nwn-L7-Zq6" firstAttribute="top" secondItem="aRv-SO-W5k" secondAttribute="bottom" constant="13" id="SnP-9u-vOv"/>
+                            <constraint firstItem="aRv-SO-W5k" firstAttribute="leading" secondItem="qXg-XK-TXA" secondAttribute="leadingMargin" constant="147" id="TWs-eR-7HP"/>
                             <constraint firstItem="hly-ao-Oy2" firstAttribute="leading" secondItem="qXg-XK-TXA" secondAttribute="leadingMargin" id="Vjt-Jp-yk1"/>
-                            <constraint firstItem="vTz-la-6Zi" firstAttribute="top" secondItem="nwn-L7-Zq6" secondAttribute="bottom" constant="70" id="Vxy-cp-Dk4"/>
-                            <constraint firstItem="9vY-Yj-q4X" firstAttribute="top" secondItem="vTz-la-6Zi" secondAttribute="bottom" constant="50" id="YJw-cH-b4Y"/>
-                            <constraint firstItem="9vY-Yj-q4X" firstAttribute="top" secondItem="nwn-L7-Zq6" secondAttribute="bottom" constant="150" id="Zvt-q0-Gou"/>
+                            <constraint firstItem="nwn-L7-Zq6" firstAttribute="top" secondItem="q5b-Z2-tct" secondAttribute="bottom" constant="45" id="c44-ES-och"/>
                             <constraint firstItem="q5b-Z2-tct" firstAttribute="top" secondItem="CqW-At-Xtg" secondAttribute="bottom" constant="8" id="c9P-uF-bcf"/>
+                            <constraint firstItem="nwn-L7-Zq6" firstAttribute="top" secondItem="CqW-At-Xtg" secondAttribute="bottom" constant="83" id="cCq-wn-ZKK"/>
+                            <constraint firstItem="9vY-Yj-q4X" firstAttribute="top" secondItem="vTz-la-6Zi" secondAttribute="bottom" constant="33" id="cbW-Gj-hxn"/>
                             <constraint firstItem="q5b-Z2-tct" firstAttribute="leading" secondItem="qXg-XK-TXA" secondAttribute="leadingMargin" constant="69" id="eBC-uL-L59"/>
                             <constraint firstItem="aRv-SO-W5k" firstAttribute="top" secondItem="q5b-Z2-tct" secondAttribute="bottom" constant="11" id="j0K-p6-0XY"/>
-                            <constraint firstItem="pmA-hQ-uHT" firstAttribute="top" secondItem="nwn-L7-Zq6" secondAttribute="bottom" constant="70" id="kop-db-d98"/>
                             <constraint firstItem="nwn-L7-Zq6" firstAttribute="leading" secondItem="qXg-XK-TXA" secondAttribute="leadingMargin" id="m6t-VK-5gn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aRv-SO-W5k" secondAttribute="trailing" constant="69" id="nip-sf-wL9"/>
+                            <constraint firstItem="vTz-la-6Zi" firstAttribute="top" secondItem="nwn-L7-Zq6" secondAttribute="bottom" constant="25" id="rvh-kJ-zAT"/>
                             <constraint firstItem="hly-ao-Oy2" firstAttribute="leading" secondItem="qXg-XK-TXA" secondAttribute="leadingMargin" id="sw7-ir-Y9Y"/>
+                            <constraint firstItem="pmA-hQ-uHT" firstAttribute="top" secondItem="nwn-L7-Zq6" secondAttribute="bottom" constant="25" id="y5h-7k-p7M"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2AS-2Z-ilR"/>
@@ -446,7 +525,7 @@ BarTendr !</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liste de boisson" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKE-7n-MEL">
-                                <rect key="frame" x="76" y="34" width="168" height="24"/>
+                                <rect key="frame" x="76" y="28" width="168" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -466,31 +545,38 @@ BarTendr !</string>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohC-FF-y7m">
-                                <rect key="frame" x="16" y="68" width="46" height="30"/>
+                                <rect key="frame" x="16" y="63" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.60292025719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Retour">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="Stg-CR-w9X" kind="push" identifier="return_numberTable" id="qWI-yu-FD3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Es-8j-EmM">
-                                <rect key="frame" x="85" y="483" width="44" height="30"/>
+                                <rect key="frame" x="95" y="505" width="44" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.60292025719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Panier">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXA-mh-Vcq">
-                                <rect key="frame" x="204" y="483" width="40" height="30"/>
-                                <state key="normal" title="Payer">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="JEw-Um-rsJ" kind="push" id="o1Y-4D-AGF"/>
-                                </connections>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rbi-Jq-rwd">
-                                <rect key="frame" x="16" y="106" width="288" height="369"/>
+                                <rect key="frame" x="16" y="101" width="288" height="378"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell2" id="2Ng-DI-gR7">
@@ -507,34 +593,54 @@ BarTendr !</string>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table n°X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fl-Qb-68s">
-                                <rect key="frame" x="172" y="72" width="72" height="21"/>
+                                <rect key="frame" x="172" y="67" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXA-mh-Vcq">
+                                <rect key="frame" x="196" y="505" width="40" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.60292025719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Payer">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="JEw-Um-rsJ" kind="push" id="o1Y-4D-AGF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6Fl-Qb-68s" firstAttribute="leading" secondItem="ohC-FF-y7m" secondAttribute="trailing" constant="110" id="1jA-0W-DWv"/>
                             <constraint firstItem="rbi-Jq-rwd" firstAttribute="trailing" secondItem="Y53-2S-IMa" secondAttribute="trailingMargin" id="2dd-Oa-hfD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6Fl-Qb-68s" secondAttribute="trailing" constant="60" id="3qZ-Xe-Ppa"/>
-                            <constraint firstItem="6Fl-Qb-68s" firstAttribute="top" secondItem="QKE-7n-MEL" secondAttribute="bottom" constant="14" id="53v-nB-Cqw"/>
-                            <constraint firstItem="TXA-mh-Vcq" firstAttribute="top" secondItem="rbi-Jq-rwd" secondAttribute="bottom" constant="8" id="MT4-Vt-40J"/>
-                            <constraint firstItem="QKE-7n-MEL" firstAttribute="top" secondItem="0ZN-DM-8iT" secondAttribute="bottom" constant="14" id="Oil-jn-Wgr"/>
-                            <constraint firstItem="TXA-mh-Vcq" firstAttribute="leading" secondItem="0Es-8j-EmM" secondAttribute="trailing" constant="75" id="QNi-kU-3ad"/>
-                            <constraint firstItem="rbi-Jq-rwd" firstAttribute="top" secondItem="6Fl-Qb-68s" secondAttribute="bottom" constant="13" id="Qay-i1-7Wu"/>
-                            <constraint firstItem="ohC-FF-y7m" firstAttribute="top" secondItem="0ZN-DM-8iT" secondAttribute="bottom" constant="48" id="Uhg-Kl-KJS"/>
+                            <constraint firstItem="6Fl-Qb-68s" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" constant="156" id="9bd-gS-A8o"/>
+                            <constraint firstItem="rbi-Jq-rwd" firstAttribute="top" secondItem="ohC-FF-y7m" secondAttribute="bottom" constant="8" id="Cd0-nA-2QS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Es-8j-EmM" secondAttribute="trailing" constant="165" id="Ck8-62-cJ5"/>
+                            <constraint firstItem="6Fl-Qb-68s" firstAttribute="top" secondItem="QKE-7n-MEL" secondAttribute="bottom" constant="15" id="Dtd-w1-Nzl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TXA-mh-Vcq" secondAttribute="trailing" constant="68" id="Ld2-uS-get"/>
+                            <constraint firstItem="TXA-mh-Vcq" firstAttribute="top" secondItem="rbi-Jq-rwd" secondAttribute="bottom" constant="26" id="Pac-Fw-1YT"/>
+                            <constraint firstItem="ohC-FF-y7m" firstAttribute="top" secondItem="0ZN-DM-8iT" secondAttribute="bottom" constant="43" id="PiL-W3-S6Z"/>
+                            <constraint firstItem="xmM-uF-egN" firstAttribute="top" secondItem="TXA-mh-Vcq" secondAttribute="bottom" constant="33" id="V7C-3X-b2F"/>
                             <constraint firstItem="rbi-Jq-rwd" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" id="aj5-ub-vIA"/>
+                            <constraint firstItem="TXA-mh-Vcq" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" constant="180" id="ckb-iO-EkP"/>
                             <constraint firstItem="QKE-7n-MEL" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" constant="60" id="cop-hl-QX8"/>
-                            <constraint firstItem="xmM-uF-egN" firstAttribute="top" secondItem="0Es-8j-EmM" secondAttribute="bottom" constant="55" id="erd-Oi-WZa"/>
-                            <constraint firstItem="0Es-8j-EmM" firstAttribute="top" secondItem="rbi-Jq-rwd" secondAttribute="bottom" constant="8" id="jT1-jO-QRg"/>
+                            <constraint firstItem="rbi-Jq-rwd" firstAttribute="top" secondItem="0ZN-DM-8iT" secondAttribute="bottom" constant="81" id="eAP-hp-mXX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Fl-Qb-68s" secondAttribute="trailing" constant="60" id="ev2-G4-LPe"/>
+                            <constraint firstItem="xmM-uF-egN" firstAttribute="top" secondItem="0Es-8j-EmM" secondAttribute="bottom" constant="33" id="gtW-Vx-oY0"/>
+                            <constraint firstItem="0Es-8j-EmM" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" constant="79" id="hzN-vG-wsu"/>
                             <constraint firstItem="ohC-FF-y7m" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" id="je0-SQ-IG2"/>
-                            <constraint firstItem="rbi-Jq-rwd" firstAttribute="top" secondItem="QKE-7n-MEL" secondAttribute="bottom" constant="48" id="lRx-zO-jBA"/>
-                            <constraint firstItem="rbi-Jq-rwd" firstAttribute="top" secondItem="ohC-FF-y7m" secondAttribute="bottom" constant="8" id="ltv-t6-lsv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TXA-mh-Vcq" secondAttribute="trailing" constant="60" id="s9F-G7-8MT"/>
-                            <constraint firstItem="xmM-uF-egN" firstAttribute="top" secondItem="TXA-mh-Vcq" secondAttribute="bottom" constant="55" id="t8Y-6w-mXl"/>
+                            <constraint firstItem="0Es-8j-EmM" firstAttribute="top" secondItem="rbi-Jq-rwd" secondAttribute="bottom" constant="26" id="kpR-MO-UGr"/>
+                            <constraint firstItem="QKE-7n-MEL" firstAttribute="top" secondItem="0ZN-DM-8iT" secondAttribute="bottom" constant="8" id="tIm-u7-993"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ohC-FF-y7m" secondAttribute="trailing" constant="242" id="x1B-zF-JKC"/>
+                            <constraint firstItem="rbi-Jq-rwd" firstAttribute="top" secondItem="6Fl-Qb-68s" secondAttribute="bottom" constant="13" id="xpV-Jd-RlB"/>
+                            <constraint firstItem="rbi-Jq-rwd" firstAttribute="top" secondItem="QKE-7n-MEL" secondAttribute="bottom" constant="49" id="yk5-gk-Qj8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QKE-7n-MEL" secondAttribute="trailing" constant="60" id="zBw-4P-jxX"/>
-                            <constraint firstItem="0Es-8j-EmM" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" constant="69" id="zWe-Ph-8A1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6OV-lo-NbI"/>
@@ -576,8 +682,8 @@ BarTendr !</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ZBa-Da-He9"/>
-        <segue reference="qWI-yu-FD3"/>
+        <segue reference="CY5-fc-PIY"/>
+        <segue reference="gyI-96-7kZ"/>
         <segue reference="GQP-Kf-GPR"/>
         <segue reference="5RL-ew-l2c"/>
     </inferredMetricsTieBreakers>
