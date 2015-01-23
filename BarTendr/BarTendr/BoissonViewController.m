@@ -100,6 +100,7 @@
                         categorie.nom_categorie = [dictionary objectForKey:@"name"];
                         NSLog(@"name = %@", categorie.nom_categorie);
                         [data addObject:categorie.nom_categorie];
+                        NSLog(@"%@", data);
                 }
                 //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
                    

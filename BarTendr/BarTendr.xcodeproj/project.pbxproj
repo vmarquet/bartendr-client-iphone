@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		371E54F41A724C1500F15643 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 371E54F31A724C1500F15643 /* Article.m */; };
 		37CD71C61A1FAC1300A86E85 /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CD71C51A1FAC1300A86E85 /* QRViewController.m */; };
 		37DF97211A69522100113402 /* Categorie.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DF97201A69522100113402 /* Categorie.m */; };
 		37EAC7F11A1643D600360744 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC7F01A1643D600360744 /* main.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		371E54F21A724C1500F15643 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
+		371E54F31A724C1500F15643 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
 		37CD71C41A1FAC1300A86E85 /* QRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRViewController.h; sourceTree = "<group>"; };
 		37CD71C51A1FAC1300A86E85 /* QRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRViewController.m; sourceTree = "<group>"; };
 		37DF971F1A69522100113402 /* Categorie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categorie.h; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				64BA91E91A697C4200BD9EFC /* ExpendingCell */,
 				64F66C9B1A6FDD510075BA5A /* CategoryCell */,
 				6491C5771A69176D0028390B /* Globals.h */,
+				371E54F21A724C1500F15643 /* Article.h */,
+				371E54F31A724C1500F15643 /* Article.m */,
 				37DF971F1A69522100113402 /* Categorie.h */,
 				37DF97201A69522100113402 /* Categorie.m */,
 				64377AE91A28908B00F2A93C /* recapViewController.h */,
@@ -308,6 +313,7 @@
 				64377AEB1A28908B00F2A93C /* listeBoissonViewController.m in Sources */,
 				643434E81A1F931B005482E3 /* boissonViewController.m in Sources */,
 				64F66CA01A6FDDB10075BA5A /* CategoryCell.m in Sources */,
+				371E54F41A724C1500F15643 /* Article.m in Sources */,
 				37CD71C61A1FAC1300A86E85 /* QRViewController.m in Sources */,
 				37EAC7FA1A1643D600360744 /* ViewController.m in Sources */,
 				37EAC7F11A1643D600360744 /* main.m in Sources */,
