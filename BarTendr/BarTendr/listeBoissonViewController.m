@@ -9,6 +9,7 @@
 #import "listeBoissonViewController.h"
 #import "Globals.h"
 #import "Categorie.h"
+#import "Article.h"
 
 @interface listeBoissonViewController ()
 @property UIAlertView *alert;
@@ -107,10 +108,16 @@ int indexSelected;
             if ([_dictionnaire isKindOfClass:[NSArray class]]){
                 //Parcours du Json
                 for (NSDictionary *dictionary in _dictionnaire) {
-                    Categorie * categorie = [[Categorie alloc] init];
-                    categorie.id_categorie = [[dictionary objectForKey:@"id"]integerValue];
-                    categorie.nom_categorie = [dictionary objectForKey:@"name"];
-                    [data2 addObject:categorie.nom_categorie];
+                    Article * article = [[Article alloc] init];
+                    article.id_boisson = [[dictionary objectForKey:@"id"]integerValue];
+                    article.nom_boisson = [dictionary objectForKey:@"name"];
+                    article.boisson_description = [dictionary objectForKey:@"description"];
+                    article.volume_boisson = [dictionary objectForKey:@"size"];
+                    article.prix = [[dictionary objectForKey:@"price"]integerValue];
+                    [data2 addObject:article.nom_boisson];
+                    // Affichage du details de chaque boisson
+                    NSLog(@"Mes données article : id= %d, nom= %@, volume= %@, prix= %2f €, description= %@"
+                          , article.id_boisson, article.nom_boisson,article.volume_boisson, article.prix,article.boisson_description);
                 }
                 //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
                 [self.tableView2 reloadData];
