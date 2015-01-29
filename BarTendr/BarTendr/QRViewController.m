@@ -29,6 +29,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    commande = [[Commande alloc] init];
+    commande.liste_article = [[NSMutableArray alloc] initWithObjects:nil];
+    
     _isReading = YES;
     
     _captureSession = nil;

@@ -23,8 +23,8 @@
     labelTable.text = numberTable;
     
     // TableView
-    data3 = [[NSMutableArray alloc]initWithObjects: @"Grimbergen x1", @"Leffe Blonde x1", @"Kilkenny x1", @"Guiness x2", nil];
-    
+    //data3 = [[NSMutableArray alloc]initWithObjects: @"Grimbergen x1", @"Leffe Blonde x1", @"Kilkenny x1", @"Guiness x2", nil];
+    data3 = commande.liste_article;
     
     
     
@@ -110,14 +110,34 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView3 cellForRowAtIndexPath:(NSIndexPath *)indexPath3 {
     
-    static NSString *CellIdentifier3 = @"Cell3";
-    UITableViewCell *cell3 = [tableView3 dequeueReusableCellWithIdentifier:CellIdentifier3 forIndexPath:indexPath3];
+    static NSString *CellIdentifier3 = @"RecapCell";
+    RecapCell *cell3 = [tableView3 dequeueReusableCellWithIdentifier:CellIdentifier3];
     
     if(cell3 == nil){
-        cell3 = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier3];
+        NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"RecapCell" owner:self options:nil];
+        cell3 = [nib objectAtIndex:0];
     }
     
-    cell3.textLabel.text = [data3 objectAtIndex:indexPath3.row];
+    NSString * strPrix = [NSString alloc];
+    NSString * strQuantite = [NSString alloc];
+    Article * obj;
+    obj = [[Article alloc] init];
+    
+    obj = [data3 objectAtIndex:indexPath3.row];
+    cell3.nomBoisson.text = obj.nom_boisson;
+    strPrix = [strPrix initWithFormat:@"%.2f€", obj.prix];
+    cell3.prixBoisson.text = strPrix;
+    strQuantite = [strQuantite initWithFormat:@"x %d", obj.quantite];
+    cell3.quantiteBoisson.text = strQuantite;
+    NSLog(@"%@ %@", strPrix, strQuantite);
+    
+    //Affichage de la commande en entier en console
+    NSLog(@"\nRECAP:\n");
+    for(int i = 0; i < commande.liste_article.count; i++){
+        obj = [commande.liste_article objectAtIndex:i];
+        NSLog(@"%@ x %d", obj.nom_boisson, obj.quantite);
+    }
+    
     return cell3;
     
 }

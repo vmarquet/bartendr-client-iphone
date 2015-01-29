@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Categorie.h"
 
 @interface Article : NSObject {
     
@@ -14,8 +15,9 @@
     NSString * nom_boisson;
     NSString * boisson_description;
     float prix;
+    unsigned int quantite;
     NSString * volume_boisson;
-    
+    Categorie * categorie;
     
 }
 
@@ -24,6 +26,9 @@
 @property (nonatomic, retain) NSString * boisson_description;
 @property (nonatomic) float prix;
 @property (nonatomic, retain) NSString * volume_boisson;
+@property (nonatomic, retain) Categorie * categorie;
+@property (nonatomic) unsigned int quantite;
+
 
 
 @end

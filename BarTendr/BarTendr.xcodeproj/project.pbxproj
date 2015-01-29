@@ -25,6 +25,9 @@
 		64BA91E61A697C2600BD9EFC /* biere.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64BA91E21A697C2600BD9EFC /* biere.jpg */; };
 		64BA91E71A697C2600BD9EFC /* ExpendingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BA91E41A697C2600BD9EFC /* ExpendingCell.m */; };
 		64BA91E81A697C2600BD9EFC /* ExpendingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64BA91E51A697C2600BD9EFC /* ExpendingCell.xib */; };
+		64D1E3BF1A77B94700294DC2 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D1E3BE1A77B94600294DC2 /* Globals.m */; };
+		64D1E3C21A77C44F00294DC2 /* RecapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D1E3C11A77C44F00294DC2 /* RecapCell.xib */; };
+		64D1E3C51A77C48300294DC2 /* RecapCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D1E3C41A77C48300294DC2 /* RecapCell.m */; };
 		64F66C9D1A6FDD830075BA5A /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F66C9C1A6FDD830075BA5A /* CategoryCell.xib */; };
 		64F66CA01A6FDDB10075BA5A /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F66C9F1A6FDDB10075BA5A /* CategoryCell.m */; };
 		64F66CA81A72A8690075BA5A /* Commande.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F66CA71A72A8690075BA5A /* Commande.m */; };
@@ -73,6 +76,10 @@
 		64BA91E31A697C2600BD9EFC /* ExpendingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpendingCell.h; sourceTree = "<group>"; };
 		64BA91E41A697C2600BD9EFC /* ExpendingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpendingCell.m; sourceTree = "<group>"; };
 		64BA91E51A697C2600BD9EFC /* ExpendingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpendingCell.xib; sourceTree = "<group>"; };
+		64D1E3BE1A77B94600294DC2 /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
+		64D1E3C11A77C44F00294DC2 /* RecapCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecapCell.xib; sourceTree = "<group>"; };
+		64D1E3C31A77C48300294DC2 /* RecapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecapCell.h; sourceTree = "<group>"; };
+		64D1E3C41A77C48300294DC2 /* RecapCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecapCell.m; sourceTree = "<group>"; };
 		64F66C9C1A6FDD830075BA5A /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		64F66C9E1A6FDDB10075BA5A /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
 		64F66C9F1A6FDDB10075BA5A /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
@@ -119,10 +126,12 @@
 		37EAC7ED1A1643D600360744 /* BarTendr */ = {
 			isa = PBXGroup;
 			children = (
+				64D1E3C01A77C43100294DC2 /* RecapCell */,
 				64BA91EA1A697C5B00BD9EFC /* Images */,
 				64BA91E91A697C4200BD9EFC /* ExpendingCell */,
 				64F66C9B1A6FDD510075BA5A /* CategoryCell */,
 				6491C5771A69176D0028390B /* Globals.h */,
+				64D1E3BE1A77B94600294DC2 /* Globals.m */,
 				371E54F21A724C1500F15643 /* Article.h */,
 				371E54F31A724C1500F15643 /* Article.m */,
 				37DF971F1A69522100113402 /* Categorie.h */,
@@ -193,6 +202,16 @@
 				6491C5A91A6974A10028390B /* logo.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		64D1E3C01A77C43100294DC2 /* RecapCell */ = {
+			isa = PBXGroup;
+			children = (
+				64D1E3C11A77C44F00294DC2 /* RecapCell.xib */,
+				64D1E3C31A77C48300294DC2 /* RecapCell.h */,
+				64D1E3C41A77C48300294DC2 /* RecapCell.m */,
+			);
+			name = RecapCell;
 			sourceTree = "<group>";
 		};
 		64F66C9B1A6FDD510075BA5A /* CategoryCell */ = {
@@ -287,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6491C5AA1A6974A10028390B /* logo.png in Resources */,
+				64D1E3C21A77C44F00294DC2 /* RecapCell.xib in Resources */,
 				64F66C9D1A6FDD830075BA5A /* CategoryCell.xib in Resources */,
 				64BA91E61A697C2600BD9EFC /* biere.jpg in Resources */,
 				64BA91E81A697C2600BD9EFC /* ExpendingCell.xib in Resources */,
@@ -311,7 +331,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				37EAC7F41A1643D600360744 /* AppDelegate.m in Sources */,
+				64D1E3C51A77C48300294DC2 /* RecapCell.m in Sources */,
 				37EAC7F71A1643D600360744 /* BarTendr.xcdatamodeld in Sources */,
+				64D1E3BF1A77B94700294DC2 /* Globals.m in Sources */,
 				64BA91E71A697C2600BD9EFC /* ExpendingCell.m in Sources */,
 				64377AEC1A28908B00F2A93C /* recapViewController.m in Sources */,
 				37DF97211A69522100113402 /* Categorie.m in Sources */,

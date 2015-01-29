@@ -10,4 +10,8 @@
 
 @interface RecapCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UILabel *nomBoisson;
+@property (strong, nonatomic) IBOutlet UILabel *prixBoisson;
+@property (strong, nonatomic) IBOutlet UILabel *quantiteBoisson;
+
 @end

@@ -7,6 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Commande.h"
 
 extern NSString * numberTable;
-//extern NSArray * data;
+extern Commande * commande;
+
+@interface Globals : NSObject
+{
+
+}
+@end

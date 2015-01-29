@@ -17,9 +17,11 @@
     int i;
     
     for(i = 0; i<liste_article.count; i++){
-        //remplir avec le prix de chaque article de la liste
-        //total += liste_article[i][indexPrix];
+        //remplir avec le prix de chaque article de la liste x la quantité
+        total = 0;
     }
 }
+
+
 
 @end

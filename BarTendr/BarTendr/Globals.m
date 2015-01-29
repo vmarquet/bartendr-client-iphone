@@ -7,3 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Globals.h"
+
+NSString * numberTable;
+Commande * commande;
+
+@implementation Globals
+{
+    
+}
+
+@end

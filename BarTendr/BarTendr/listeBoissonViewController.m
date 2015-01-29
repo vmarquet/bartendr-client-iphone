@@ -158,6 +158,43 @@ int indexSelected;
 
 -(void)buttonPressed {
     NSLog(@"Button %d Pressed!", indexSelected);
+    NSLog(@"Article %@ ajouté au panier !", [data2 objectAtIndex:indexSelected]);
+    
+    //A compléter quand la structure des JSON sera terminée
+    Article * article ;
+    Article * articleComp;
+    bool flag = false;
+    article = [[Article alloc] init];
+    articleComp = [[Article alloc] init];
+    article.quantite = 1;
+    article.id_boisson = indexSelected;
+    article.nom_boisson = [data2 objectAtIndex:indexSelected];
+    //str = [article ];
+    
+    NSLog(@"\nRECAP:\n");
+    for(int i = 0; i < commande.liste_article.count; i++){
+        articleComp = [commande.liste_article objectAtIndex:i];
+        if(article.nom_boisson == articleComp.nom_boisson && article.id_boisson == articleComp.id_boisson) {
+            article.quantite = articleComp.quantite + 1;
+            [commande.liste_article replaceObjectAtIndex:i withObject:article];
+            flag = true;
+            break;
+        }
+        //NSLog(@"%@", article.nom_boisson);
+    }
+    
+    NSLog(@"\n%@ x%d, index %d", article.nom_boisson, article.quantite, article.id_boisson);
+    
+    if(flag == false){
+        [commande.liste_article addObject:article];
+    }
+    //Affichage de la commande en entier en console
+    NSLog(@"\nRECAP:\n");
+    for(int i = 0; i < commande.liste_article.count; i++){
+        article = [commande.liste_article objectAtIndex:i];
+        NSLog(@"%@ x %d", article.nom_boisson, article.quantite);
+    }
+    
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

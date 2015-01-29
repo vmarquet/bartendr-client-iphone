@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Article.h"
 
 @interface Commande : NSObject {
     
