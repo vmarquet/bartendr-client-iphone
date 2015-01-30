@@ -151,4 +151,13 @@
 }
 */
 
+- (void)tableView:(UITableView *)tableView3 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Article * obj = [[Article alloc] init];
+    obj = [data3 objectAtIndex:indexPath.row];
+
+    
+
+}
+
 @end

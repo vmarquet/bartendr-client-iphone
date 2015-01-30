@@ -126,8 +126,8 @@
 		37EAC7ED1A1643D600360744 /* BarTendr */ = {
 			isa = PBXGroup;
 			children = (
-				64D1E3C01A77C43100294DC2 /* RecapCell */,
 				64BA91EA1A697C5B00BD9EFC /* Images */,
+				64D1E3C01A77C43100294DC2 /* RecapCell */,
 				64BA91E91A697C4200BD9EFC /* ExpendingCell */,
 				64F66C9B1A6FDD510075BA5A /* CategoryCell */,
 				6491C5771A69176D0028390B /* Globals.h */,
