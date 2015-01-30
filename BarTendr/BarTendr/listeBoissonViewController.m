@@ -171,15 +171,17 @@ Article * article;
     bool flag = false;
     article = [[Article alloc] init];
     articleComp = [[Article alloc] init];
+    
     article.quantite = 1;
     article.id_boisson = indexSelected;
     article.nom_boisson = art.nom_boisson;
+    article.prix = art.prix;
 
     
-    NSLog(@"\nRECAP:\n");
+    //NSLog(@"\nRECAP:\n");
     for(int i = 0; i < commande.liste_article.count; i++){
         articleComp = [commande.liste_article objectAtIndex:i];
-        if(article.nom_boisson == articleComp.nom_boisson && article.id_boisson == articleComp.id_boisson) {
+        if(art.id_boisson == articleComp.id_boisson) {
             article.quantite = articleComp.quantite + 1;
             [commande.liste_article replaceObjectAtIndex:i withObject:article];
             flag = true;
@@ -188,7 +190,7 @@ Article * article;
         //NSLog(@"%@", article.nom_boisson);
     }
     
-    NSLog(@"\n%@ x%d, index %d", article.nom_boisson, article.quantite, article.id_boisson);
+    //NSLog(@"\n%@ x%d, index %d", article.nom_boisson, article.quantite, article.id_boisson);
     
     if(flag == false){
         [commande.liste_article addObject:article];
