@@ -27,6 +27,7 @@
 @synthesize idCategorie;
 
 int indexSelected;
+Article * article;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -62,11 +63,6 @@ int indexSelected;
     
     // Initialisation de la TableView
     data2 = [[NSMutableArray alloc]initWithObjects:nil];
-    
-    /*
-    // Initialisation de la TableView
-    data2 = [[NSMutableArray alloc]initWithObjects:@"Heineken", @"Kronenbourg", @"Grimbergen", @"Leffe Blonde", @"Leffe Ruby", @"Kilkenny", @"Guiness", nil];
-     */
 }
 
 #pragma mark NSURLConnectionDelegate
@@ -108,20 +104,19 @@ int indexSelected;
             if ([_dictionnaire isKindOfClass:[NSArray class]]){
                 //Parcours du Json
                 for (NSDictionary *dictionary in _dictionnaire) {
-                    Article * article = [[Article alloc] init];
+                    article = [[Article alloc] init];
                     article.id_boisson = [[dictionary objectForKey:@"id"]integerValue];
                     article.nom_boisson = [dictionary objectForKey:@"name"];
                     article.boisson_description = [dictionary objectForKey:@"description"];
                     article.volume_boisson = [dictionary objectForKey:@"size"];
                     article.prix = [[dictionary objectForKey:@"price"]integerValue];
-                    [data2 addObject:article.nom_boisson];
+                    [data2 addObject:article];
                     // Affichage du details de chaque boisson
-                    NSLog(@"Mes données article : id= %d, nom= %@, volume= %@, prix= %2f €, description= %@"
+                    NSLog(@"Mes données article : id= %d, nom= %@, volume= %@, prix= %.2f €, description= %@"
                           , article.id_boisson, article.nom_boisson,article.volume_boisson, article.prix,article.boisson_description);
                 }
                 //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
                 [self.tableView2 reloadData];
-                NSLog(@"Ma Liste de données : %@", data2);
                 [_alert dismissWithClickedButtonIndex:0 animated:YES];
             }
         }
@@ -152,9 +147,11 @@ int indexSelected;
     }
     
     indexSelected = indexPath.row;
-    
-    cell.titleCell.text = [data2 objectAtIndex:indexPath.row];
-    cell.descLabelCell.text = @"Ceci est un test de description de boisson, ça doit être assez long pour être significatif !";
+    Article * my_article = [data2 objectAtIndex:indexPath.row];
+    cell.titleCell.text = my_article.nom_boisson;
+    cell.descLabelCell.text = my_article.boisson_description;
+    NSString * prix = [NSString stringWithFormat:@"%.2f €",my_article.prix];
+    cell.priceLabelCell.text = prix;
     //listen for clicks
     [cell.addButton addTarget:self action:@selector(buttonPressed)
      forControlEvents:UIControlEventTouchUpInside];
@@ -165,7 +162,8 @@ int indexSelected;
 
 -(void)buttonPressed {
     NSLog(@"Button %d Pressed!", indexSelected);
-    NSLog(@"Article %@ ajouté au panier !", [data2 objectAtIndex:indexSelected]);
+    Article * art = [data2 objectAtIndex:indexSelected];
+    NSLog(@"Article %@ ajouté au panier !", art.nom_boisson);
     
     //A compléter quand la structure des JSON sera terminée
     Article * article ;
@@ -175,8 +173,8 @@ int indexSelected;
     articleComp = [[Article alloc] init];
     article.quantite = 1;
     article.id_boisson = indexSelected;
-    article.nom_boisson = [data2 objectAtIndex:indexSelected];
-    //str = [article ];
+    article.nom_boisson = art.nom_boisson;
+
     
     NSLog(@"\nRECAP:\n");
     for(int i = 0; i < commande.liste_article.count; i++){
@@ -216,8 +214,6 @@ int indexSelected;
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    NSLog(@"Row at Index > %d: %@", indexPath.row, data2[indexPath.row]);
     
     if(SelectedIndex == indexPath.row){
         SelectedIndex = -1;

@@ -22,9 +22,8 @@
     
     labelTable.text = numberTable;
     
-    // TableView
-    //data3 = [[NSMutableArray alloc]initWithObjects: @"Grimbergen x1", @"Leffe Blonde x1", @"Kilkenny x1", @"Guiness x2", nil];
     data3 = commande.liste_article;
+    NSLog(@" TROLRORLRORLOR %@", data3);
     
     
     
@@ -141,7 +140,7 @@
     return cell3;
     
 }
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -149,7 +148,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 - (void)tableView:(UITableView *)tableView3 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
