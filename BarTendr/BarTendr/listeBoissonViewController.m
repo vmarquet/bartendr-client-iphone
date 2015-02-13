@@ -27,6 +27,8 @@
 @synthesize idCategorie;
 
 int indexSelected;
+int prevIndex = -1;
+NSIndexPath *prevPath;
 Article * article;
 
 - (void)viewDidLoad {
@@ -128,41 +130,60 @@ Article * article;
     // Dispose of any resources that can be recreated.
 }
 
+//Définition du nombre de section de la tableview
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)section2 {
     return 1;
 }
 
+//Définition du nombre de lignes de la tableview
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section2 {
     return [data2 count];
 }
 
+//Définition d'une cellule à la ligne = indexPath
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    //déclaration du type de cellule
     static NSString *CellIdentifier = @"expendingCell";
     ExpendingCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
     if(cell == nil){
         NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"ExpendingCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
     
+    //Paramétrage des données de la cellule (label ...)
     indexSelected = indexPath.row;
     Article * my_article = [data2 objectAtIndex:indexPath.row];
     
-    cell.titleCell.text = my_article.nom_boisson;
-    cell.descLabelCell.text = my_article.boisson_description;
-    if(indexSelected == indexPath.row){
+    if(prevIndex == indexPath.row){
         cell.descLabelCell.hidden = NO;
         cell.descCell.hidden = NO;
         cell.addButton.hidden = NO;
-    }else {
+    }
+    
+    cell.titleCell.text = my_article.nom_boisson;
+    cell.descLabelCell.text = my_article.boisson_description;
+    if(SelectedIndex == indexPath.row){
+        cell.descLabelCell.hidden = NO;
+        cell.descCell.hidden = NO;
+        cell.addButton.hidden = NO;
+    }else{
         cell.descLabelCell.hidden = YES;
         cell.descCell.hidden = YES;
         cell.addButton.hidden = YES;
     }
     
+    /*if(indexPath.row == prevIndex && prevIndex != SelectedIndex){
+        
+        cell.descLabelCell.hidden = YES;
+        cell.descCell.hidden = YES;
+        cell.addButton.hidden = YES;
+    }*/
+
+    
     NSString * prix = [NSString stringWithFormat:@"%.2f €",my_article.prix];
     cell.priceLabelCell.text = prix;
+    
     //listen for clicks
     [cell.addButton addTarget:self action:@selector(buttonPressed)
      forControlEvents:UIControlEventTouchUpInside];
@@ -171,12 +192,15 @@ Article * article;
     
 }
 
+//Action lors d'un clic sur le bouton d'ajout
 -(void)buttonPressed {
     NSLog(@"Button %d Pressed!", indexSelected);
     Article * art = [data2 objectAtIndex:indexSelected];
     NSLog(@"Article %@ ajouté au panier !", art.nom_boisson);
     
-    //A compléter quand la structure des JSON sera terminée
+    // /!\ A compléter quand la structure des JSON sera terminée /!\
+    
+    //Ajout des données à l'objet Article courant pour l'ajouter à la liste
     Article * article ;
     Article * articleComp;
     bool flag = false;
@@ -215,19 +239,19 @@ Article * article;
     
 }
 
+//Définition de la taille de la cellule à la ligne = indexPath
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"expendingCell";
     ExpendingCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    
+    //cellule sur laquelle on a cliqué ou non ?
     if(SelectedIndex == indexPath.row){
-        cell.descLabelCell.hidden = NO;
-        cell.descCell.hidden = NO;
-        cell.addButton.hidden = NO;
+        //cell.descLabelCell.hidden = NO;
+        //cell.descCell.hidden = NO;
+        //cell.addButton.hidden = NO;
         return 180;
-    }
-    else {
+    }else {
         cell.descLabelCell.hidden = YES;
         cell.descCell.hidden = YES;
         cell.addButton.hidden = YES;
@@ -235,22 +259,40 @@ Article * article;
     }
 }
 
-
+//Cellule sur laquelle on a cliqué
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    static NSString *CellIdentifier = @"expendingCell";
+    ExpendingCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    //Deuxième clic sur la meme cellule -> fermeture
     if(SelectedIndex == indexPath.row){
+        cell.descLabelCell.hidden = YES;
+        cell.descCell.hidden = YES;
+        cell.addButton.hidden = YES;
+        
         SelectedIndex = -1;
         [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
         return;
     }
     
+    //Il existe déjà une autre cellule ouverte
     if(SelectedIndex != -1){
         SelectedIndex = indexPath.row;
-        NSIndexPath *prevPath = [NSIndexPath indexPathForRow:SelectedIndex inSection:0];
+        //NSIndexPath *prevPath = [NSIndexPath indexPathForRow:SelectedIndex inSection:0];
+        ExpendingCell *previousCell = (ExpendingCell*)[tableView cellForRowAtIndexPath:prevPath];
+        previousCell.descLabelCell.hidden = YES;
+        previousCell.descCell.hidden = YES;
+        previousCell.addButton.hidden = YES;
+        
         [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:prevPath] withRowAnimation:UITableViewRowAnimationFade];
     }
     
+    //Sauvegarde des indices
     SelectedIndex = indexPath.row;
+    prevIndex = SelectedIndex;
+    prevPath = indexPath;
+    
     NSLog(@"SelectedIndex = %d", SelectedIndex);
     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
