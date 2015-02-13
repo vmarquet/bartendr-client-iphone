@@ -148,8 +148,10 @@ Article * article;
     
     indexSelected = indexPath.row;
     Article * my_article = [data2 objectAtIndex:indexPath.row];
+    
     cell.titleCell.text = my_article.nom_boisson;
     cell.descLabelCell.text = my_article.boisson_description;
+    
     NSString * prix = [NSString stringWithFormat:@"%.2f €",my_article.prix];
     cell.priceLabelCell.text = prix;
     //listen for clicks
@@ -206,10 +208,20 @@ Article * article;
 
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    static NSString *CellIdentifier = @"expendingCell";
+    ExpendingCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    
     if(SelectedIndex == indexPath.row){
+        cell.descLabelCell.hidden = NO;
+        cell.descCell.hidden = NO;
+        cell.addButton.hidden = NO;
         return 180;
     }
     else {
+        cell.descLabelCell.hidden = YES;
+        cell.descCell.hidden = YES;
+        cell.addButton.hidden = YES;
         return 54;
     }
 }
