@@ -12,12 +12,12 @@
 @interface Commande : NSObject {
     
     NSMutableArray * liste_article;
-    unsigned int total;
+    float total;
     //Date
     int numberTable;
 }
 
-@property (nonatomic) unsigned int total;
+@property (nonatomic) float total;
 @property (strong, nonatomic) NSMutableArray * liste_article;
 @property (nonatomic) int numberTable;
 

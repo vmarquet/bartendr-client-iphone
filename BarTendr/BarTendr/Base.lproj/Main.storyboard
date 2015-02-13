@@ -145,8 +145,8 @@ poursuivre votre commande</string>
                                     <segue destination="nMZ-dg-Bvj" kind="push" id="lwM-k9-lDk"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cNT-dz-ouL">
-                                <rect key="frame" x="16" y="125" width="288" height="348"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cNT-dz-ouL">
+                                <rect key="frame" x="16" y="125" width="288" height="325"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell3" id="RXz-xz-yfg">
@@ -204,6 +204,18 @@ poursuivre votre commande</string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxY-i3-3mI">
+                                <rect key="frame" x="69" y="467" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="xx.xx €" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RG6-EJ-fku">
+                                <rect key="frame" x="170" y="467" width="134" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -219,14 +231,12 @@ poursuivre votre commande</string>
                             <constraint firstItem="55J-av-jnx" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" id="IsG-qA-D67"/>
                             <constraint firstItem="ShN-c3-cla" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" constant="53" id="Lui-9c-JiL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X4s-Xr-jHz" secondAttribute="trailing" constant="62" id="RRW-f7-nYa"/>
-                            <constraint firstItem="ShN-c3-cla" firstAttribute="top" secondItem="cNT-dz-ouL" secondAttribute="bottom" constant="29" id="XZT-G8-iJk"/>
                             <constraint firstItem="cNT-dz-ouL" firstAttribute="top" secondItem="X4s-Xr-jHz" secondAttribute="bottom" constant="49" id="cOM-Dy-lAH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S0L-FB-fM1" secondAttribute="trailing" constant="62" id="d2M-D9-sSi"/>
                             <constraint firstItem="X4s-Xr-jHz" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" constant="53" id="dRx-6o-QnR"/>
                             <constraint firstItem="Gn6-KL-SeL" firstAttribute="top" secondItem="cNT-dz-ouL" secondAttribute="bottom" constant="95" id="fRD-dN-mBE"/>
                             <constraint firstItem="sLa-cq-yMB" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" constant="171" id="gIS-j5-vaN"/>
                             <constraint firstItem="cNT-dz-ouL" firstAttribute="trailing" secondItem="zzi-zr-MWg" secondAttribute="trailingMargin" id="isv-Fr-jJT"/>
-                            <constraint firstItem="sLa-cq-yMB" firstAttribute="top" secondItem="cNT-dz-ouL" secondAttribute="bottom" constant="29" id="mhE-Ft-AL7"/>
                             <constraint firstItem="cNT-dz-ouL" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" id="q97-BD-OGZ"/>
                             <constraint firstItem="cNT-dz-ouL" firstAttribute="top" secondItem="aFG-Mf-IRl" secondAttribute="bottom" constant="105" id="t8a-Tm-HKu"/>
                             <constraint firstItem="55J-av-jnx" firstAttribute="top" secondItem="aFG-Mf-IRl" secondAttribute="bottom" constant="67" id="v5R-dk-I20"/>
@@ -235,6 +245,8 @@ poursuivre votre commande</string>
                     <navigationItem key="navigationItem" id="3ir-Y2-om9"/>
                     <connections>
                         <outlet property="labelTable" destination="S0L-FB-fM1" id="g6W-Uz-v3r"/>
+                        <outlet property="messagePrixTotal" destination="kxY-i3-3mI" id="WT9-HL-uqu"/>
+                        <outlet property="prixTotal" destination="RG6-EJ-fku" id="PmB-oJ-m1o"/>
                         <outlet property="tableView3" destination="cNT-dz-ouL" id="bD6-Ld-Aa9"/>
                     </connections>
                 </viewController>

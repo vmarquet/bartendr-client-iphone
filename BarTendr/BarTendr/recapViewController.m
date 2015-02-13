@@ -16,18 +16,26 @@
 @implementation recapViewController
 @synthesize data3;
 @synthesize labelTable;
+@synthesize prixTotal;
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     labelTable.text = numberTable;
-    
     data3 = commande.liste_article;
-    NSLog(@" TROLRORLRORLOR %@", data3);
+    // Au début commande = 0 € nope? :p
+    commande.total=0;
     
-    
-    
-    /* TEST ENVOI AU SERVEUR c'est moche je c ....*/
+    //Affichage des article de la commane en console + calcul du prix total de la commande
+        for (Article *article in data3) {
+            NSLog(@" Article: %@ , %@, %.2f", article.nom_boisson, article.boisson_description, article.prix);
+            commande.total+= article.prix;
+    }
+    NSLog(@"%.2f €", commande.total);
+    NSString *strPrix = [NSString stringWithFormat:@"%.2f €",commande.total];
+    prixTotal.text = strPrix;
+    /* TEST ENVOI AU SERVEUR c'est moche je c ....
      
      NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
      NSMutableDictionary *dict2 = [[NSMutableDictionary alloc]init];
@@ -47,8 +55,11 @@
      
      NSError *error = nil;
      NSData *json;
-     NSURL *url = [NSURL URLWithString:@"http://mabite.fr/orders.json"];
-     
+     NSURL *url = [NSURL URLWithString:@"http://176.182.204.12/orders.json"];
+    // http://mabite.fr/orders.json
+     //http://176.182.204.12/orders.json
+    
+    
      // Dictionary convertable to JSON ?
      if ([NSJSONSerialization isValidJSONObject:dict])
      {
@@ -59,7 +70,7 @@
      if (json != nil && error == nil)
      {
          NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
-         NSLog(@"%@", jsonString);
+        // NSLog(@"%@", jsonString);
          NSData *postData = [jsonString dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
          NSMutableURLRequest *requestData = [[NSMutableURLRequest alloc] init];
      
@@ -80,7 +91,7 @@
              NSLog(@"Connection could not be made");
          }
         }
-     }
+     }*/
 }
 
 - (void)didReceiveMemoryWarning {
@@ -118,7 +129,6 @@
     }
     
     NSString * strPrix = [NSString alloc];
-    NSString * strQuantite = [NSString alloc];
     Article * obj;
     obj = [[Article alloc] init];
     
@@ -126,16 +136,6 @@
     cell3.nomBoisson.text = obj.nom_boisson;
     strPrix = [strPrix initWithFormat:@"%.2f€", obj.prix];
     cell3.prixBoisson.text = strPrix;
-    strQuantite = [strQuantite initWithFormat:@"x %d", obj.quantite];
-    cell3.quantiteBoisson.text = strQuantite;
-    NSLog(@"%@ %@", strPrix, strQuantite);
-    
-    //Affichage de la commande en entier en console
-    NSLog(@"\nRECAP:\n");
-    for(int i = 0; i < commande.liste_article.count; i++){
-        obj = [commande.liste_article objectAtIndex:i];
-        NSLog(@"%@ x %d", obj.nom_boisson, obj.quantite);
-    }
     
     return cell3;
     

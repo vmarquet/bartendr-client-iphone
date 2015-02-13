@@ -37,7 +37,8 @@
     
     // Description de l'URL, j'ai mis l'url de Fabrigli pour avoir une liste de categories ^^, on la changera apres :)
     NSURL * url = [NSURL URLWithString:@"http://v-marquet.bitbucket.org/bartendr/menu.json"];
-    
+    // Adresse final : http://176.182.204.12/categories.json
+    // http://v-marquet.bitbucket.org/bartendr/menu.json
     //Création de la requete web à l'aide de NSURLRequest
     NSURLRequest * requete = [NSURLRequest requestWithURL:url];
     
@@ -87,7 +88,7 @@
             // On va donc pouvoir "Déserialiser" le JSON, et donc recupérer les infos nécéssaire au remplissage de nos TableView :)
             // Pour le moment je l'affiche dans le terminal (test)
             
-            NSLog(@"Mon JSON : \n %@", _dictionnaire);
+           // NSLog(@"Mon JSON : \n %@", _dictionnaire);
             
             // PARSING JSON
             
@@ -101,7 +102,7 @@
                 }
                 //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
                    [self.tableView reloadData];
-                NSLog(@"Ma Liste de données : %@", data);
+              //  NSLog(@"Ma Liste de données : %@", data);
                    [_alert dismissWithClickedButtonIndex:0 animated:YES];
             }
         }
@@ -144,14 +145,14 @@
         listeBoissonViewController *controller = [segue destinationViewController];
         controller.boissonType = _nomCat;
         controller.idCategorie = _idCat;
-        NSLog(@"%d",_idCat);
+        //NSLog(@"%d",_idCat);
         
     }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
    
-    NSLog(@"Row Selected > %ld: %@", (long)indexPath.item, data[indexPath.item]);
+   // NSLog(@"Row Selected > %ld: %@", (long)indexPath.item, data[indexPath.item]);
     _nomCat = data[indexPath.item];
     _idCat = (unsigned int) indexPath.item;
     

@@ -274,6 +274,11 @@
 					37EAC7EA1A1643D600360744 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = TQ4QLT966J;
+						SystemCapabilities = {
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
 					};
 					37EAC8061A1643D600360744 = {
 						CreatedOnToolsVersion = 6.1;

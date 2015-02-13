@@ -46,7 +46,8 @@ Article * article;
     
     // Description de l'URL, j'ai mis l'url de Fabrigli pour avoir une liste de categories ^^, on la changera apres :)
     NSString * url = [NSString stringWithFormat:@"http://v-marquet.bitbucket.org/bartendr/categories/%d.json", rowPressed];
-    
+    // Adresse final :http://176.182.204.12/categories/%d.json
+    // http://v-marquet.bitbucket.org/bartendr/categories/%d.json
     NSURL *urll = [NSURL URLWithString:url];
     
     //Création de la requete web à l'aide de NSURLRequest
@@ -161,46 +162,11 @@ Article * article;
 }
 
 -(void)buttonPressed {
-    NSLog(@"Button %d Pressed!", indexSelected);
+    //NSLog(@"Button %d Pressed!", indexSelected);
     Article * art = [data2 objectAtIndex:indexSelected];
-    NSLog(@"Article %@ ajouté au panier !", art.nom_boisson);
+    NSLog(@" %@ ajouté au panier !", art.nom_boisson);
     
-    //A compléter quand la structure des JSON sera terminée
-    Article * article ;
-    Article * articleComp;
-    bool flag = false;
-    article = [[Article alloc] init];
-    articleComp = [[Article alloc] init];
-    
-    article.quantite = 1;
-    article.id_boisson = indexSelected;
-    article.nom_boisson = art.nom_boisson;
-    article.prix = art.prix;
-
-    
-    //NSLog(@"\nRECAP:\n");
-    for(int i = 0; i < commande.liste_article.count; i++){
-        articleComp = [commande.liste_article objectAtIndex:i];
-        if(art.id_boisson == articleComp.id_boisson) {
-            article.quantite = articleComp.quantite + 1;
-            [commande.liste_article replaceObjectAtIndex:i withObject:article];
-            flag = true;
-            break;
-        }
-        //NSLog(@"%@", article.nom_boisson);
-    }
-    
-    //NSLog(@"\n%@ x%d, index %d", article.nom_boisson, article.quantite, article.id_boisson);
-    
-    if(flag == false){
-        [commande.liste_article addObject:article];
-    }
-    //Affichage de la commande en entier en console
-    NSLog(@"\nRECAP:\n");
-    for(int i = 0; i < commande.liste_article.count; i++){
-        article = [commande.liste_article objectAtIndex:i];
-        NSLog(@"%@ x %d", article.nom_boisson, article.quantite);
-    }
+    [commande.liste_article addObject:art];
     
 }
 
@@ -230,7 +196,6 @@ Article * article;
     }
     
     SelectedIndex = indexPath.row;
-    NSLog(@"SelectedIndex = %d", SelectedIndex);
     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
