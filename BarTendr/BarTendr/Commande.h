@@ -21,4 +21,6 @@
 @property (strong, nonatomic) NSMutableArray * liste_article;
 @property (nonatomic) int numberTable;
 
+-(float) calculTotalCommande :(Commande *) commande;
+
 @end

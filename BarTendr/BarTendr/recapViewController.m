@@ -8,6 +8,7 @@
 
 #import "recapViewController.h"
 #import "Globals.h"
+#import "Commande.h"
 
 @interface recapViewController ()
 
@@ -18,23 +19,22 @@
 @synthesize labelTable;
 @synthesize prixTotal;
 
-
+float prix;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     labelTable.text = numberTable;
     data3 = commande.liste_article;
-    // Au début commande = 0 € nope? :p
-    commande.total=0;
+    
+    [commande calculTotalCommande:commande];
+    NSString *strPrix = [NSString stringWithFormat:@"%.2f €",commande.total];
+    prixTotal.text = strPrix;
     
     //Affichage des article de la commane en console + calcul du prix total de la commande
         for (Article *article in data3) {
             NSLog(@" Article: %@ , %@, %.2f", article.nom_boisson, article.boisson_description, article.prix);
             commande.total+= article.prix;
     }
-    NSLog(@"%.2f €", commande.total);
-    NSString *strPrix = [NSString stringWithFormat:@"%.2f €",commande.total];
-    prixTotal.text = strPrix;
     /* TEST ENVOI AU SERVEUR c'est moche je c ....
      
      NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
@@ -154,7 +154,12 @@
     
     Article * obj = [[Article alloc] init];
     obj = [data3 objectAtIndex:indexPath.row];
-
+    [data3 removeObjectAtIndex: indexPath.row];
+    [self.tableView3 reloadData];
+    [commande calculTotalCommande:commande];
+    NSLog(@"%.2f", commande.total);
+    NSString *strPrix = [NSString stringWithFormat:@"%.2f €",commande.total];
+    prixTotal.text = strPrix;
     
 
 }

@@ -12,4 +12,13 @@
 
 @synthesize total, liste_article, numberTable;
 
+
+-(void) calculTotalCommande :(Commande *) commande
+{
+    commande.total = 0;
+    for (Article * article in commande.liste_article) {
+        commande.total += article.prix;
+    }
+}
+
 @end
