@@ -16,6 +16,9 @@
 @property (strong, nonatomic) NSMutableArray *data3;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelTable;
+@property (weak, nonatomic) IBOutlet UILabel *prixTotal;
+@property (weak, nonatomic) IBOutlet UILabel *messagePrixTotal;
+
 
 // This method receives the error report in case of connection is not made to server.
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;

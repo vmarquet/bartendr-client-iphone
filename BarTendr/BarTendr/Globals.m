@@ -14,7 +14,6 @@ Commande * commande;
 
 @implementation Globals
 {
-    
 }
 
 @end
