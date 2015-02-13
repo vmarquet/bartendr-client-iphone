@@ -1,5 +1,4 @@
-//
-//  RecapCell.h
+
 //  BarTendr
 //
 //  Created by ESIEA on 27/01/2015.
