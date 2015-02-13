@@ -151,6 +151,15 @@ Article * article;
     
     cell.titleCell.text = my_article.nom_boisson;
     cell.descLabelCell.text = my_article.boisson_description;
+    if(indexSelected == indexPath.row){
+        cell.descLabelCell.hidden = NO;
+        cell.descCell.hidden = NO;
+        cell.addButton.hidden = NO;
+    }else {
+        cell.descLabelCell.hidden = YES;
+        cell.descCell.hidden = YES;
+        cell.addButton.hidden = YES;
+    }
     
     NSString * prix = [NSString stringWithFormat:@"%.2f €",my_article.prix];
     cell.priceLabelCell.text = prix;
