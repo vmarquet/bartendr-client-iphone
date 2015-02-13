@@ -197,7 +197,7 @@ Article * article;
 -(void)buttonPressed {
     //NSLog(@"Button %d Pressed!", indexSelected);
     Article * art = [data2 objectAtIndex:indexSelected];
-<<<<<<< HEAD
+
     NSLog(@"Article %@ ajouté au panier !", art.nom_boisson);
     
     // /!\ A compléter quand la structure des JSON sera terminée /!\
@@ -228,10 +228,8 @@ Article * article;
     }
     
     //NSLog(@"\n%@ x%d, index %d", article.nom_boisson, article.quantite, article.id_boisson);
-=======
     NSLog(@" %@ ajouté au panier !", art.nom_boisson);
->>>>>>> 8c98ee599b7e2fc5a8c890f55df931a01211647c
-    
+
     [commande.liste_article addObject:art];
     
 }
@@ -287,13 +285,10 @@ Article * article;
     
     //Sauvegarde des indices
     SelectedIndex = indexPath.row;
-<<<<<<< HEAD
     prevIndex = SelectedIndex;
     prevPath = indexPath;
     
     NSLog(@"SelectedIndex = %d", SelectedIndex);
-=======
->>>>>>> 8c98ee599b7e2fc5a8c890f55df931a01211647c
     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
