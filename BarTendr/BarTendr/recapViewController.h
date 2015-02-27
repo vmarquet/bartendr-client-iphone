@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *messagePrixTotal;
 
 
+- (IBAction)modifyPressed:(id)sender;
 -(void) buttonPressed2;
     
 

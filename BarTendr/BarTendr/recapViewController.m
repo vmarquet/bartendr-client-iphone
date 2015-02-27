@@ -15,12 +15,14 @@
 @end
 
 @implementation recapViewController
+@synthesize tableView3;
 @synthesize data3;
 @synthesize labelTable;
 @synthesize prixTotal;
 
 float prix;
 int SelectedIndex;
+bool modiFlag = NO;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -59,6 +61,14 @@ int SelectedIndex;
         cell3 = [nib objectAtIndex:0];
     }
     
+    if(modiFlag == NO) {
+        cell3.suppression.hidden = YES;
+        
+    }
+    else {
+        cell3.suppression.hidden = NO;
+    }
+    
     NSString * strPrix = [NSString alloc];
     Article * obj;
     obj = [[Article alloc] init];
@@ -75,6 +85,16 @@ int SelectedIndex;
     
     return cell3;
     
+}
+
+- (IBAction)modifyPressed:(id)sender {
+
+    if(modiFlag == NO) {
+        modiFlag = YES;
+    } else {
+        modiFlag = NO;
+    }
+    [tableView3 reloadData];
 }
 
 -(void) buttonPressed2 {

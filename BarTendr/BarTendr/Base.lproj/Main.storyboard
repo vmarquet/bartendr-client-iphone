@@ -206,6 +206,9 @@ poursuivre votre commande</string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.borderWidth" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="modifyPressed:" destination="JEw-Um-rsJ" eventType="touchUpInside" id="9lf-Qf-obu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xx.xx €" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RG6-EJ-fku">
                                 <rect key="frame" x="163" y="467" width="61" height="21"/>
