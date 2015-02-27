@@ -141,7 +141,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     _nomCat = data[indexPath.item];
-    NSLog(@" ID SLECTED %@", _listeIdCat[indexPath.item]);
     _idCat = [_listeIdCat[indexPath.item]intValue];
     
     [self performSegueWithIdentifier:@"toto" sender:self.view];
