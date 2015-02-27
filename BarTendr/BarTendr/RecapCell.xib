@@ -17,24 +17,34 @@
                         <rect key="frame" x="0.0" y="2" width="40" height="40"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nom_Boisson" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K51-LT-WpX">
-                        <rect key="frame" x="48" y="8" width="153" height="30"/>
+                        <rect key="frame" x="48" y="9" width="130" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-Ra-ySk">
-                        <rect key="frame" x="216" y="9" width="88" height="26"/>
+                        <rect key="frame" x="186" y="10" width="66" height="26"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7u-1r-6Of">
+                        <rect key="frame" x="282" y="9" width="30" height="30"/>
+                        <state key="normal" title="Button" image="poubelle.jpg">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="nomBoisson" destination="K51-LT-WpX" id="ahY-Lg-N1h"/>
                 <outlet property="prixBoisson" destination="bKJ-Ra-ySk" id="R24-tu-QWH"/>
+                <outlet property="suppression" destination="L7u-1r-6Of" id="0jy-lV-2i5"/>
             </connections>
-            <point key="canvasLocation" x="536" y="200"/>
+            <point key="canvasLocation" x="536" y="198"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="poubelle.jpg" width="104" height="109"/>
+    </resources>
 </document>

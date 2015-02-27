@@ -159,7 +159,7 @@ poursuivre votre commande</string>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="JEw-Um-rsJ" id="48J-cT-gEW"/>
-                                    <outlet property="delegate" destination="JEw-Um-rsJ" id="Abk-3z-laQ"/>
+                                    <outlet property="delegate" destination="JEw-Um-rsJ" id="lct-Mo-lDX"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55J-av-jnx">
@@ -721,8 +721,8 @@ poursuivre votre commande</string>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="CY5-fc-PIY"/>
-        <segue reference="5RL-ew-l2c"/>
-        <segue reference="Z10-ni-TVd"/>
         <segue reference="gyI-96-7kZ"/>
+        <segue reference="V2R-nb-SEF"/>
+        <segue reference="Z10-ni-TVd"/>
     </inferredMetricsTieBreakers>
 </document>

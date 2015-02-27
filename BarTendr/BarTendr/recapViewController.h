@@ -20,4 +20,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *messagePrixTotal;
 
 
+-(void) :(UITableView *)tableView3 buttonPressed2 :(NSIndexPath *)indexPath;
+
 @end

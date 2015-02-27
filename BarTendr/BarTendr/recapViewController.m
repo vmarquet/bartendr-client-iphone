@@ -20,6 +20,7 @@
 @synthesize prixTotal;
 
 float prix;
+int SelectedIndex;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,7 +34,6 @@ float prix;
     //Affichage des article de la commane en console + calcul du prix total de la commande
     [commande calculTotalCommande:commande];
     NSLog(@"%.2f", commande.total);
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,8 +68,25 @@ float prix;
     strPrix = [strPrix initWithFormat:@"%.2f€", obj.prix];
     cell3.prixBoisson.text = strPrix;
     
+    SelectedIndex = indexPath3.row;
+    
+    [cell3.suppression addTarget:self action:@selector(buttonPressed2)
+             forControlEvents:UIControlEventTouchUpInside];
+    
     return cell3;
     
+}
+
+-(void) buttonPressed2 {
+    
+    Article * obj = [[Article alloc] init];
+    obj = [data3 objectAtIndex:SelectedIndex];
+    [data3 removeObjectAtIndex:SelectedIndex];
+    [self.tableView3 reloadData];
+    [commande calculTotalCommande:commande];
+    NSLog(@"%.2f", commande.total);
+    NSString *strPrix = [NSString stringWithFormat:@"%.2f €",commande.total];
+    prixTotal.text = strPrix;
 }
 
 #pragma mark - Navigation
@@ -80,8 +97,15 @@ float prix;
     // Pass the selected object to the new view controller.
 }
 
-
 - (void)tableView:(UITableView *)tableView3 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    /*
+    static NSString *CellIdentifier3 = @"RecapCell";
+    RecapCell *cell3 = [tableView3 dequeueReusableCellWithIdentifier:CellIdentifier3];
+    
+    if(cell3 == nil){
+        NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"RecapCell" owner:self options:nil];
+        cell3 = [nib objectAtIndex:0];
+    }
     
     Article * obj = [[Article alloc] init];
     obj = [data3 objectAtIndex:indexPath.row];
@@ -91,7 +115,7 @@ float prix;
     NSLog(@"%.2f", commande.total);
     NSString *strPrix = [NSString stringWithFormat:@"%.2f €",commande.total];
     prixTotal.text = strPrix;
-    
+    */
 
 }
 
