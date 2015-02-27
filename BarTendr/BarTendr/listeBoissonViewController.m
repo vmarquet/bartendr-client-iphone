@@ -215,18 +215,6 @@ Article * article;
     article.nom_boisson = art.nom_boisson;
     article.prix = art.prix;
     
-    
-    for(int i = 0; i < commande.liste_article.count; i++){
-        articleComp = [commande.liste_article objectAtIndex:i];
-        if(art.id_boisson == articleComp.id_boisson) {
-            article.quantite = articleComp.quantite + 1;
-            [commande.liste_article replaceObjectAtIndex:i withObject:article];
-            flag = true;
-            break;
-        }
-        //NSLog(@"%@", article.nom_boisson);
-    }
-    
     //NSLog(@"\n%@ x%d, index %d", article.nom_boisson, article.quantite, article.id_boisson);
     NSLog(@" %@ ajouté au panier !", art.nom_boisson);
     
@@ -287,8 +275,6 @@ Article * article;
     SelectedIndex = indexPath.row;
     prevIndex = SelectedIndex;
     prevPath = indexPath;
-    
-    NSLog(@"SelectedIndex = %d", SelectedIndex);
     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
