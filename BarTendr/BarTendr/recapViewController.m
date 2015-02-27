@@ -19,6 +19,7 @@
 @synthesize data3;
 @synthesize labelTable;
 @synthesize prixTotal;
+@synthesize modifyButton;
 
 float prix;
 int SelectedIndex;
@@ -63,10 +64,11 @@ bool modiFlag = NO;
     
     if(modiFlag == NO) {
         cell3.suppression.hidden = YES;
-        
+        [modifyButton setTitle:@"Modifier" forState:UIControlStateNormal];
     }
     else {
         cell3.suppression.hidden = NO;
+       [modifyButton setTitle:@"OK" forState:UIControlStateNormal];
     }
     
     NSString * strPrix = [NSString alloc];

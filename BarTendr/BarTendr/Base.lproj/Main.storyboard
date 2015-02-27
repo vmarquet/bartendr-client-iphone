@@ -260,6 +260,7 @@ poursuivre votre commande</string>
                     <connections>
                         <outlet property="labelTable" destination="S0L-FB-fM1" id="g6W-Uz-v3r"/>
                         <outlet property="messagePrixTotal" destination="kxY-i3-3mI" id="WT9-HL-uqu"/>
+                        <outlet property="modifyButton" destination="ShN-c3-cla" id="s6G-cy-t4L"/>
                         <outlet property="prixTotal" destination="RG6-EJ-fku" id="PmB-oJ-m1o"/>
                         <outlet property="tableView3" destination="cNT-dz-ouL" id="bD6-Ld-Aa9"/>
                     </connections>
