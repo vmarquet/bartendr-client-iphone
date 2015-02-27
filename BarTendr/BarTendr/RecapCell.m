@@ -20,7 +20,7 @@
     // Configure the view for the selected state
 }
 
--(void) :(UITableView *)tableView3 buttonPressed2 :(NSIndexPath *)indexPath{
+-(void) buttonPressed2 {
     
 }
 

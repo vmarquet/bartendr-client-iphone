@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *prixBoisson;
 @property (weak, nonatomic) IBOutlet UIButton *suppression;
 
--(void) :(UITableView *)tableView3 buttonPressed2 :(NSIndexPath *)indexPath;
+-(void) buttonPressed2;
+
 @end
