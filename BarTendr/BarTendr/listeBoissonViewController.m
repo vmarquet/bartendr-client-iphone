@@ -206,7 +206,6 @@ Article * article;
     //Ajout des données à l'objet Article courant pour l'ajouter à la liste
     Article * article ;
     Article * articleComp;
-    bool flag = false;
     article = [[Article alloc] init];
     articleComp = [[Article alloc] init];
     
