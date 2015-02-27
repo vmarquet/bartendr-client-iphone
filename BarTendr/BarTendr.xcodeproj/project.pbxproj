@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		371E54F41A724C1500F15643 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 371E54F31A724C1500F15643 /* Article.m */; };
+		37BBB7E71AA0974300A57F2D /* SendCommandController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BBB7E61AA0974300A57F2D /* SendCommandController.m */; };
 		37CD71C61A1FAC1300A86E85 /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CD71C51A1FAC1300A86E85 /* QRViewController.m */; };
 		37DF97211A69522100113402 /* Categorie.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DF97201A69522100113402 /* Categorie.m */; };
 		37EAC7F11A1643D600360744 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC7F01A1643D600360744 /* main.m */; };
@@ -46,6 +47,8 @@
 /* Begin PBXFileReference section */
 		371E54F21A724C1500F15643 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
 		371E54F31A724C1500F15643 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		37BBB7E51AA0974300A57F2D /* SendCommandController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCommandController.h; sourceTree = "<group>"; };
+		37BBB7E61AA0974300A57F2D /* SendCommandController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendCommandController.m; sourceTree = "<group>"; };
 		37CD71C41A1FAC1300A86E85 /* QRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRViewController.h; sourceTree = "<group>"; };
 		37CD71C51A1FAC1300A86E85 /* QRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRViewController.m; sourceTree = "<group>"; };
 		37DF971F1A69522100113402 /* Categorie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categorie.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				64377AE81A28908B00F2A93C /* listeBoissonViewController.m */,
 				643434E61A1F931B005482E3 /* boissonViewController.h */,
 				643434E71A1F931B005482E3 /* boissonViewController.m */,
+				37BBB7E51AA0974300A57F2D /* SendCommandController.h */,
+				37BBB7E61AA0974300A57F2D /* SendCommandController.m */,
 				37EAC7FB1A1643D600360744 /* Main.storyboard */,
 				37EAC7FE1A1643D600360744 /* Images.xcassets */,
 				37EAC8001A1643D600360744 /* LaunchScreen.xib */,
@@ -350,6 +355,7 @@
 				37CD71C61A1FAC1300A86E85 /* QRViewController.m in Sources */,
 				37EAC7FA1A1643D600360744 /* ViewController.m in Sources */,
 				37EAC7F11A1643D600360744 /* main.m in Sources */,
+				37BBB7E71AA0974300A57F2D /* SendCommandController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

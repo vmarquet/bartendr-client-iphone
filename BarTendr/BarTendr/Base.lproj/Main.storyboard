@@ -265,10 +265,10 @@ poursuivre votre commande</string>
             </objects>
             <point key="canvasLocation" x="1884" y="1029"/>
         </scene>
-        <!--View Controller-->
+        <!--Send Command Controller-->
         <scene sceneID="93Y-oI-wgj">
             <objects>
-                <viewController id="nMZ-dg-Bvj" sceneMemberID="viewController">
+                <viewController id="nMZ-dg-Bvj" customClass="SendCommandController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xsJ-Lv-7Mk"/>
                         <viewControllerLayoutGuide type="bottom" id="t0n-AF-nPf"/>
@@ -343,6 +343,12 @@ poursuivre votre commande</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N8n-4R-ayk"/>
+                    <connections>
+                        <outlet property="gros_text" destination="Rfm-Jc-LmZ" id="fKk-6r-zay"/>
+                        <outlet property="nextButton" destination="CE7-Xd-44h" id="JYr-UU-4Bj"/>
+                        <outlet property="paiement" destination="XXW-ry-wgO" id="a1r-xg-4BM"/>
+                        <outlet property="returnButton" destination="GxC-vC-2kv" id="YVu-hb-hJx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5j0-5f-oOt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -714,9 +720,9 @@ poursuivre votre commande</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="wkm-bX-F7h"/>
-        <segue reference="Z10-ni-TVd"/>
-        <segue reference="5RL-ew-l2c"/>
         <segue reference="CY5-fc-PIY"/>
+        <segue reference="5RL-ew-l2c"/>
+        <segue reference="Z10-ni-TVd"/>
+        <segue reference="gyI-96-7kZ"/>
     </inferredMetricsTieBreakers>
 </document>

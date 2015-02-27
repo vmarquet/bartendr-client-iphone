@@ -18,6 +18,7 @@
 @property NSString * nomCat;
 @property unsigned int idCat;
 @property UIAlertView *alert;
+@property NSMutableArray * listeIdCat;
 @end
 
 @implementation boissonViewController
@@ -36,9 +37,10 @@
     [_alert show];
     
     // Description de l'URL, j'ai mis l'url de Fabrigli pour avoir une liste de categories ^^, on la changera apres :)
-    NSURL * url = [NSURL URLWithString:@"http://v-marquet.bitbucket.org/bartendr/menu.json"];
+    NSURL * url = [NSURL URLWithString:@"http://176.182.204.12/categories.json"];
     // Adresse final : http://176.182.204.12/categories.json
-    // http://v-marquet.bitbucket.org/bartendr/menu.json
+
+    
     //Création de la requete web à l'aide de NSURLRequest
     NSURLRequest * requete = [NSURLRequest requestWithURL:url];
     
@@ -53,6 +55,7 @@
     
     // Initialisation de la TableView
     data = [[NSMutableArray alloc]initWithObjects:nil];
+    _listeIdCat = [[NSMutableArray alloc]initWithObjects:nil];
 }
 
 
@@ -86,9 +89,6 @@
         // On test pour voir si notre dictionnaire est bien un JSON
         if([NSJSONSerialization isValidJSONObject:_dictionnaire]){
             // On va donc pouvoir "Déserialiser" le JSON, et donc recupérer les infos nécéssaire au remplissage de nos TableView :)
-            // Pour le moment je l'affiche dans le terminal (test)
-            
-           // NSLog(@"Mon JSON : \n %@", _dictionnaire);
             
             // PARSING JSON
             
@@ -99,10 +99,11 @@
                         categorie.id_categorie = [[dictionary objectForKey:@"id"]integerValue];
                         categorie.nom_categorie = [dictionary objectForKey:@"name"];
                         [data addObject:categorie.nom_categorie];
+                        [_listeIdCat addObject:[NSNumber numberWithInteger:categorie.id_categorie]];
+                        NSLog(@"LISTE ID : %@", _listeIdCat);
                 }
                 //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
                    [self.tableView reloadData];
-              //  NSLog(@"Ma Liste de données : %@", data);
                    [_alert dismissWithClickedButtonIndex:0 animated:YES];
             }
         }
@@ -137,28 +138,23 @@
     
 }
 
-#pragma mark - Navigation
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"toto"]){
-        //UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
-        listeBoissonViewController *controller = [segue destinationViewController];
-        controller.boissonType = _nomCat;
-        controller.idCategorie = _idCat;
-        //NSLog(@"%d",_idCat);
-        
-    }
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-   
-   // NSLog(@"Row Selected > %ld: %@", (long)indexPath.item, data[indexPath.item]);
+    
     _nomCat = data[indexPath.item];
-    _idCat = (unsigned int) indexPath.item;
+    NSLog(@" ID SLECTED %@", _listeIdCat[indexPath.item]);
+    _idCat = [_listeIdCat[indexPath.item]intValue];
     
     [self performSegueWithIdentifier:@"toto" sender:self.view];
 }
 
+#pragma mark - Navigation
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"toto"]){
+        listeBoissonViewController *controller = [segue destinationViewController];
+        controller.boissonType = _nomCat;
+        controller.idCategorie = _idCat;
+    }
+}
 
 @end

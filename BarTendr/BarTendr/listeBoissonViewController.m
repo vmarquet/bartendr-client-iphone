@@ -47,9 +47,10 @@ Article * article;
     NSInteger rowPressed = idCategorie;
     
     // Description de l'URL, j'ai mis l'url de Fabrigli pour avoir une liste de categories ^^, on la changera apres :)
-    NSString * url = [NSString stringWithFormat:@"http://v-marquet.bitbucket.org/bartendr/categories/%d.json", rowPressed];
+    NSString * url = [NSString stringWithFormat:@"http://176.182.204.12/categories/%d.json", rowPressed];
+    
     // Adresse final :http://176.182.204.12/categories/%d.json
-    // http://v-marquet.bitbucket.org/bartendr/categories/%d.json
+    
     NSURL *urll = [NSURL URLWithString:url];
     
     //Création de la requete web à l'aide de NSURLRequest
@@ -175,20 +176,20 @@ Article * article;
     }
     
     /*if(indexPath.row == prevIndex && prevIndex != SelectedIndex){
-        
-        cell.descLabelCell.hidden = YES;
-        cell.descCell.hidden = YES;
-        cell.addButton.hidden = YES;
-    }*/
-
+     
+     cell.descLabelCell.hidden = YES;
+     cell.descCell.hidden = YES;
+     cell.addButton.hidden = YES;
+     }*/
+    
     
     NSString * prix = [NSString stringWithFormat:@"%.2f €",my_article.prix];
     cell.priceLabelCell.text = prix;
     
     //listen for clicks
     [cell.addButton addTarget:self action:@selector(buttonPressed)
-     forControlEvents:UIControlEventTouchUpInside];
-
+             forControlEvents:UIControlEventTouchUpInside];
+    
     return cell;
     
 }
@@ -197,7 +198,7 @@ Article * article;
 -(void)buttonPressed {
     //NSLog(@"Button %d Pressed!", indexSelected);
     Article * art = [data2 objectAtIndex:indexSelected];
-
+    
     NSLog(@"Article %@ ajouté au panier !", art.nom_boisson);
     
     // /!\ A compléter quand la structure des JSON sera terminée /!\
@@ -213,9 +214,8 @@ Article * article;
     article.id_boisson = indexSelected;
     article.nom_boisson = art.nom_boisson;
     article.prix = art.prix;
-
     
-    //NSLog(@"\nRECAP:\n");
+    
     for(int i = 0; i < commande.liste_article.count; i++){
         articleComp = [commande.liste_article objectAtIndex:i];
         if(art.id_boisson == articleComp.id_boisson) {
@@ -229,8 +229,8 @@ Article * article;
     
     //NSLog(@"\n%@ x%d, index %d", article.nom_boisson, article.quantite, article.id_boisson);
     NSLog(@" %@ ajouté au panier !", art.nom_boisson);
-
-
+    
+    
     [commande.liste_article addObject:art];
     
 }

@@ -22,7 +22,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="XX.XX€" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w32-Qy-JkG">
-                        <rect key="frame" x="216" y="17" width="64" height="25"/>
+                        <rect key="frame" x="207" y="18" width="73" height="25"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -57,7 +57,7 @@
                 <outlet property="priceLabelCell" destination="w32-Qy-JkG" id="rpH-gV-7ov"/>
                 <outlet property="titleCell" destination="OSb-VQ-Bt1" id="QG4-rB-pUC"/>
             </connections>
-            <point key="canvasLocation" x="303" y="192"/>
+            <point key="canvasLocation" x="303" y="191"/>
         </tableViewCell>
     </objects>
     <resources>
