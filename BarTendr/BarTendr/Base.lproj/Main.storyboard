@@ -549,7 +549,7 @@ poursuivre votre commande</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liste de boisson" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKE-7n-MEL">
-                                <rect key="frame" x="76" y="28" width="168" height="24"/>
+                                <rect key="frame" x="16" y="28" width="288" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -634,6 +634,8 @@ poursuivre votre commande</string>
                             <constraint firstItem="6Fl-Qb-68s" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" constant="204" id="8Ga-Yz-buM"/>
                             <constraint firstItem="rbi-Jq-rwd" firstAttribute="top" secondItem="QKE-7n-MEL" secondAttribute="bottom" constant="48" id="AqM-WA-Efw"/>
                             <constraint firstItem="6Fl-Qb-68s" firstAttribute="top" secondItem="QKE-7n-MEL" secondAttribute="bottom" constant="15" id="Dtd-w1-Nzl"/>
+                            <constraint firstItem="QKE-7n-MEL" firstAttribute="trailing" secondItem="Y53-2S-IMa" secondAttribute="trailingMargin" id="FnW-Y4-lzJ"/>
+                            <constraint firstItem="QKE-7n-MEL" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" id="H4e-wn-CVB"/>
                             <constraint firstItem="rbi-Jq-rwd" firstAttribute="top" secondItem="6Fl-Qb-68s" secondAttribute="bottom" constant="12" id="IR8-5F-vdn"/>
                             <constraint firstItem="TXA-mh-Vcq" firstAttribute="top" secondItem="rbi-Jq-rwd" secondAttribute="bottom" constant="25" id="MYO-ff-ZIb"/>
                             <constraint firstItem="ohC-FF-y7m" firstAttribute="top" secondItem="0ZN-DM-8iT" secondAttribute="bottom" constant="43" id="PiL-W3-S6Z"/>
@@ -641,14 +643,12 @@ poursuivre votre commande</string>
                             <constraint firstAttribute="trailingMargin" secondItem="6Fl-Qb-68s" secondAttribute="trailing" constant="12" id="YEU-j0-P2r"/>
                             <constraint firstItem="rbi-Jq-rwd" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" id="aj5-ub-vIA"/>
                             <constraint firstItem="TXA-mh-Vcq" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" constant="122" id="cQ0-Dy-hFC"/>
-                            <constraint firstItem="QKE-7n-MEL" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" constant="60" id="cop-hl-QX8"/>
                             <constraint firstItem="ohC-FF-y7m" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" id="je0-SQ-IG2"/>
                             <constraint firstItem="rbi-Jq-rwd" firstAttribute="top" secondItem="0ZN-DM-8iT" secondAttribute="bottom" constant="80" id="kXN-bY-hXZ"/>
                             <constraint firstItem="rbi-Jq-rwd" firstAttribute="top" secondItem="ohC-FF-y7m" secondAttribute="bottom" constant="7" id="mv8-w5-kK8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ohC-FF-y7m" secondAttribute="trailing" constant="242" id="qCS-3a-azr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TXA-mh-Vcq" secondAttribute="trailing" constant="121" id="rcX-ZH-avb"/>
                             <constraint firstItem="QKE-7n-MEL" firstAttribute="top" secondItem="0ZN-DM-8iT" secondAttribute="bottom" constant="8" id="tIm-u7-993"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QKE-7n-MEL" secondAttribute="trailing" constant="60" id="zBw-4P-jxX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6OV-lo-NbI"/>
