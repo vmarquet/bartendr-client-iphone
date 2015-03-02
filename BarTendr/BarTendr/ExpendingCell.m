@@ -24,7 +24,7 @@
     NSLog(@"Button Pressed!");
 }
 
-- (IBAction)buttonTapped:(UIButton *)sender
+- (void)buttonTapped:(id)sender
 {
     NSLog(@"Button Tapped!");
 }

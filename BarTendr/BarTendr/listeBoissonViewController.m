@@ -177,7 +177,7 @@ Article * article;
     cell.priceLabelCell.text = prix;
     
     //listen for clicks
-    [cell.addButton addTarget:self action:@selector(buttonPressed)
+    [cell.addButton addTarget:self action:@selector(buttonPressed:)
              forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
@@ -185,9 +185,13 @@ Article * article;
 }
 
 //Action lors d'un clic sur le bouton d'ajout
--(void)buttonPressed {
+-(void)buttonPressed:(id)sender {
     
     // on crée un article pour récupérer les données à la case selectionné.
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView2];
+    NSIndexPath *indexLocal = [self.tableView2 indexPathForRowAtPoint:buttonPosition];
+    indexSelected = indexLocal.row;
+    
     Article * art = [data2 objectAtIndex:indexSelected];
     
     // FUTUR NOTIF D'AJOUT DE COMMENTAIRES
