@@ -12,7 +12,7 @@
 
 
 @interface SendCommandController ()
-
+@property UIAlertView *alert2;
 @end
 
 @implementation SendCommandController
@@ -20,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _alert2 = [[UIAlertView alloc] initWithTitle:@"Envoi de la commande en cours.\nVeuillez patienter..."message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
+    [_alert2 show];
     
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
     NSMutableDictionary *dict2 = [[NSMutableDictionary alloc]init];
@@ -91,18 +94,36 @@
     NSLog(@"Erreur ===>  %@  <====== Fin Erreur", error);
 }
 
-- (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
+- (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response{
     NSLog(@"Reponse Serveur ===> %@", response);
+    [_alert2 dismissWithClickedButtonIndex:0 animated:YES];
+
+    UIAlertView * responseAlert;
+    
+    if ([response statusCode] == 201) {
+        responseAlert = [[UIAlertView alloc] initWithTitle:nil message:@"Commande envoyée avec succès." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    }
+    else{
+        responseAlert = [[UIAlertView alloc] initWithTitle:nil message:@"Envoi de la commande échouée." delegate:self cancelButtonTitle:@"Réessayer" otherButtonTitles: nil];
+    }
+    
+    [responseAlert show];
+
 }
 
 - (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
     NSLog(@"DATA RECEIVED : ");
     NSString *myResponseReadable = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSLog(@"%@",myResponseReadable);
+    
+    
+    
 }
 // This method is used to process the data after connection has made successfully.
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
     NSLog(@"Fini de transmettre les données");
+    [_alert2 dismissWithClickedButtonIndex:0 animated:YES];
+
 }
 
 /*
