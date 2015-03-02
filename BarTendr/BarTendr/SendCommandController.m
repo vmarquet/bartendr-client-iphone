@@ -30,7 +30,7 @@
         article1 = [[NSMutableDictionary alloc]init];
         [article1 setValue:[NSNumber numberWithInteger: article.id_boisson] forKey:@"article_id"];
         NSLog(@" MON ID %u", article.id_boisson);
-        [article1 setValue:@"null" forKey:@"comments"];
+        [article1 setValue:@"" forKey:@"comments"];
         [liste addObject:article1];
         
     }

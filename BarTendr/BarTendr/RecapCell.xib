@@ -37,6 +37,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="imageBoisson" destination="IKt-xG-6eN" id="zZx-uB-cHG"/>
                 <outlet property="nomBoisson" destination="K51-LT-WpX" id="ahY-Lg-N1h"/>
                 <outlet property="prixBoisson" destination="bKJ-Ra-ySk" id="R24-tu-QWH"/>
                 <outlet property="suppression" destination="L7u-1r-6Of" id="0jy-lV-2i5"/>

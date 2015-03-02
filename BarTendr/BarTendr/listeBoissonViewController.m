@@ -216,8 +216,6 @@ Article * article;
     
     //NSLog(@"\n%@ x%d, index %d", article.nom_boisson, article.quantite, article.id_boisson);
     NSLog(@" %@ ajouté au panier !", art.nom_boisson);
-    
-    
     [commande.liste_article addObject:art];
     
 }

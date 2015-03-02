@@ -12,6 +12,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *nomBoisson;
 @property (strong, nonatomic) IBOutlet UILabel *prixBoisson;
 @property (weak, nonatomic) IBOutlet UIButton *suppression;
+@property (weak, nonatomic) IBOutlet UIImageView *imageBoisson;
 
 -(void) buttonPressed2;
 
