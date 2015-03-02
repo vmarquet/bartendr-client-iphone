@@ -29,6 +29,7 @@
 		64D1E3BF1A77B94700294DC2 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D1E3BE1A77B94600294DC2 /* Globals.m */; };
 		64D1E3C21A77C44F00294DC2 /* RecapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D1E3C11A77C44F00294DC2 /* RecapCell.xib */; };
 		64D1E3C51A77C48300294DC2 /* RecapCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D1E3C41A77C48300294DC2 /* RecapCell.m */; };
+		64D73A281AA499D60035F4A4 /* panier.png in Resources */ = {isa = PBXBuildFile; fileRef = 64D73A271AA499D50035F4A4 /* panier.png */; };
 		64DE101C1AA0C0FE005FDB70 /* poubelle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64DE101B1AA0C0FE005FDB70 /* poubelle.jpg */; };
 		64F66C9D1A6FDD830075BA5A /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F66C9C1A6FDD830075BA5A /* CategoryCell.xib */; };
 		64F66CA01A6FDDB10075BA5A /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F66C9F1A6FDDB10075BA5A /* CategoryCell.m */; };
@@ -84,6 +85,7 @@
 		64D1E3C11A77C44F00294DC2 /* RecapCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecapCell.xib; sourceTree = "<group>"; };
 		64D1E3C31A77C48300294DC2 /* RecapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecapCell.h; sourceTree = "<group>"; };
 		64D1E3C41A77C48300294DC2 /* RecapCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecapCell.m; sourceTree = "<group>"; };
+		64D73A271AA499D50035F4A4 /* panier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panier.png; sourceTree = "<group>"; };
 		64DE101B1AA0C0FE005FDB70 /* poubelle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = poubelle.jpg; sourceTree = "<group>"; };
 		64F66C9C1A6FDD830075BA5A /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		64F66C9E1A6FDDB10075BA5A /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		64BA91EA1A697C5B00BD9EFC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				64D73A271AA499D50035F4A4 /* panier.png */,
 				64BA91E21A697C2600BD9EFC /* biere.jpg */,
 				64DE101B1AA0C0FE005FDB70 /* poubelle.jpg */,
 				6491C5A91A6974A10028390B /* logo.png */,
@@ -318,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64D73A281AA499D60035F4A4 /* panier.png in Resources */,
 				6491C5AA1A6974A10028390B /* logo.png in Resources */,
 				64D1E3C21A77C44F00294DC2 /* RecapCell.xib in Resources */,
 				64F66C9D1A6FDD830075BA5A /* CategoryCell.xib in Resources */,
