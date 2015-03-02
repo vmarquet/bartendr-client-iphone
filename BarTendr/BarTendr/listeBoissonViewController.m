@@ -111,7 +111,7 @@ Article * article;
                     article.nom_boisson = [dictionary objectForKey:@"name"];
                     article.boisson_description = [dictionary objectForKey:@"description"];
                     article.volume_boisson = [[dictionary objectForKey:@"size"]integerValue];
-                    article.prix = [[dictionary objectForKey:@"price"]integerValue];
+                    article.prix = [[dictionary objectForKey:@"price"]floatValue];
                     [data2 addObject:article];
                     // Affichage du details de chaque boisson
                     NSLog(@"Mes données article : id= %d, nom= %@, volume= %.2u, prix= %.2f €, description= %@"
