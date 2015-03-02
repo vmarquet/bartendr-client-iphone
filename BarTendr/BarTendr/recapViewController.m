@@ -24,12 +24,13 @@
 
 float prix;
 int SelectedIndex;
-bool modiFlag = NO;
+bool modiFlag;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     labelTable.text = numberTable;
     data3 = commande.liste_article;
+    modiFlag = NO;
     
     [commande calculTotalCommande:commande];
     NSString *strPrix = [NSString stringWithFormat:@"%.2f €",commande.total];
