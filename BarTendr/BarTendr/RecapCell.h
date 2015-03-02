@@ -14,6 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *suppression;
 @property (weak, nonatomic) IBOutlet UIImageView *imageBoisson;
 
--(void) buttonPressed2;
+-(void) buttonPressed2:(id)sender;
 
 @end

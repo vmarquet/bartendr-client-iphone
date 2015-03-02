@@ -20,7 +20,7 @@
     // Configure the view for the selected state
 }
 
--(void) buttonPressed2 {
+-(void) buttonPressed2:(id)sender {
     
 }
 

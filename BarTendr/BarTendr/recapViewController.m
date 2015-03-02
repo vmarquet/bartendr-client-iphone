@@ -93,7 +93,7 @@ bool modiFlag;
     
     SelectedIndex = indexPath3.row;
     
-    [cell3.suppression addTarget:self action:@selector(buttonPressed2)
+    [cell3.suppression addTarget:self action:@selector(buttonPressed2:)
              forControlEvents:UIControlEventTouchUpInside];
     
     return cell3;
@@ -112,10 +112,12 @@ bool modiFlag;
 }
 
 //Bouton "supprimer" lors de la modif pressé
--(void) buttonPressed2 {
+-(void) buttonPressed2:(id)sender {
     
-    Article * obj = [[Article alloc] init];
-    obj = [data3 objectAtIndex:SelectedIndex];
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView3];
+    NSIndexPath *indexLocal = [self.tableView3 indexPathForRowAtPoint:buttonPosition];
+    SelectedIndex = indexLocal.row;
+    [data3 objectAtIndex:SelectedIndex];
     [data3 removeObjectAtIndex:SelectedIndex];
     [self.tableView3 reloadData];
     [commande calculTotalCommande:commande];
