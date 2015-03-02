@@ -137,7 +137,6 @@
     
     cell.titleCell.text = [data objectAtIndex:indexPath.row];
     return cell;
-    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

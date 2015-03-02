@@ -10,7 +10,7 @@
 
 @implementation Article
 
-@synthesize id_boisson, nom_boisson, boisson_description, prix, volume_boisson, categorie, quantite;
+@synthesize id_boisson, nom_boisson, boisson_description, prix, volume_boisson, categorie;
 
 
 @end

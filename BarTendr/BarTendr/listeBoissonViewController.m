@@ -99,8 +99,6 @@ Article * article;
         // On test pour voir si notre dictionnaire est bien un JSON
         if([NSJSONSerialization isValidJSONObject:_dictionnaire]){
             // On va donc pouvoir "Déserialiser" le JSON, et donc recupérer les infos nécéssaire au remplissage de nos TableView :)
-            // Pour le moment je l'affiche dans le terminal (test)
-            
             NSLog(@"Mon JSON : \n %@", _dictionnaire);
             
             // PARSING JSON
@@ -112,11 +110,11 @@ Article * article;
                     article.id_boisson = [[dictionary objectForKey:@"id"]integerValue];
                     article.nom_boisson = [dictionary objectForKey:@"name"];
                     article.boisson_description = [dictionary objectForKey:@"description"];
-                    article.volume_boisson = [dictionary objectForKey:@"size"];
+                    article.volume_boisson = [[dictionary objectForKey:@"size"]integerValue];
                     article.prix = [[dictionary objectForKey:@"price"]integerValue];
                     [data2 addObject:article];
                     // Affichage du details de chaque boisson
-                    NSLog(@"Mes données article : id= %d, nom= %@, volume= %@, prix= %.2f €, description= %@"
+                    NSLog(@"Mes données article : id= %d, nom= %@, volume= %.2u, prix= %.2f €, description= %@"
                           , article.id_boisson, article.nom_boisson,article.volume_boisson, article.prix,article.boisson_description);
                 }
                 //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
@@ -175,14 +173,6 @@ Article * article;
         cell.addButton.hidden = YES;
     }
     
-    /*if(indexPath.row == prevIndex && prevIndex != SelectedIndex){
-     
-     cell.descLabelCell.hidden = YES;
-     cell.descCell.hidden = YES;
-     cell.addButton.hidden = YES;
-     }*/
-    
-    
     NSString * prix = [NSString stringWithFormat:@"%.2f €",my_article.prix];
     cell.priceLabelCell.text = prix;
     
@@ -196,27 +186,29 @@ Article * article;
 
 //Action lors d'un clic sur le bouton d'ajout
 -(void)buttonPressed {
-    //NSLog(@"Button %d Pressed!", indexSelected);
+    
+    // on crée un article pour récupérer les données à la case selectionné.
     Article * art = [data2 objectAtIndex:indexSelected];
     
-    NSLog(@"Article %@ ajouté au panier !", art.nom_boisson);
+    // FUTUR NOTIF D'AJOUT DE COMMENTAIRES
+    /*
+    UIAlertView * alertAddBoisson;
+    alertAddBoisson = [[UIAlertView alloc] initWithTitle:@"AlertView with User Input" message:@"Commentaire" delegate:self cancelButtonTitle:@"Ajouter" otherButtonTitles:@"Non Merci",nil];
+    alertAddBoisson.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alertAddBoisson show];
+    */
     
-    // /!\ A compléter quand la structure des JSON sera terminée /!\
+    // Affichage du "TOAST" d'ajout à la commande avec message en fonction de la boisson choisie
+    NSString * alertMessage = [NSString stringWithFormat:@"%@ a bien été ajouté au panier.", art.nom_boisson];
+    UIAlertView * alertAddBoisson;
+    alertAddBoisson = [[UIAlertView alloc] initWithTitle:nil message:alertMessage delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
     
-    //Ajout des données à l'objet Article courant pour l'ajouter à la liste
-    Article * article ;
-    Article * articleComp;
-    article = [[Article alloc] init];
-    articleComp = [[Article alloc] init];
-    
-    article.quantite = 1;
-    article.id_boisson = indexSelected;
-    article.nom_boisson = art.nom_boisson;
-    article.prix = art.prix;
-    
-    //NSLog(@"\n%@ x%d, index %d", article.nom_boisson, article.quantite, article.id_boisson);
-    NSLog(@" %@ ajouté au panier !", art.nom_boisson);
+    // Ajout de l'article choisi à la commande
     [commande.liste_article addObject:art];
+    
+    // On affiche et desaffiche l'alert == equivalent TOAST Android?? :p
+    [alertAddBoisson show];
+    [alertAddBoisson dismissWithClickedButtonIndex:0 animated:YES];
     
 }
 
@@ -228,9 +220,6 @@ Article * article;
     
     //cellule sur laquelle on a cliqué ou non ?
     if(SelectedIndex == indexPath.row){
-        //cell.descLabelCell.hidden = NO;
-        //cell.descCell.hidden = NO;
-        //cell.addButton.hidden = NO;
         return 180;
     }else {
         cell.descLabelCell.hidden = YES;
@@ -260,7 +249,6 @@ Article * article;
     //Il existe déjà une autre cellule ouverte
     if(SelectedIndex != -1){
         SelectedIndex = indexPath.row;
-        //NSIndexPath *prevPath = [NSIndexPath indexPathForRow:SelectedIndex inSection:0];
         ExpendingCell *previousCell = (ExpendingCell*)[tableView cellForRowAtIndexPath:prevPath];
         previousCell.descLabelCell.hidden = YES;
         previousCell.descCell.hidden = YES;
