@@ -74,7 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarTendr/listeBoissonViewController.m"
+<<<<<<< HEAD
             timestampString = "447008665.200136"
+=======
+            timestampString = "445530894.208966"
+>>>>>>> 1158f9afb0059ee783b031e55fda42bb4ff43b4f
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "244"
@@ -122,11 +126,21 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarTendr/recapViewController.m"
+<<<<<<< HEAD
             timestampString = "447008665.200136"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "150"
             endingLineNumber = "150">
+=======
+            timestampString = "446742239.273156"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "-modifyPressed:"
+            landmarkType = "5">
+>>>>>>> 1158f9afb0059ee783b031e55fda42bb4ff43b4f
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -136,29 +150,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarTendr/recapViewController.m"
-            timestampString = "446745510.425577"
+            timestampString = "446742988.484563"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
             endingLineNumber = "17"
             landmarkName = "tableView3"
             landmarkType = "19">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarTendr/recapViewController.m"
-            timestampString = "446999650.827691"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
