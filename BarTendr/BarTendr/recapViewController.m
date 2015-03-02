@@ -20,6 +20,7 @@
 @synthesize labelTable;
 @synthesize prixTotal;
 @synthesize modifyButton;
+@synthesize payButton;
 
 float prix;
 int SelectedIndex;
@@ -37,6 +38,15 @@ bool modiFlag = NO;
     //Affichage des article de la commane en console + calcul du prix total de la commande
     [commande calculTotalCommande:commande];
     NSLog(@"%.2f", commande.total);
+    
+    if([data3 count] == 0){
+        modifyButton.hidden = YES;
+        payButton.hidden = YES;
+    }
+    if([data3 count] != 0){
+        modifyButton.hidden = NO;
+        payButton.hidden = NO;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,6 +99,7 @@ bool modiFlag = NO;
     
 }
 
+//Bouton "modifier" pressé
 - (IBAction)modifyPressed:(id)sender {
 
     if(modiFlag == NO) {
@@ -99,6 +110,7 @@ bool modiFlag = NO;
     [tableView3 reloadData];
 }
 
+//Bouton "supprimer" lors de la modif pressé
 -(void) buttonPressed2 {
     
     Article * obj = [[Article alloc] init];
@@ -109,6 +121,15 @@ bool modiFlag = NO;
     NSLog(@"%.2f", commande.total);
     NSString *strPrix = [NSString stringWithFormat:@"%.2f €",commande.total];
     prixTotal.text = strPrix;
+    
+    if([data3 count] == 0){
+        modifyButton.hidden = YES;
+        payButton.hidden = YES;
+    }
+    else {
+        modifyButton.hidden = NO;
+        payButton.hidden = NO;
+    }
 }
 
 #pragma mark - Navigation

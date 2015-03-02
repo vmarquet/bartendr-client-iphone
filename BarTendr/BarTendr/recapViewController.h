@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *prixTotal;
 @property (weak, nonatomic) IBOutlet UILabel *messagePrixTotal;
 @property (strong, nonatomic) IBOutlet UIButton *modifyButton;
+@property (strong, nonatomic) IBOutlet UIButton *payButton;
 
 
 - (IBAction)modifyPressed:(id)sender;

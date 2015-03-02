@@ -92,19 +92,21 @@
             
             // PARSING JSON
             
-               if ([_dictionnaire isKindOfClass:[NSArray class]]){
-                    //Parcours du Json
-                    for (NSDictionary *dictionary in _dictionnaire) {
-                        Categorie * categorie = [[Categorie alloc] init];
-                        categorie.id_categorie = [[dictionary objectForKey:@"id"]integerValue];
-                        categorie.nom_categorie = [dictionary objectForKey:@"name"];
-                        [data addObject:categorie.nom_categorie];
-                        [_listeIdCat addObject:[NSNumber numberWithInteger:categorie.id_categorie]];
-                        NSLog(@"LISTE ID : %@", _listeIdCat);
+            if ([_dictionnaire isKindOfClass:[NSArray class]]){
+            //Parcours du Json
+                for (NSDictionary *dictionary in _dictionnaire) {
+                    Categorie * categorie = [[Categorie alloc] init];
+                    categorie.id_categorie = [[dictionary objectForKey:@"id"]integerValue];
+                    categorie.nom_categorie = [dictionary objectForKey:@"name"];
+                    [data addObject:categorie.nom_categorie];
+                    [_listeIdCat addObject:[NSNumber numberWithInteger:categorie.id_categorie]];
                 }
+                
+                NSLog(@"LISTE ID : %@", _listeIdCat);
+                
                 //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
-                   [self.tableView reloadData];
-                   [_alert dismissWithClickedButtonIndex:0 animated:YES];
+                [self.tableView reloadData];
+                [_alert dismissWithClickedButtonIndex:0 animated:YES];
             }
         }
     }
