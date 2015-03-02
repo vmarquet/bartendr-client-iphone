@@ -52,10 +52,10 @@ bool modiFlag = NO;
     return [data3 count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView3 cellForRowAtIndexPath:(NSIndexPath *)indexPath3 {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath3 {
     
     static NSString *CellIdentifier3 = @"RecapCell";
-    RecapCell *cell3 = [tableView3 dequeueReusableCellWithIdentifier:CellIdentifier3];
+    RecapCell *cell3 = [tableView dequeueReusableCellWithIdentifier:CellIdentifier3];
     
     if(cell3 == nil){
         NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"RecapCell" owner:self options:nil];
@@ -119,26 +119,5 @@ bool modiFlag = NO;
     // Pass the selected object to the new view controller.
 }
 
-- (void)tableView:(UITableView *)tableView3 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    /*
-    static NSString *CellIdentifier3 = @"RecapCell";
-    RecapCell *cell3 = [tableView3 dequeueReusableCellWithIdentifier:CellIdentifier3];
-    
-    if(cell3 == nil){
-        NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"RecapCell" owner:self options:nil];
-        cell3 = [nib objectAtIndex:0];
-    }
-    
-    Article * obj = [[Article alloc] init];
-    obj = [data3 objectAtIndex:indexPath.row];
-    [data3 removeObjectAtIndex: indexPath.row];
-    [self.tableView3 reloadData];
-    [commande calculTotalCommande:commande];
-    NSLog(@"%.2f", commande.total);
-    NSString *strPrix = [NSString stringWithFormat:@"%.2f €",commande.total];
-    prixTotal.text = strPrix;
-    */
-
-}
 
 @end
