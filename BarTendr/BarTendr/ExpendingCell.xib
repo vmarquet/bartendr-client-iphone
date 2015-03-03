@@ -40,12 +40,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58n-8y-daD">
-                        <rect key="frame" x="216" y="67" width="64" height="46"/>
-                        <color key="backgroundColor" red="0.34664470679600368" green="0.33389024138370149" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="+">
-                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="216" y="87" width="64" height="27"/>
+                        <color key="backgroundColor" white="0.80000000000000004" alpha="1" colorSpace="calibratedWhite"/>
+                        <state key="normal" title="Ajouter">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.borderWidth" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </button>
                 </subviews>
             </tableViewCellContentView>
@@ -57,7 +64,7 @@
                 <outlet property="priceLabelCell" destination="w32-Qy-JkG" id="rpH-gV-7ov"/>
                 <outlet property="titleCell" destination="OSb-VQ-Bt1" id="QG4-rB-pUC"/>
             </connections>
-            <point key="canvasLocation" x="303" y="191"/>
+            <point key="canvasLocation" x="303" y="190"/>
         </tableViewCell>
     </objects>
     <resources>
