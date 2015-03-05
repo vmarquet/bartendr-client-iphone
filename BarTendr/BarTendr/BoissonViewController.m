@@ -114,6 +114,7 @@
                     Categorie * categorie = [[Categorie alloc] init];
                     categorie.id_categorie = [[dictionary objectForKey:@"id"]integerValue];
                     categorie.nom_categorie = [dictionary objectForKey:@"name"];
+                    categorie.url_img_categorie = [dictionary objectForKey:@"picture_url"];
                     [data addObject:categorie.nom_categorie];
                     [_listeIdCat addObject:[NSNumber numberWithInteger:categorie.id_categorie]];
                 }
