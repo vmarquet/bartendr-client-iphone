@@ -24,6 +24,14 @@
     _alert2 = [[UIAlertView alloc] initWithTitle:@"Envoi de la commande en cours.\nVeuillez patienter..."message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
     [_alert2 show];
     
+    int table = 0;
+    if ([numberTable length] != 0) {
+        NSRange range = [numberTable rangeOfString:@"°" options:NSBackwardsSearch range:NSMakeRange(0, 8)];
+        NSString *substring = [numberTable substringFromIndex:range.location+1];
+        table = [substring integerValue];
+    }
+            NSLog(@"ID TABLE: %d",table);
+    
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
     NSMutableDictionary *dict2 = [[NSMutableDictionary alloc]init];
     NSMutableDictionary *article1;
@@ -38,7 +46,7 @@
         
     }
     NSLog(@"ma liste :%@", liste);
-    [dict setValue: @1 forKey:@"table"];
+    [dict setValue:[[NSString alloc] initWithFormat:@"%d",table] forKey:@"table"];
     [dict setValue:liste forKey:@"items_attributes"];
     [dict2 setValue:dict forKey:@"order"];
     
