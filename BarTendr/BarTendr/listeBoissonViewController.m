@@ -128,10 +128,11 @@ Article * article;
                     article.boisson_description = [dictionary objectForKey:@"description"];
                     article.volume_boisson = [[dictionary objectForKey:@"size"]integerValue];
                     article.prix = [[dictionary objectForKey:@"price"]floatValue];
+                    article.urlImage = [dictionary objectForKey:@"picture_url"];
                     [data2 addObject:article];
                     // Affichage du details de chaque boisson
-                    NSLog(@"Mes données article : id= %d, nom= %@, volume= %.2u, prix= %.2f €, description= %@"
-                          , article.id_boisson, article.nom_boisson,article.volume_boisson, article.prix,article.boisson_description);
+                    NSLog(@"Mes données article : id= %d, nom= %@, volume= %.2u, prix= %.2f €, description= %@, URLIMAGE= %@"
+                          , article.id_boisson, article.nom_boisson,article.volume_boisson, article.prix,article.boisson_description, article.urlImage);
                 }
                 //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
                 [self.tableView2 reloadData];
