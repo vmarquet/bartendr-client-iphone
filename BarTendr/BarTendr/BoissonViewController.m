@@ -19,6 +19,7 @@
 @property unsigned int idCat;
 @property UIAlertView *alert;
 @property NSMutableArray * listeIdCat;
+@property(nonatomic) NSInteger cancelButtonIndex;
 @end
 
 @implementation boissonViewController
@@ -30,11 +31,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    labelTable.text = numberTable;
-    
     // Affichage d'un petit Pop-Up d'attente, a finaliser ...
     _alert = [[UIAlertView alloc] initWithTitle:@"Téléchargement en cours.\nVeuillez patienter..."message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
     [_alert show];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:true];
+    labelTable.text = numberTable;
     
     // Description de l'URL, j'ai mis l'url de Fabrigli pour avoir une liste de categories ^^, on la changera apres :)
     NSURL * url = [NSURL URLWithString:@"http://176.182.204.12/categories.json"];
@@ -58,13 +62,25 @@
     _listeIdCat = [[NSMutableArray alloc]initWithObjects:nil];
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        NSLog(@"He press OK");
+        [self viewWillAppear:true];
+    }
+}
 
 #pragma mark NSURLConnectionDelegate
 // On verifie que la connexion n'a pas FAIL, sinon affichage dans le terminal du message d'erreur obtenu
 - (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     NSLog(@"Erreur ===>  %@  <====== Fin Erreur", error);
-
+    
+    [_alert dismissWithClickedButtonIndex:0 animated:YES];
+    
+    _alert = [[UIAlertView alloc] initWithTitle:nil message:@"Une erreur de connexion s'est produite.\n\nVeuillez vous déplacer dans une zone avec une meilleure réception et réessayer. Appuyez sur le bouton pour vous reconnecter." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    [_alert show];
 }
+
 // Verification pour voir si on a reçu une réponse
 - (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     _donnes = [[NSMutableData alloc] init];
