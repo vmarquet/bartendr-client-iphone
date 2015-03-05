@@ -183,7 +183,7 @@ poursuivre votre commande</string>
                                     <segue destination="Stg-CR-w9X" kind="push" id="gyI-96-7kZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Récapitulatif de  votre commande" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4s-Xr-jHz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre panier" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4s-Xr-jHz">
                                 <rect key="frame" x="69" y="28" width="173" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -285,15 +285,12 @@ poursuivre votre commande</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WEB VIEW PAYPAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfm-Jc-LmZ">
-                                <rect key="frame" x="66" y="239" width="189" height="94"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfm-Jc-LmZ">
+                                <rect key="frame" x="66" y="149" width="189" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="fz0-3U-Zg8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paiement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXW-ry-wgO">
-                                <rect key="frame" x="116" y="42" width="89" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -333,20 +330,38 @@ poursuivre votre commande</string>
                                     <segue destination="JEw-Um-rsJ" kind="push" id="CY5-fc-PIY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre numéro de commande:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXW-ry-wgO">
+                                <rect key="frame" x="31" y="58" width="259" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant à payer : XX.XX€" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcU-A4-SKx">
+                                <rect key="frame" x="76" y="314" width="169" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="JUs-JE-R6t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XXW-ry-wgO" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="100" id="5cE-JF-IZm"/>
-                            <constraint firstItem="t0n-AF-nPf" firstAttribute="top" secondItem="Rfm-Jc-LmZ" secondAttribute="bottom" constant="235" id="Dgb-09-gfQ"/>
+                            <constraint firstItem="XXW-ry-wgO" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="15" id="5cE-JF-IZm"/>
+                            <constraint firstItem="Rfm-Jc-LmZ" firstAttribute="top" secondItem="XXW-ry-wgO" secondAttribute="bottom" constant="67" id="Cjb-p3-q2v"/>
+                            <constraint firstItem="KcU-A4-SKx" firstAttribute="top" secondItem="Rfm-Jc-LmZ" secondAttribute="bottom" constant="71" id="EC2-2h-tiL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CE7-Xd-44h" secondAttribute="trailing" constant="49" id="Iiq-J7-Khn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XXW-ry-wgO" secondAttribute="trailing" constant="99" id="Lkd-La-Ep4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XXW-ry-wgO" secondAttribute="trailing" constant="14" id="Lkd-La-Ep4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GxC-vC-2kv" secondAttribute="trailing" constant="185" id="OOX-aV-9qG"/>
                             <constraint firstItem="t0n-AF-nPf" firstAttribute="top" secondItem="GxC-vC-2kv" secondAttribute="bottom" constant="38" id="ReY-pC-Ld1"/>
+                            <constraint firstItem="Rfm-Jc-LmZ" firstAttribute="trailing" secondItem="CE7-Xd-44h" secondAttribute="trailing" id="WIx-rv-0YW"/>
+                            <constraint firstItem="KcU-A4-SKx" firstAttribute="centerX" secondItem="Rfm-Jc-LmZ" secondAttribute="centerX" id="bCd-UZ-ZwL"/>
+                            <constraint firstItem="Rfm-Jc-LmZ" firstAttribute="leading" secondItem="GxC-vC-2kv" secondAttribute="leading" id="gxc-nS-xnJ"/>
+                            <constraint firstItem="KcU-A4-SKx" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="60" id="hgo-s7-J3P"/>
                             <constraint firstItem="GxC-vC-2kv" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="50" id="kCq-81-ybj"/>
                             <constraint firstItem="t0n-AF-nPf" firstAttribute="top" secondItem="CE7-Xd-44h" secondAttribute="bottom" constant="38" id="mjr-bD-FPM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Rfm-Jc-LmZ" secondAttribute="trailing" constant="49" id="p8b-VP-81H"/>
-                            <constraint firstItem="Rfm-Jc-LmZ" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="50" id="rhd-vN-bcg"/>
-                            <constraint firstItem="XXW-ry-wgO" firstAttribute="top" secondItem="xsJ-Lv-7Mk" secondAttribute="bottom" constant="22" id="wkP-sZ-1SR"/>
+                            <constraint firstItem="XXW-ry-wgO" firstAttribute="top" secondItem="xsJ-Lv-7Mk" secondAttribute="bottom" constant="38" id="wkP-sZ-1SR"/>
                             <constraint firstItem="CE7-Xd-44h" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="172" id="ycj-d3-g1M"/>
                         </constraints>
                     </view>
@@ -690,8 +705,8 @@ poursuivre votre commande</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ZBa-Da-He9"/>
         <segue reference="gyI-96-7kZ"/>
+        <segue reference="CY5-fc-PIY"/>
         <segue reference="GQP-Kf-GPR"/>
         <segue reference="V2R-nb-SEF"/>
     </inferredMetricsTieBreakers>
