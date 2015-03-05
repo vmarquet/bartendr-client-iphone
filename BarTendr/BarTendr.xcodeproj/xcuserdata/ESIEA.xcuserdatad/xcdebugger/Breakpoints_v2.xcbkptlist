@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarTendr/boissonViewController.m"
-            timestampString = "443113695.965555"
+            timestampString = "447260354.258132"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,15 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarTendr/listeBoissonViewController.m"
-<<<<<<< HEAD
-            timestampString = "447008665.200136"
-=======
-            timestampString = "445530894.208966"
->>>>>>> 1158f9afb0059ee783b031e55fda42bb4ff43b4f
+            timestampString = "447260818.749388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "244"
-            endingLineNumber = "244"
+            startingLineNumber = "256"
+            endingLineNumber = "256"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -94,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarTendr/listeBoissonViewController.m"
-            timestampString = "446738052.955046"
+            timestampString = "447259358.763666"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -126,21 +122,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarTendr/recapViewController.m"
-<<<<<<< HEAD
-            timestampString = "447008665.200136"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150">
-=======
-            timestampString = "446742239.273156"
+            timestampString = "447009036.941233"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
             endingLineNumber = "104"
             landmarkName = "-modifyPressed:"
             landmarkType = "5">
->>>>>>> 1158f9afb0059ee783b031e55fda42bb4ff43b4f
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -157,6 +145,54 @@
             endingLineNumber = "17"
             landmarkName = "tableView3"
             landmarkType = "19">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarTendr/listeBoissonViewController.m"
+            timestampString = "447260818.749388"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarTendr/listeBoissonViewController.m"
+            timestampString = "447260818.749388"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarTendr/boissonViewController.m"
+            timestampString = "447260574.149578"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-connection:didFailWithError:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

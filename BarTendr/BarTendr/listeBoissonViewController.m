@@ -34,15 +34,18 @@ Article * article;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Affichage d'un petit Pop-Up d'attente, a finaliser ...
+    _alert = [[UIAlertView alloc] initWithTitle:@"Téléchargement en cours.\nVeuillez patienter..."message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
+    [_alert show];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:true];
     SelectedIndex = -1;
     labelTable.text = numberTable;
     labelTitre.text = boissonType;
     NSLog(@"boissonType = %@", boissonType);
     NSLog(@"%u", idCategorie);
-    
-    // Affichage d'un petit Pop-Up d'attente, a finaliser ...
-    _alert = [[UIAlertView alloc] initWithTitle:@"Téléchargement en cours.\nVeuillez patienter..."message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
-    [_alert show];
     
     NSInteger rowPressed = idCategorie;
     
@@ -69,12 +72,25 @@ Article * article;
     data2 = [[NSMutableArray alloc]initWithObjects:nil];
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        NSLog(@"He press OK");
+        [self viewWillAppear:true];
+    }
+}
+
 #pragma mark NSURLConnectionDelegate
 // On verifie que la connexion n'a pas FAIL, sinon affichage dans le terminal du message d'erreur obtenu
 - (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     NSLog(@"Erreur ===>  %@  <====== Fin Erreur", error);
     
+    [_alert dismissWithClickedButtonIndex:0 animated:YES];
+    
+    _alert = [[UIAlertView alloc] initWithTitle:nil message:@"Une erreur de connexion s'est produite.\n\nVeuillez vous déplacer dans une zone avec une meilleure réception et réessayer. Appuyez sur le bouton pour vous reconnecter." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+
+    [_alert show];
 }
+
 // Verification pour voir si on a reçu une réponse
 - (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     _donnes = [[NSMutableData alloc] init];
