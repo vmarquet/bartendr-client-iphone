@@ -11,6 +11,8 @@
 
 extern NSString * numberTable;
 extern Commande * commande;
+extern NSString * numCommande;
+extern NSString * totalString;
 
 @interface Globals : NSObject
 {

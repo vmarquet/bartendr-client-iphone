@@ -23,7 +23,7 @@
 
 
 - (IBAction)modifyPressed:(id)sender;
-//-(void) buttonPressed2:(id)sender;
+- (IBAction)payPressed:(id)sender;
     
 
 @end

@@ -369,8 +369,10 @@ poursuivre votre commande</string>
                     <connections>
                         <outlet property="gros_text" destination="Rfm-Jc-LmZ" id="fKk-6r-zay"/>
                         <outlet property="nextButton" destination="CE7-Xd-44h" id="JYr-UU-4Bj"/>
+                        <outlet property="numComLabel" destination="Rfm-Jc-LmZ" id="VRI-5V-lj2"/>
                         <outlet property="paiement" destination="XXW-ry-wgO" id="a1r-xg-4BM"/>
                         <outlet property="returnButton" destination="GxC-vC-2kv" id="YVu-hb-hJx"/>
+                        <outlet property="totalLabel" destination="KcU-A4-SKx" id="jCw-Si-ohO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5j0-5f-oOt" userLabel="First Responder" sceneMemberID="firstResponder"/>

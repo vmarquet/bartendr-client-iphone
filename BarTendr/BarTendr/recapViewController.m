@@ -48,6 +48,9 @@ bool modiFlag;
         modifyButton.hidden = NO;
         payButton.hidden = NO;
     }
+    
+    [payButton addTarget:self action:@selector(payPressed:)
+                forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -133,6 +136,12 @@ bool modiFlag;
         modifyButton.hidden = NO;
         payButton.hidden = NO;
     }
+}
+
+-(IBAction)payPressed:(id)sender {
+    
+    totalString = prixTotal.text;
+    numCommande = @"ABC";
 }
 
 #pragma mark - Navigation

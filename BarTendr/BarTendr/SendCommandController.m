@@ -16,10 +16,17 @@
 @end
 
 @implementation SendCommandController
+@synthesize numComLabel;
+@synthesize totalLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSString * tempString;
+    tempString = @"Montant à payer : ";
+    tempString = [tempString stringByAppendingString:totalString];
+    totalLabel.text = tempString;
     
     _alert2 = [[UIAlertView alloc] initWithTitle:@"Envoi de la commande en cours.\nVeuillez patienter..."message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
     [_alert2 show];

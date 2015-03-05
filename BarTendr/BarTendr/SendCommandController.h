@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *returnButton;
 @property (weak, nonatomic) IBOutlet UILabel *paiement;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (strong, nonatomic) IBOutlet UILabel *numComLabel;
+@property (strong, nonatomic) IBOutlet UILabel *totalLabel;
 
 // This method receives the error report in case of connection is not made to server.
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;

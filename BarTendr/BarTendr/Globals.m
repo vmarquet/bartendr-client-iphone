@@ -11,6 +11,8 @@
 
 NSString * numberTable;
 Commande * commande;
+NSString * numCommande;
+NSString * totalString;
 
 @implementation Globals
 {
