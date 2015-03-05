@@ -138,8 +138,8 @@ bool modiFlag;
     }
 }
 
+//Bouton "payer" pressé
 -(IBAction)payPressed:(id)sender {
-    
     totalString = prixTotal.text;
     numCommande = @"ABC";
 }

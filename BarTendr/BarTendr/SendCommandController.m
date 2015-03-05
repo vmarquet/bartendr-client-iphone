@@ -21,13 +21,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
+    //Construction du texte pour le totalLabel
     NSString * tempString;
     tempString = @"Montant à payer : ";
     tempString = [tempString stringByAppendingString:totalString];
     totalLabel.text = tempString;
     
+    //UIAlertView
     _alert2 = [[UIAlertView alloc] initWithTitle:@"Envoi de la commande en cours.\nVeuillez patienter..."message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
     [_alert2 show];
     
@@ -92,11 +93,8 @@
             } else {
                 NSLog(@"Connection could not be made");
             }
-            
         }
-        
     }
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -110,6 +108,7 @@
 }
 
 - (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response{
+    
     NSLog(@"Reponse Serveur ===> %@", response);
     [_alert2 dismissWithClickedButtonIndex:0 animated:YES];
 
@@ -126,28 +125,18 @@
 }
 
 - (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
+    
     NSLog(@"DATA RECEIVED : ");
     NSString *myResponseReadable = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSLog(@"%@",myResponseReadable);
     
-    
-    
 }
 // This method is used to process the data after connection has made successfully.
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
+    
     NSLog(@"Fini de transmettre les données");
     [_alert2 dismissWithClickedButtonIndex:0 animated:YES];
 
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
