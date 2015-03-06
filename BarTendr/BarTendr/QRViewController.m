@@ -33,8 +33,6 @@
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
     
-    NSLog(@"\n\nScreen Width: %.2f\nScreen height: %.2f\n", screenWidth, screenHeight);
-    
     commande = [[Commande alloc] init];
     commande.liste_article = [[NSMutableArray alloc] initWithObjects:nil];
     
@@ -91,7 +89,7 @@
 }
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
-   int penis;
+   int maTable;
     if (metadataObjects != nil && [metadataObjects count] > 0) {
         AVMetadataMachineReadableCodeObject *metadataObj = [metadataObjects objectAtIndex:0];
         if ([[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode]) {
@@ -102,12 +100,12 @@
             NSError *e;
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&e];
             NSLog(@"JSON TABLE \n%@", dict);
-            if ([dict isKindOfClass:[NSArray class]]){
+            if ([dict isKindOfClass:[NSDictionary class]]){
                 //Parcours du Json
-                   penis = [[dict objectForKey:@"table"]integerValue];
-                
+                maTable = [[dict objectForKey:@"table"]integerValue];
             }
-            NSLog(@"    %d    ", penis);
+            numberTable = [NSString stringWithFormat:@"Table n°%d", maTable];
+            NSLog(@"%@", numberTable);
             
             [self performSelectorOnMainThread:@selector(stopReading) withObject:nil waitUntilDone:NO];
             _isReading = NO;
