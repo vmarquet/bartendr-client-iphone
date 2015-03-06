@@ -108,7 +108,6 @@
 }
 
 - (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response{
-    
     NSLog(@"Reponse Serveur ===> %@", response);
     [_alert2 dismissWithClickedButtonIndex:0 animated:YES];
 
@@ -120,12 +119,10 @@
     else{
         responseAlert = [[UIAlertView alloc] initWithTitle:nil message:@"Envoi de la commande échouée." delegate:self cancelButtonTitle:@"Réessayer" otherButtonTitles: nil];
     }
-    
     [responseAlert show];
 }
 
 - (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
-    
     NSLog(@"DATA RECEIVED : ");
     NSString *myResponseReadable = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSLog(@"%@",myResponseReadable);
@@ -133,7 +130,6 @@
 }
 // This method is used to process the data after connection has made successfully.
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    
     NSLog(@"Fini de transmettre les données");
     [_alert2 dismissWithClickedButtonIndex:0 animated:YES];
 
