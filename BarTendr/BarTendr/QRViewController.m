@@ -85,11 +85,23 @@
 }
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
+   int penis;
     if (metadataObjects != nil && [metadataObjects count] > 0) {
         AVMetadataMachineReadableCodeObject *metadataObj = [metadataObjects objectAtIndex:0];
         if ([[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode]) {
-            NSLog(@"%@", [metadataObj stringValue]);
+           // NSLog(@"%@", [metadataObj stringValue]);
             numberTable = [metadataObj stringValue];
+
+            NSData *jsonData = [numberTable dataUsingEncoding:NSUTF8StringEncoding];
+            NSError *e;
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&e];
+            NSLog(@"JSON TABLE \n%@", dict);
+            if ([dict isKindOfClass:[NSArray class]]){
+                //Parcours du Json
+                   penis = [[dict objectForKey:@"table"]integerValue];
+                
+            }
+            NSLog(@"    %d    ", penis);
             
             [self performSelectorOnMainThread:@selector(stopReading) withObject:nil waitUntilDone:NO];
             _isReading = NO;

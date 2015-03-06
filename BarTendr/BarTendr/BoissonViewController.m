@@ -153,6 +153,7 @@
     }
     
     cell.titleCell.text = [data objectAtIndex:indexPath.row];
+    //cell.imageCell.image =
     return cell;
 }
 
