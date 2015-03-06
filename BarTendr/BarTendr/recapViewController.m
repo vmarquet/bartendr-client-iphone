@@ -33,7 +33,7 @@ bool modiFlag;
     modiFlag = NO;
     
     [commande calculTotalCommande:commande];
-    NSString *strPrix = [NSString stringWithFormat:@"%.2f €",commande.total];
+    NSString *strPrix = [NSString stringWithFormat:@"Total : %.2f €",commande.total];
     prixTotal.text = strPrix;
     
     //Affichage des article de la commane en console + calcul du prix total de la commande
@@ -85,14 +85,12 @@ bool modiFlag;
        [modifyButton setTitle:@"OK" forState:UIControlStateNormal];
     }
     
-    NSString * strPrix = [NSString alloc];
     Article * obj;
     obj = [[Article alloc] init];
     
     obj = [data3 objectAtIndex:indexPath3.row];
     cell3.nomBoisson.text = obj.nom_boisson;
-    strPrix = [strPrix initWithFormat:@"%.2f€", obj.prix];
-    cell3.prixBoisson.text = strPrix;
+    cell3.prixBoisson.text = [NSString stringWithFormat:@"%.2f €",obj.prix];
     
     SelectedIndex = indexPath3.row;
     
@@ -124,9 +122,7 @@ bool modiFlag;
     [data3 removeObjectAtIndex:SelectedIndex];
     [self.tableView3 reloadData];
     [commande calculTotalCommande:commande];
-    NSLog(@"%.2f", commande.total);
-    NSString *strPrix = [NSString stringWithFormat:@"%.2f €",commande.total];
-    prixTotal.text = strPrix;
+    prixTotal.text = [NSString stringWithFormat:@"Total : %.2f €",commande.total];;
     
     if([data3 count] == 0){
         modifyButton.hidden = YES;
@@ -140,7 +136,7 @@ bool modiFlag;
 
 //Bouton "payer" pressé
 -(IBAction)payPressed:(id)sender {
-    totalString = prixTotal.text;
+    totalString = [NSString stringWithFormat:@"%.2f",commande.total];
     numCommande = @"ABC";
 }
 
