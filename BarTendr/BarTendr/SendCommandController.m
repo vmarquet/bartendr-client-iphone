@@ -32,13 +32,7 @@
     _alert2 = [[UIAlertView alloc] initWithTitle:@"Envoi de la commande en cours.\nVeuillez patienter..."message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
     [_alert2 show];
     
-    int table = 0;
-    if ([numberTable length] != 0) {
-        NSRange range = [numberTable rangeOfString:@"°" options:NSBackwardsSearch range:NSMakeRange(0, 8)];
-        NSString *substring = [numberTable substringFromIndex:range.location+1];
-        table = [substring integerValue];
-    }
-            NSLog(@"ID TABLE: %d",table);
+    NSLog(@"ID TABLE: %d",numberTable);
     
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
     NSMutableDictionary *dict2 = [[NSMutableDictionary alloc]init];
@@ -48,13 +42,11 @@
     for (Article * article in commande.liste_article) {
         article1 = [[NSMutableDictionary alloc]init];
         [article1 setValue:[NSNumber numberWithInteger: article.id_boisson] forKey:@"article_id"];
-        NSLog(@" MON ID %u", article.id_boisson);
         [article1 setValue:@"" forKey:@"comments"];
         [liste addObject:article1];
         
     }
-    NSLog(@"ma liste :%@", liste);
-    [dict setValue:[[NSString alloc] initWithFormat:@"%d",table] forKey:@"table"];
+    [dict setValue:[[NSString alloc] initWithFormat:@"%d",numberTable] forKey:@"table"];
     [dict setValue:liste forKey:@"items_attributes"];
     [dict2 setValue:dict forKey:@"order"];
     
@@ -110,7 +102,7 @@
 - (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response{
     NSLog(@"Reponse Serveur ===> %@", response);
     [_alert2 dismissWithClickedButtonIndex:0 animated:YES];
-
+    
     UIAlertView * responseAlert;
     
     if ([response statusCode] == 201) {
@@ -132,7 +124,7 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
     NSLog(@"Fini de transmettre les données");
     [_alert2 dismissWithClickedButtonIndex:0 animated:YES];
-
+    
 }
 
 @end

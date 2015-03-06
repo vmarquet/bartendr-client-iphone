@@ -28,7 +28,7 @@ bool modiFlag;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    labelTable.text = numberTable;
+    labelTable.text = [NSString stringWithFormat:@"N°%d",numberTable];
     data3 = commande.liste_article;
     modiFlag = NO;
     

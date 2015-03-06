@@ -43,7 +43,7 @@ Article * article;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:true];
     SelectedIndex = -1;
-    labelTable.text = numberTable;
+    labelTable.text = [NSString stringWithFormat:@"N°%d",numberTable];
     labelTitre.text = boissonType;
     NSLog(@"boissonType = %@", boissonType);
     NSLog(@"%u", idCategorie);

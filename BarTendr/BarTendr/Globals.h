@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Commande.h"
 
-extern NSString * numberTable;
+extern int numberTable;
 extern Commande * commande;
 extern NSString * numCommande;
 extern NSString * totalString;

@@ -38,7 +38,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:true];
-    labelTable.text = numberTable;
+    NSString * message_table = [NSString stringWithFormat:@"N°%d", numberTable];
+    labelTable.text = message_table;
     
     // Description de l'URL, j'ai mis l'url de Fabrigli pour avoir une liste de categories ^^, on la changera apres :)
     NSURL * url = [NSURL URLWithString:@"http://176.182.204.12/categories.json"];

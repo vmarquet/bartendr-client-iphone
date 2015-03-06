@@ -29,10 +29,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
-    
     commande = [[Commande alloc] init];
     commande.liste_article = [[NSMutableArray alloc] initWithObjects:nil];
     
@@ -89,23 +85,22 @@
 }
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
-   int maTable;
+    NSString * num_tab;
     if (metadataObjects != nil && [metadataObjects count] > 0) {
         AVMetadataMachineReadableCodeObject *metadataObj = [metadataObjects objectAtIndex:0];
         if ([[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode]) {
            // NSLog(@"%@", [metadataObj stringValue]);
-            numberTable = [metadataObj stringValue];
+            num_tab = [metadataObj stringValue];
 
-            NSData *jsonData = [numberTable dataUsingEncoding:NSUTF8StringEncoding];
+            NSData *jsonData = [num_tab dataUsingEncoding:NSUTF8StringEncoding];
             NSError *e;
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&e];
             NSLog(@"JSON TABLE \n%@", dict);
             if ([dict isKindOfClass:[NSDictionary class]]){
                 //Parcours du Json
-                maTable = [[dict objectForKey:@"table"]integerValue];
+                numberTable = [[dict objectForKey:@"table"]integerValue];
             }
-            numberTable = [NSString stringWithFormat:@"Table n°%d", maTable];
-            NSLog(@"%@", numberTable);
+            NSLog(@"%d", numberTable);
             
             [self performSelectorOnMainThread:@selector(stopReading) withObject:nil waitUntilDone:NO];
             _isReading = NO;

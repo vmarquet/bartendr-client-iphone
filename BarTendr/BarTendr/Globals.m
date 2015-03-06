@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Globals.h"
 
-NSString * numberTable;
+int numberTable;
 Commande * commande;
 NSString * numCommande;
 NSString * totalString;
