@@ -31,6 +31,7 @@
     
     commande = [[Commande alloc] init];
     commande.liste_article = [[NSMutableArray alloc] initWithObjects:nil];
+    numberTable =0;
     
     _isReading = YES;
     
