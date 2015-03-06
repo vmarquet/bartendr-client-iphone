@@ -29,6 +29,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    NSLog(@"\n\nScreen Width: %.2f\nScreen height: %.2f\n", screenWidth, screenHeight);
+    
     commande = [[Commande alloc] init];
     commande.liste_article = [[NSMutableArray alloc] initWithObjects:nil];
     
