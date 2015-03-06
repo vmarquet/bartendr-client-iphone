@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "Categorie.h"
 
 @interface Article : NSObject {
@@ -18,7 +19,6 @@
     unsigned int volume_boisson;
     NSString * urlImage;
     Categorie * categorie;
-    
 }
 
 @property (nonatomic) unsigned int id_boisson;

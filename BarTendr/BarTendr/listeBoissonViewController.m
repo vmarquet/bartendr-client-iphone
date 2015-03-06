@@ -10,6 +10,7 @@
 #import "Globals.h"
 #import "Categorie.h"
 #import "Article.h"
+#import <UIKit/UIKit.h>
 
 @interface listeBoissonViewController ()
 @property UIAlertView *alert;
@@ -115,10 +116,7 @@ Article * article;
         // On test pour voir si notre dictionnaire est bien un JSON
         if([NSJSONSerialization isValidJSONObject:_dictionnaire]){
             // On va donc pouvoir "Déserialiser" le JSON, et donc recupérer les infos nécéssaire au remplissage de nos TableView :)
-            NSLog(@"Mon JSON : \n %@", _dictionnaire);
-            
-            // PARSING JSON
-            
+
             if ([_dictionnaire isKindOfClass:[NSArray class]]){
                 //Parcours du Json
                 for (NSDictionary *dictionary in _dictionnaire) {
@@ -130,11 +128,7 @@ Article * article;
                     article.prix = [[dictionary objectForKey:@"price"]floatValue];
                     article.urlImage = [dictionary objectForKey:@"picture_url"];
                     [data2 addObject:article];
-                    // Affichage du details de chaque boisson
-                    NSLog(@"Mes données article : id= %d, nom= %@, volume= %.2u, prix= %.2f €, description= %@, URLIMAGE= %@"
-                          , article.id_boisson, article.nom_boisson,article.volume_boisson, article.prix,article.boisson_description, article.urlImage);
                 }
-                //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
                 [self.tableView2 reloadData];
                 [_alert dismissWithClickedButtonIndex:0 animated:YES];
             }
@@ -193,6 +187,13 @@ Article * article;
     NSString * prix = [NSString stringWithFormat:@"%.2f €",my_article.prix];
     cell.priceLabelCell.text = prix;
     
+    // AJOUT DE L'IMAGE SI ON A EU L'URL DE L'IMAGE
+    if (![my_article.urlImage isEqual:@""]) {
+    NSString * url_dl = [NSString stringWithFormat:@"http://176.182.204.12/categories%@",my_article.urlImage ];
+    cell.imageCell.image = [UIImage imageWithData:
+                              [NSData dataWithContentsOfURL:
+                               [NSURL URLWithString: url_dl]]];
+    }
     //listen for clicks
     [cell.addButton addTarget:self action:@selector(buttonPressed:)
              forControlEvents:UIControlEventTouchUpInside];
