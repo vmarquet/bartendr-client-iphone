@@ -116,7 +116,7 @@
                     categorie.nom_categorie = [dictionary objectForKey:@"name"];
                     categorie.url_img_categorie = [dictionary objectForKey:@"picture_url"];
                     [data addObject:categorie];
-                    NSLog(@"LISTE Catégorie: %@ ID : %ld", categorie.nom_categorie, categorie.id_categorie);
+                    NSLog(@"Catégorie: %@ ID : %ld", categorie.nom_categorie, categorie.id_categorie);
                 }
                 //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
                 [self.tableView reloadData];
@@ -150,7 +150,16 @@
         cell = [nib objectAtIndex:0];
     }
     
+    // AFFECTATION DES CHAMPS NOM ET IMAGE DES CELLULES CATEGORIES
     cell.titleCell.text = my_categorie.nom_categorie;
+    
+    // Récupération Image Categorie, si pas d'URL = image par defaut logo.png
+    if ([my_categorie.url_img_categorie isEqual:@"URL IMAGE"]) {
+        NSString * url_dl = [NSString stringWithFormat:@"http://176.182.204.12/categories%@",my_categorie.url_img_categorie];
+        cell.imageCell.image = [UIImage imageWithData:
+                                [NSData dataWithContentsOfURL:
+                                 [NSURL URLWithString: url_dl]]];
+    }
     return cell;
 }
 
@@ -160,13 +169,13 @@
     _nomCat = my_categorie.nom_categorie;
     _idCat = my_categorie.id_categorie;
     
-    [self performSegueWithIdentifier:@"toto" sender:self.view];
+    [self performSegueWithIdentifier:@"categorieToBoisson" sender:self.view];
 }
 
 #pragma mark - Navigation
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"toto"]){
+    if([segue.identifier isEqualToString:@"categorieToBoisson"]){
         listeBoissonViewController *controller = [segue destinationViewController];
         controller.boissonType = _nomCat;
         controller.idCategorie = _idCat;

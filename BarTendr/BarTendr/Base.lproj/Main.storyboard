@@ -519,7 +519,7 @@ poursuivre votre commande</string>
                     <connections>
                         <outlet property="boissonLabel" destination="q5b-Z2-tct" id="UJb-5w-qZg"/>
                         <outlet property="tableView" destination="nwn-L7-Zq6" id="oa5-AQ-Tm2"/>
-                        <segue destination="LjG-Tw-pwO" kind="push" identifier="toto" id="euJ-Zo-SQX"/>
+                        <segue destination="LjG-Tw-pwO" kind="push" identifier="categorieToBoisson" id="euJ-Zo-SQX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ch1-92-vn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -675,7 +675,7 @@ poursuivre votre commande</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="CY5-fc-PIY"/>
+        <segue reference="ZBa-Da-He9"/>
         <segue reference="gyI-96-7kZ"/>
         <segue reference="GQP-Kf-GPR"/>
         <segue reference="5RL-ew-l2c"/>
