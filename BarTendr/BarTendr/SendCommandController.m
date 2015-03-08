@@ -54,6 +54,9 @@
     NSData *json;
     NSURL *url = [NSURL URLWithString:@"http://176.182.204.12/orders.json"];
     
+    // Adresse nico : http://176.182.204.12/orders.json
+    // Adresse Rasp : http://192.168.42.1:3000/orders.json
+    
     // Dictionary convertable to JSON ?
     if ([NSJSONSerialization isValidJSONObject:dict])
     {

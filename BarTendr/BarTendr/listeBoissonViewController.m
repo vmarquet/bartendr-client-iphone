@@ -54,6 +54,7 @@ Article * article;
     NSString * url = [NSString stringWithFormat:@"http://176.182.204.12/categories/%d.json", rowPressed];
     
     // Adresse final :http://176.182.204.12/categories/%d.json
+    // Adresse Rasp : http://192.168.42.1:3000/categories/%d.json
     
     NSURL *urll = [NSURL URLWithString:url];
     
@@ -187,15 +188,14 @@ Article * article;
     
     NSString * prix = [NSString stringWithFormat:@"%.2f €",my_article.prix];
     cell.priceLabelCell.text = prix;
-    /*
-    // AJOUT DE L'IMAGE SI ON A EU L'URL DE L'IMAGE
-    if (![my_article.urlImage isEqual:@"<null>"]) {
+    
+    // AJOUT DE L'IMAGE SI ON A EU L'URL DE L'IMAGE A completer ! Et par defaut Bières.png si pas d'url
+    if ([my_article.urlImage isEqual:@"URL IMAGE"]) {
         NSString * url_dl = [NSString stringWithFormat:@"http://176.182.204.12/categories%@",my_article.urlImage ];
         cell.imageCell.image = [UIImage imageWithData:
                                 [NSData dataWithContentsOfURL:
                                  [NSURL URLWithString: url_dl]]];
     }
-    */
     //listen for clicks
     [cell.addButton addTarget:self action:@selector(buttonPressed:)
              forControlEvents:UIControlEventTouchUpInside];

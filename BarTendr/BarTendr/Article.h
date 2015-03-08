@@ -18,7 +18,6 @@
     float prix;
     unsigned int volume_boisson;
     NSString * urlImage;
-    Categorie * categorie;
 }
 
 @property (nonatomic) unsigned int id_boisson;
@@ -26,7 +25,6 @@
 @property (nonatomic, retain) NSString * boisson_description;
 @property (nonatomic) float prix;
 @property (nonatomic) unsigned int volume_boisson;
-@property (nonatomic, retain) Categorie * categorie;
 @property (nonatomic, retain) NSString * urlImage;
 
 

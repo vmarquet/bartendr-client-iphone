@@ -18,7 +18,6 @@
 @property NSString * nomCat;
 @property unsigned int idCat;
 @property UIAlertView *alert;
-@property NSMutableArray * listeIdCat;
 @property(nonatomic) NSInteger cancelButtonIndex;
 @end
 
@@ -43,7 +42,8 @@
     
     // Description de l'URL, j'ai mis l'url de Fabrigli pour avoir une liste de categories ^^, on la changera apres :)
     NSURL * url = [NSURL URLWithString:@"http://176.182.204.12/categories.json"];
-    // Adresse final : http://176.182.204.12/categories.json
+    // Adresse NICO : http://176.182.204.12/categories.json
+    // Adresse RASP : http://192.168.42.1:3000/categories.json
 
     
     //Création de la requete web à l'aide de NSURLRequest
@@ -60,7 +60,6 @@
     
     // Initialisation de la TableView
     data = [[NSMutableArray alloc]initWithObjects:nil];
-    _listeIdCat = [[NSMutableArray alloc]initWithObjects:nil];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -116,12 +115,9 @@
                     categorie.id_categorie = [[dictionary objectForKey:@"id"]integerValue];
                     categorie.nom_categorie = [dictionary objectForKey:@"name"];
                     categorie.url_img_categorie = [dictionary objectForKey:@"picture_url"];
-                    [data addObject:categorie.nom_categorie];
-                    [_listeIdCat addObject:[NSNumber numberWithInteger:categorie.id_categorie]];
+                    [data addObject:categorie];
+                    NSLog(@"LISTE Catégorie: %@ ID : %ld", categorie.nom_categorie, categorie.id_categorie);
                 }
-                
-                NSLog(@"LISTE ID : %@", _listeIdCat);
-                
                 //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
                 [self.tableView reloadData];
                 [_alert dismissWithClickedButtonIndex:0 animated:YES];
@@ -147,21 +143,22 @@
     
     static NSString *CellIdentifier = @"CategoryCell";
     CategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    Categorie * my_categorie = [data objectAtIndex:indexPath.row];
     
     if(cell == nil){
         NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"CategoryCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
     
-    cell.titleCell.text = [data objectAtIndex:indexPath.row];
-    //cell.imageCell.image =
+    cell.titleCell.text = my_categorie.nom_categorie;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Categorie * my_categorie = data[indexPath.item];
     
-    _nomCat = data[indexPath.item];
-    _idCat = [_listeIdCat[indexPath.item]intValue];
+    _nomCat = my_categorie.nom_categorie;
+    _idCat = my_categorie.id_categorie;
     
     [self performSegueWithIdentifier:@"toto" sender:self.view];
 }
