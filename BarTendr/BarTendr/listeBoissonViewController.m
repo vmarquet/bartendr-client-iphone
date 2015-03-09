@@ -130,6 +130,7 @@ Article * article;
                     article.prix = [[dictionary objectForKey:@"price"]floatValue];
                     article.urlImage = [dictionary objectForKey:@"picture_url"];
                     [data2 addObject:article];
+                    NSLog(@"boisson : %@, url : %@", article.nom_boisson, article.urlImage);
                 }
                 [self.tableView2 reloadData];
                 [_alert dismissWithClickedButtonIndex:0 animated:YES];
@@ -190,8 +191,8 @@ Article * article;
     cell.priceLabelCell.text = prix;
     
     // AJOUT DE L'IMAGE SI ON A EU L'URL DE L'IMAGE A completer ! Et par defaut Bières.png si pas d'url
-    if ([my_article.urlImage isEqual:@"URL IMAGE"]) {
-        NSString * url_dl = [NSString stringWithFormat:@"http://176.182.204.12/categories%@",my_article.urlImage ];
+    if (![my_article.urlImage isEqual:[NSNull null]]) {
+        NSString * url_dl = [NSString stringWithFormat:@"http://176.182.204.12%@",my_article.urlImage];
         cell.imageCell.image = [UIImage imageWithData:
                                 [NSData dataWithContentsOfURL:
                                  [NSURL URLWithString: url_dl]]];
@@ -216,11 +217,11 @@ Article * article;
     
     // FUTUR NOTIF D'AJOUT DE COMMENTAIRES
     /*
-     UIAlertView * alertAddBoisson;
-     alertAddBoisson = [[UIAlertView alloc] initWithTitle:@"AlertView with User Input" message:@"Commentaire" delegate:self cancelButtonTitle:@"Ajouter" otherButtonTitles:@"Non Merci",nil];
-     alertAddBoisson.alertViewStyle = UIAlertViewStylePlainTextInput;
-     [alertAddBoisson show];
-     */
+     UIAlertView * alertBoisson;
+     alertBoisson = [[UIAlertView alloc] initWithTitle:@"Voulez vous ajouter un commentaire" message:nil delegate:self cancelButtonTitle:@"Non Merci" otherButtonTitles:@"Ajouter",nil];
+     alertBoisson.alertViewStyle = UIAlertViewStylePlainTextInput;
+     [alertBoisson show];
+    */
     
     // Affichage du "TOAST" d'ajout à la commande avec message en fonction de la boisson choisie
     NSString * alertMessage = [NSString stringWithFormat:@"%@ a bien été ajouté au panier.", art.nom_boisson];
@@ -233,7 +234,6 @@ Article * article;
     // On affiche et desaffiche l'alert == equivalent TOAST Android?? :p
     [alertAddBoisson show];
     [alertAddBoisson dismissWithClickedButtonIndex:0 animated:YES];
-    
 }
 
 //Définition de la taille de la cellule à la ligne = indexPath

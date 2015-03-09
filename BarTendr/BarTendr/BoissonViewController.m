@@ -116,7 +116,7 @@
                     categorie.nom_categorie = [dictionary objectForKey:@"name"];
                     categorie.url_img_categorie = [dictionary objectForKey:@"picture_url"];
                     [data addObject:categorie];
-                    NSLog(@"Catégorie: %@ ID : %ld", categorie.nom_categorie, categorie.id_categorie);
+                    NSLog(@"Catégorie: %@ url :%@", categorie.nom_categorie, categorie.url_img_categorie);
                 }
                 //Affichage de la liste des donnees pour la liste des categories ^^afficher dans le terminal
                 [self.tableView reloadData];
@@ -154,8 +154,8 @@
     cell.titleCell.text = my_categorie.nom_categorie;
     
     // Récupération Image Categorie, si pas d'URL = image par defaut logo.png
-    if ([my_categorie.url_img_categorie isEqual:@"URL IMAGE"]) {
-        NSString * url_dl = [NSString stringWithFormat:@"http://176.182.204.12/categories%@",my_categorie.url_img_categorie];
+    if (![my_categorie.url_img_categorie isEqual:[NSNull null]]) {
+        NSString * url_dl = [NSString stringWithFormat:@"http://176.182.204.12%@",my_categorie.url_img_categorie];
         cell.imageCell.image = [UIImage imageWithData:
                                 [NSData dataWithContentsOfURL:
                                  [NSURL URLWithString: url_dl]]];
