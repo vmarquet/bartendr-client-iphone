@@ -92,6 +92,9 @@ bool modiFlag;
     cell3.nomBoisson.text = obj.nom_boisson;
     cell3.prixBoisson.text = [NSString stringWithFormat:@"%.2f €",obj.prix];
     
+    if ((![obj.urlImage isEqual:[NSNull null]])) {
+        cell3.imageBoisson.image = obj.imgBoisson;
+    }
     SelectedIndex = indexPath3.row;
     
     [cell3.suppression addTarget:self action:@selector(buttonPressed2:)

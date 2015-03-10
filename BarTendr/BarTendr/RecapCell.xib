@@ -13,7 +13,7 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ufS-q5-i8E" id="pVo-H1-L9g">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="IKt-xG-6eN">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="biere.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IKt-xG-6eN">
                         <rect key="frame" x="0.0" y="2" width="40" height="40"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nom_Boisson" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K51-LT-WpX">
@@ -46,7 +46,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="logo.png" width="672" height="664"/>
+        <image name="biere.jpg" width="149" height="150"/>
         <image name="poubelle.jpg" width="104" height="109"/>
     </resources>
 </document>

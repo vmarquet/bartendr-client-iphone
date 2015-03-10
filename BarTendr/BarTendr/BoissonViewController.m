@@ -44,7 +44,7 @@
     NSURL * url = [NSURL URLWithString:@"http://176.182.204.12/categories.json"];
     // Adresse NICO : http://176.182.204.12/categories.json
     // Adresse RASP : http://192.168.42.1:3000/categories.json
-
+    
     
     //Création de la requete web à l'aide de NSURLRequest
     NSURLRequest * requete = [NSURLRequest requestWithURL:url];
@@ -109,12 +109,17 @@
             // PARSING JSON
             
             if ([_dictionnaire isKindOfClass:[NSArray class]]){
-            //Parcours du Json
+                //Parcours du Json
                 for (NSDictionary *dictionary in _dictionnaire) {
                     Categorie * categorie = [[Categorie alloc] init];
                     categorie.id_categorie = [[dictionary objectForKey:@"id"]integerValue];
                     categorie.nom_categorie = [dictionary objectForKey:@"name"];
                     categorie.url_img_categorie = [dictionary objectForKey:@"picture_url"];
+                    
+                    if (![categorie.url_img_categorie isEqual:[NSNull null]]) {
+                        NSString * url_dl = [NSString stringWithFormat:@"http://176.182.204.12%@",categorie.url_img_categorie];
+                        categorie.imgCat = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: url_dl]]];
+                    }
                     [data addObject:categorie];
                     NSLog(@"Catégorie: %@ url :%@", categorie.nom_categorie, categorie.url_img_categorie);
                 }
@@ -155,13 +160,11 @@
     
     // Récupération Image Categorie, si pas d'URL = image par defaut logo.png
     if (![my_categorie.url_img_categorie isEqual:[NSNull null]]) {
-        NSString * url_dl = [NSString stringWithFormat:@"http://176.182.204.12%@",my_categorie.url_img_categorie];
-        cell.imageCell.image = [UIImage imageWithData:
-                                [NSData dataWithContentsOfURL:
-                                 [NSURL URLWithString: url_dl]]];
+        cell.imageCell.image = my_categorie.imgCat;
     }
     return cell;
 }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Categorie * my_categorie = data[indexPath.item];

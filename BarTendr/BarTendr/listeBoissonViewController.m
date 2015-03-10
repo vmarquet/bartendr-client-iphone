@@ -129,6 +129,13 @@ Article * article;
                     article.volume_boisson = [[dictionary objectForKey:@"size"]integerValue];
                     article.prix = [[dictionary objectForKey:@"price"]floatValue];
                     article.urlImage = [dictionary objectForKey:@"picture_url"];
+                    
+                    // AJOUT DE L'IMAGE SI ON A EU L'URL DE L'IMAGE ! Et par defaut Bières.png si pas d'url
+                    if (![article.urlImage isEqual:[NSNull null]]) {
+                        NSString * url_dl = [NSString stringWithFormat:@"http://176.182.204.12%@",article.urlImage];
+                        article.imgBoisson = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: url_dl]]];
+                    }
+                    
                     [data2 addObject:article];
                     NSLog(@"boisson : %@, url : %@", article.nom_boisson, article.urlImage);
                 }
@@ -192,11 +199,8 @@ Article * article;
     
     // AJOUT DE L'IMAGE SI ON A EU L'URL DE L'IMAGE A completer ! Et par defaut Bières.png si pas d'url
     if (![my_article.urlImage isEqual:[NSNull null]]) {
-        NSString * url_dl = [NSString stringWithFormat:@"http://176.182.204.12%@",my_article.urlImage];
-        cell.imageCell.image = [UIImage imageWithData:
-                                [NSData dataWithContentsOfURL:
-                                 [NSURL URLWithString: url_dl]]];
-    }
+        cell.imageCell.image = my_article.imgBoisson;
+        }
     //listen for clicks
     [cell.addButton addTarget:self action:@selector(buttonPressed:)
              forControlEvents:UIControlEventTouchUpInside];

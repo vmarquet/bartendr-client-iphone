@@ -10,6 +10,6 @@
 
 @implementation Categorie
 
-@synthesize id_categorie, nom_categorie, url_img_categorie;
+@synthesize id_categorie, nom_categorie, url_img_categorie, imgCat;
 
 @end
