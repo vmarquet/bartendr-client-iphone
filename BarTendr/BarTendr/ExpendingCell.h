@@ -16,6 +16,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *descLabelCell;
 @property (strong, nonatomic) IBOutlet UILabel *priceLabelCell;
 @property (strong, nonatomic) IBOutlet UIButton *addButton;
+@property (weak, nonatomic) IBOutlet UITextField *commentTextField;
+@property (weak, nonatomic) IBOutlet UILabel *labelCom;
 
 - (void)buttonTapped:(id)sender;
 

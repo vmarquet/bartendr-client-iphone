@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -22,7 +22,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desc" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzK-XN-o0B">
-                        <rect key="frame" x="8" y="95" width="198" height="78"/>
+                        <rect key="frame" x="8" y="95" width="198" height="47"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -51,19 +51,32 @@
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Commentaire :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fd-QK-buE">
+                        <rect key="frame" x="8" y="147" width="88" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Commentaire" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lbo-OQ-gcD">
+                        <rect key="frame" x="104" y="143" width="176" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
                 <color key="backgroundColor" red="0.98465401789999996" green="0.90921873939999998" blue="0.82466376730000002" alpha="1" colorSpace="calibratedRGB"/>
                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             </tableViewCellContentView>
             <connections>
                 <outlet property="addButton" destination="58n-8y-daD" id="JZo-vm-1Ay"/>
+                <outlet property="commentTextField" destination="Lbo-OQ-gcD" id="NnT-HR-VNc"/>
                 <outlet property="descCell" destination="GTB-cm-Cnv" id="U8B-UI-fbm"/>
                 <outlet property="descLabelCell" destination="zzK-XN-o0B" id="N3p-AQ-AhM"/>
                 <outlet property="imageCell" destination="nAD-6A-dvF" id="GAR-r9-vHe"/>
+                <outlet property="labelCom" destination="1fd-QK-buE" id="Epr-hG-zOt"/>
                 <outlet property="priceLabelCell" destination="w32-Qy-JkG" id="rpH-gV-7ov"/>
                 <outlet property="titleCell" destination="OSb-VQ-Bt1" id="QG4-rB-pUC"/>
             </connections>
-            <point key="canvasLocation" x="303" y="188"/>
+            <point key="canvasLocation" x="303" y="180"/>
         </tableViewCell>
     </objects>
     <resources>

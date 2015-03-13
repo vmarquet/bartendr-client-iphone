@@ -42,9 +42,9 @@
     for (Article * article in commande.liste_article) {
         article1 = [[NSMutableDictionary alloc]init];
         [article1 setValue:[NSNumber numberWithInteger: article.id_boisson] forKey:@"article_id"];
-        [article1 setValue:@"" forKey:@"comments"];
+        [article1 setValue:article.comment forKey:@"comments"];
         [liste addObject:article1];
-        
+        NSLog(@"comment  = - %@ -", article.comment);
     }
     [dict setValue:[[NSString alloc] initWithFormat:@"%d",numberTable] forKey:@"table"];
     [dict setValue:liste forKey:@"items_attributes"];
@@ -67,7 +67,7 @@
         if (json != nil && error == nil)
         {
             NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
-            NSLog(@"%@", jsonString);
+           // NSLog(@"%@", jsonString);
             
             NSData *postData = [jsonString dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
             NSMutableURLRequest *requestData = [[NSMutableURLRequest alloc] init];

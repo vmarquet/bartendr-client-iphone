@@ -38,6 +38,7 @@ Article * article;
     // Affichage d'un petit Pop-Up d'attente, a finaliser ...
     _alert = [[UIAlertView alloc] initWithTitle:@"Téléchargement en cours.\nVeuillez patienter..."message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
     [_alert show];
+    [_alert setTag:1];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -75,10 +76,9 @@ Article * article;
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    if (buttonIndex == 0) {
-        NSLog(@"He press OK");
-        [self viewWillAppear:true];
+    if(buttonIndex ==0){
+        NSLog(@"He Pressed OK");
+        [super viewWillAppear:TRUE];
     }
 }
 
@@ -181,6 +181,8 @@ Article * article;
         cell.descLabelCell.hidden = NO;
         cell.descCell.hidden = NO;
         cell.addButton.hidden = NO;
+        cell.commentTextField.hidden = NO;
+        cell.labelCom.hidden = NO;
     }
     
     cell.titleCell.text = my_article.nom_boisson;
@@ -189,11 +191,16 @@ Article * article;
         cell.descLabelCell.hidden = NO;
         cell.descCell.hidden = NO;
         cell.addButton.hidden = NO;
+        cell.commentTextField.hidden = NO;
+        cell.labelCom.hidden = NO;
     }else{
         cell.descLabelCell.hidden = YES;
         cell.descCell.hidden = YES;
         cell.addButton.hidden = YES;
+        cell.commentTextField.hidden = YES;
+        cell.labelCom.hidden = YES;
     }
+    
     
     NSString * prix = [NSString stringWithFormat:@"%.2f €",my_article.prix];
     cell.priceLabelCell.text = prix;
@@ -220,19 +227,11 @@ Article * article;
     
     Article * art = [data2 objectAtIndex:indexSelected];
     
-    // FUTUR NOTIF D'AJOUT DE COMMENTAIRES
-    /*
-    UIAlertView * alertBoisson;
-    alertBoisson = [[UIAlertView alloc] initWithTitle:@"Voulez vous ajouter un commentaire" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Non Merci", @"Ajouter", nil];
-    alertBoisson.alertViewStyle = UIAlertViewStylePlainTextInput;
-    [alertBoisson show];
-    */
     // Affichage du "TOAST" d'ajout à la commande avec message en fonction de la boisson choisie
     NSString * alertMessage = [NSString stringWithFormat:@"%@ a bien été ajouté au panier.", art.nom_boisson];
     UIAlertView * alertAddBoisson;
     alertAddBoisson = [[UIAlertView alloc] initWithTitle:nil message:alertMessage delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
-    
-    // Ajout de l'article choisi à la commande
+    NSLog(@"%@",cell.commentTextField.text);
     [commande.liste_article addObject:art];
     
     [alertAddBoisson show];
@@ -252,6 +251,8 @@ Article * article;
         cell.descLabelCell.hidden = YES;
         cell.descCell.hidden = YES;
         cell.addButton.hidden = YES;
+        cell.commentTextField.hidden = YES;
+        cell.labelCom.hidden = YES;
         return 54;
     }
 }
@@ -267,6 +268,8 @@ Article * article;
         cell.descLabelCell.hidden = YES;
         cell.descCell.hidden = YES;
         cell.addButton.hidden = YES;
+        cell.commentTextField.hidden = YES;
+        cell.labelCom.hidden = YES;
         
         SelectedIndex = -1;
         [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -280,6 +283,9 @@ Article * article;
         previousCell.descLabelCell.hidden = YES;
         previousCell.descCell.hidden = YES;
         previousCell.addButton.hidden = YES;
+        previousCell.commentTextField.hidden = YES;
+        previousCell.labelCom.hidden = YES;
+
         [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:prevPath] withRowAnimation:UITableViewRowAnimationFade];
     }
     
