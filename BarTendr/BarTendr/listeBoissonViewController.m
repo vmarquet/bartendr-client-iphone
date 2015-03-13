@@ -75,6 +75,7 @@ Article * article;
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
     if (buttonIndex == 0) {
         NSLog(@"He press OK");
         [self viewWillAppear:true];
@@ -200,7 +201,7 @@ Article * article;
     // AJOUT DE L'IMAGE SI ON A EU L'URL DE L'IMAGE A completer ! Et par defaut Bières.png si pas d'url
     if (![my_article.urlImage isEqual:[NSNull null]]) {
         cell.imageCell.image = my_article.imgBoisson;
-        }
+    }
     //listen for clicks
     [cell.addButton addTarget:self action:@selector(buttonPressed:)
              forControlEvents:UIControlEventTouchUpInside];
@@ -221,12 +222,11 @@ Article * article;
     
     // FUTUR NOTIF D'AJOUT DE COMMENTAIRES
     /*
-     UIAlertView * alertBoisson;
-     alertBoisson = [[UIAlertView alloc] initWithTitle:@"Voulez vous ajouter un commentaire" message:nil delegate:self cancelButtonTitle:@"Non Merci" otherButtonTitles:@"Ajouter",nil];
-     alertBoisson.alertViewStyle = UIAlertViewStylePlainTextInput;
-     [alertBoisson show];
+    UIAlertView * alertBoisson;
+    alertBoisson = [[UIAlertView alloc] initWithTitle:@"Voulez vous ajouter un commentaire" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Non Merci", @"Ajouter", nil];
+    alertBoisson.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alertBoisson show];
     */
-    
     // Affichage du "TOAST" d'ajout à la commande avec message en fonction de la boisson choisie
     NSString * alertMessage = [NSString stringWithFormat:@"%@ a bien été ajouté au panier.", art.nom_boisson];
     UIAlertView * alertAddBoisson;
@@ -235,7 +235,6 @@ Article * article;
     // Ajout de l'article choisi à la commande
     [commande.liste_article addObject:art];
     
-    // On affiche et desaffiche l'alert == equivalent TOAST Android?? :p
     [alertAddBoisson show];
     [alertAddBoisson dismissWithClickedButtonIndex:0 animated:YES];
 }

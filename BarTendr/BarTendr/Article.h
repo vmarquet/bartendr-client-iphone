@@ -19,6 +19,7 @@
     unsigned int volume_boisson;
     NSString * urlImage;
     UIImage * imgBoisson;
+    NSString * comment;
 }
 
 @property (nonatomic) unsigned int id_boisson;
@@ -28,6 +29,6 @@
 @property (nonatomic) unsigned int volume_boisson;
 @property (nonatomic, retain) NSString * urlImage;
 @property (nonatomic) UIImage * imgBoisson;
-
+@property (nonatomic, retain) NSString * comment;
 
 @end

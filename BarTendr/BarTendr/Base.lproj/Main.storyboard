@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TWy-AS-ghc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TWy-AS-ghc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -272,7 +272,7 @@ poursuivre votre commande</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfm-Jc-LmZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ABC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfm-Jc-LmZ">
                                 <rect key="frame" x="66" y="149" width="189" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="94" id="fz0-3U-Zg8"/>
@@ -281,31 +281,13 @@ poursuivre votre commande</string>
                                 <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxC-vC-2kv">
-                                <rect key="frame" x="66" y="518" width="53" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Annuler">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.borderWidth" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="JEw-Um-rsJ" kind="push" id="CY5-fc-PIY"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre numéro de commande :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXW-ry-wgO">
                                 <rect key="frame" x="31" y="58" width="263" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant à payer : XX.XX€" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcU-A4-SKx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Montant à payer : XX.XX€" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcU-A4-SKx">
                                 <rect key="frame" x="76" y="314" width="169" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="JUs-JE-R6t"/>
@@ -315,7 +297,7 @@ poursuivre votre commande</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE7-Xd-44h">
-                                <rect key="frame" x="188" y="518" width="67" height="30"/>
+                                <rect key="frame" x="129" y="518" width="67" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Continuer">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -335,21 +317,16 @@ poursuivre votre commande</string>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="CE7-Xd-44h" secondAttribute="trailing" constant="108" id="3a4-ZB-4Ie"/>
                             <constraint firstItem="XXW-ry-wgO" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="15" id="5cE-JF-IZm"/>
                             <constraint firstItem="Rfm-Jc-LmZ" firstAttribute="top" secondItem="XXW-ry-wgO" secondAttribute="bottom" constant="67" id="Cjb-p3-q2v"/>
                             <constraint firstItem="KcU-A4-SKx" firstAttribute="top" secondItem="Rfm-Jc-LmZ" secondAttribute="bottom" constant="71" id="EC2-2h-tiL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CE7-Xd-44h" secondAttribute="trailing" constant="49" id="Iiq-J7-Khn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XXW-ry-wgO" secondAttribute="trailing" constant="10" id="Lkd-La-Ep4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GxC-vC-2kv" secondAttribute="trailing" constant="185" id="OOX-aV-9qG"/>
-                            <constraint firstItem="t0n-AF-nPf" firstAttribute="top" secondItem="GxC-vC-2kv" secondAttribute="bottom" constant="20" id="Tu6-m1-H3a"/>
-                            <constraint firstItem="Rfm-Jc-LmZ" firstAttribute="trailing" secondItem="CE7-Xd-44h" secondAttribute="trailing" id="WIx-rv-0YW"/>
+                            <constraint firstItem="CE7-Xd-44h" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="113" id="STL-FK-aeI"/>
                             <constraint firstItem="KcU-A4-SKx" firstAttribute="centerX" secondItem="Rfm-Jc-LmZ" secondAttribute="centerX" id="bCd-UZ-ZwL"/>
                             <constraint firstItem="t0n-AF-nPf" firstAttribute="top" secondItem="CE7-Xd-44h" secondAttribute="bottom" constant="20" id="cpF-a5-IXH"/>
-                            <constraint firstItem="Rfm-Jc-LmZ" firstAttribute="leading" secondItem="GxC-vC-2kv" secondAttribute="leading" id="gxc-nS-xnJ"/>
                             <constraint firstItem="KcU-A4-SKx" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="60" id="hgo-s7-J3P"/>
-                            <constraint firstItem="GxC-vC-2kv" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="50" id="kCq-81-ybj"/>
                             <constraint firstItem="XXW-ry-wgO" firstAttribute="top" secondItem="xsJ-Lv-7Mk" secondAttribute="bottom" constant="38" id="wkP-sZ-1SR"/>
-                            <constraint firstItem="CE7-Xd-44h" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="172" id="ycj-d3-g1M"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N8n-4R-ayk"/>
@@ -358,7 +335,6 @@ poursuivre votre commande</string>
                         <outlet property="nextButton" destination="CE7-Xd-44h" id="JYr-UU-4Bj"/>
                         <outlet property="numComLabel" destination="Rfm-Jc-LmZ" id="VRI-5V-lj2"/>
                         <outlet property="paiement" destination="XXW-ry-wgO" id="a1r-xg-4BM"/>
-                        <outlet property="returnButton" destination="GxC-vC-2kv" id="YVu-hb-hJx"/>
                         <outlet property="totalLabel" destination="KcU-A4-SKx" id="jCw-Si-ohO"/>
                     </connections>
                 </viewController>
@@ -699,9 +675,9 @@ poursuivre votre commande</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ZBa-Da-He9"/>
         <segue reference="gyI-96-7kZ"/>
-        <segue reference="GQP-Kf-GPR"/>
+        <segue reference="ZBa-Da-He9"/>
         <segue reference="5RL-ew-l2c"/>
+        <segue reference="GQP-Kf-GPR"/>
     </inferredMetricsTieBreakers>
 </document>
