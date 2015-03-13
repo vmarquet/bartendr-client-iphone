@@ -53,6 +53,7 @@
                     </label>
                 </subviews>
                 <color key="backgroundColor" red="0.98465401789999996" green="0.90921873939999998" blue="0.82466376730000002" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             </tableViewCellContentView>
             <connections>
                 <outlet property="addButton" destination="58n-8y-daD" id="JZo-vm-1Ay"/>
