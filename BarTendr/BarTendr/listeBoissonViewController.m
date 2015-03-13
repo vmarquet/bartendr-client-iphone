@@ -231,7 +231,6 @@ Article * article;
     NSString * alertMessage = [NSString stringWithFormat:@"%@ a bien été ajouté au panier.", art.nom_boisson];
     UIAlertView * alertAddBoisson;
     alertAddBoisson = [[UIAlertView alloc] initWithTitle:nil message:alertMessage delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
-    NSLog(@"%@",cell.commentTextField.text);
     [commande.liste_article addObject:art];
     
     [alertAddBoisson show];
