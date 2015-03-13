@@ -33,6 +33,7 @@
                         </state>
                     </button>
                 </subviews>
+                <color key="backgroundColor" red="0.98465401789999996" green="0.90921873939999998" blue="0.82466376730000002" alpha="1" colorSpace="calibratedRGB"/>
             </tableViewCellContentView>
             <connections>
                 <outlet property="imageBoisson" destination="IKt-xG-6eN" id="zZx-uB-cHG"/>
