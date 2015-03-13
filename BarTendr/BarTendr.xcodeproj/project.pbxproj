@@ -20,6 +20,7 @@
 		37EAC8021A1643D600360744 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37EAC8001A1643D600360744 /* LaunchScreen.xib */; };
 		37EAC80E1A1643D600360744 /* BarTendrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EAC80D1A1643D600360744 /* BarTendrTests.m */; };
 		6419C8A31AA9C15600C54203 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6419C8A21AA9C15600C54203 /* Default-568h@2x.png */; };
+		642461A61AB319B70034C1E5 /* LaunchScreen3.5inch2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 642461A51AB319B60034C1E5 /* LaunchScreen3.5inch2x.png */; };
 		643434E81A1F931B005482E3 /* boissonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 643434E71A1F931B005482E3 /* boissonViewController.m */; };
 		64377AEB1A28908B00F2A93C /* listeBoissonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64377AE81A28908B00F2A93C /* listeBoissonViewController.m */; };
 		64377AEC1A28908B00F2A93C /* recapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64377AEA1A28908B00F2A93C /* recapViewController.m */; };
@@ -73,6 +74,7 @@
 		37EAC80C1A1643D600360744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37EAC80D1A1643D600360744 /* BarTendrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarTendrTests.m; sourceTree = "<group>"; };
 		6419C8A21AA9C15600C54203 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		642461A51AB319B60034C1E5 /* LaunchScreen3.5inch2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen3.5inch2x.png; sourceTree = "<group>"; };
 		643434E61A1F931B005482E3 /* boissonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boissonViewController.h; sourceTree = "<group>"; };
 		643434E71A1F931B005482E3 /* boissonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = boissonViewController.m; sourceTree = "<group>"; };
 		64377AE71A28908B00F2A93C /* listeBoissonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = listeBoissonViewController.h; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		64BA91EA1A697C5B00BD9EFC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				642461A51AB319B60034C1E5 /* LaunchScreen3.5inch2x.png */,
 				6493ACE61AA9F919006FF9C3 /* ajout_panier.png */,
 				6493ACE71AA9F919006FF9C3 /* suppression_panier.png */,
 				6419C8A21AA9C15600C54203 /* Default-568h@2x.png */,
@@ -331,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D73A281AA499D60035F4A4 /* panier.png in Resources */,
+				642461A61AB319B70034C1E5 /* LaunchScreen3.5inch2x.png in Resources */,
 				6419C8A31AA9C15600C54203 /* Default-568h@2x.png in Resources */,
 				6491C5AA1A6974A10028390B /* logo.png in Resources */,
 				64D1E3C21A77C44F00294DC2 /* RecapCell.xib in Resources */,
