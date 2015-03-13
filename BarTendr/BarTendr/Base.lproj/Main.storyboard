@@ -18,24 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yy-st-Eni">
-                                <rect key="frame" x="16" y="48" width="288" height="48"/>
-                                <string key="text">Bienvenue sur 
-BarTendr !</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2CO-rM-jT3">
-                                <rect key="frame" x="68" y="135" width="185" height="189"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sys-Ab-kk1">
-                                <rect key="frame" x="26" y="387" width="269" height="49"/>
-                                <string key="text">Touchez l'écran pour
-poursuivre votre commande</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI3-hQ-tOR">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <state key="normal">
@@ -46,6 +28,25 @@ poursuivre votre commande</string>
                                     <segue destination="UTh-Pa-ILz" kind="push" id="Z10-ni-TVd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yy-st-Eni">
+                                <rect key="frame" x="16" y="48" width="288" height="48"/>
+                                <string key="text">Bienvenue sur 
+BarTendr !</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2CO-rM-jT3">
+                                <rect key="frame" x="68" y="135" width="185" height="189"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sys-Ab-kk1">
+                                <rect key="frame" x="26" y="387" width="269" height="49"/>
+                                <string key="text">Touchez l'écran pour
+poursuivre votre commande</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -75,7 +76,7 @@ poursuivre votre commande</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez scanner le QR code présent sur votre table" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CT7-HE-YvN">
                                 <rect key="frame" x="73" y="50" width="175" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3m-sb-jIw">
@@ -84,9 +85,9 @@ poursuivre votre commande</string>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6j-ge-mdZ">
                                 <rect key="frame" x="89" y="422" width="143" height="30"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Je n'ai pas de table !">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -100,7 +101,7 @@ poursuivre votre commande</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="CT7-HE-YvN" firstAttribute="leading" secondItem="e6p-Pw-vD2" secondAttribute="leadingMargin" constant="57" id="Tmc-56-T04"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CT7-HE-YvN" secondAttribute="trailing" constant="56" id="W55-DI-PFC"/>
@@ -147,19 +148,18 @@ poursuivre votre commande</string>
                                     <outlet property="delegate" destination="JEw-Um-rsJ" id="lct-Mo-lDX"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Panier" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4s-Xr-jHz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfd-1a-x3W">
                                 <rect key="frame" x="0.0" y="20" width="320" height="66"/>
                                 <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShN-c3-cla">
                                 <rect key="frame" x="69" y="518" width="56" height="30"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Modifier">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -175,9 +175,9 @@ poursuivre votre commande</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLa-cq-yMB">
                                 <rect key="frame" x="195" y="518" width="40" height="30"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Payer">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -215,6 +215,13 @@ poursuivre votre commande</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Panier" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4s-Xr-jHz">
+                                <rect key="frame" x="62" y="20" width="258" height="66"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -231,8 +238,8 @@ poursuivre votre commande</string>
                             <constraint firstItem="ShN-c3-cla" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" constant="53" id="Lui-9c-JiL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X4s-Xr-jHz" secondAttribute="trailing" constant="-16" id="RRW-f7-nYa"/>
                             <constraint firstItem="RG6-EJ-fku" firstAttribute="top" secondItem="cNT-dz-ouL" secondAttribute="bottom" constant="29" id="S06-JL-QaD"/>
+                            <constraint firstItem="X4s-Xr-jHz" firstAttribute="leading" secondItem="55J-av-jnx" secondAttribute="trailing" id="SRi-hU-c2e"/>
                             <constraint firstItem="Gn6-KL-SeL" firstAttribute="top" secondItem="ShN-c3-cla" secondAttribute="bottom" constant="20" id="ZXu-eV-t3E"/>
-                            <constraint firstItem="X4s-Xr-jHz" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" constant="-16" id="dRx-6o-QnR"/>
                             <constraint firstItem="sLa-cq-yMB" firstAttribute="leading" secondItem="zzi-zr-MWg" secondAttribute="leadingMargin" constant="179" id="gPX-Ky-zdL"/>
                             <constraint firstItem="cNT-dz-ouL" firstAttribute="trailing" secondItem="zzi-zr-MWg" secondAttribute="trailingMargin" id="isv-Fr-jJT"/>
                             <constraint firstItem="cNT-dz-ouL" firstAttribute="top" secondItem="aFG-Mf-IRl" secondAttribute="bottom" constant="67" id="pfw-jF-z6J"/>
@@ -271,14 +278,14 @@ poursuivre votre commande</string>
                                     <constraint firstAttribute="height" constant="94" id="fz0-3U-Zg8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxC-vC-2kv">
                                 <rect key="frame" x="66" y="518" width="53" height="30"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Annuler">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -295,7 +302,7 @@ poursuivre votre commande</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre numéro de commande :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXW-ry-wgO">
                                 <rect key="frame" x="31" y="58" width="263" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant à payer : XX.XX€" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcU-A4-SKx">
@@ -304,14 +311,14 @@ poursuivre votre commande</string>
                                     <constraint firstAttribute="height" constant="90" id="JUs-JE-R6t"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE7-Xd-44h">
                                 <rect key="frame" x="188" y="518" width="67" height="30"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Continuer">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -326,7 +333,7 @@ poursuivre votre commande</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="XXW-ry-wgO" firstAttribute="leading" secondItem="AWF-cK-9oX" secondAttribute="leadingMargin" constant="15" id="5cE-JF-IZm"/>
                             <constraint firstItem="Rfm-Jc-LmZ" firstAttribute="top" secondItem="XXW-ry-wgO" secondAttribute="bottom" constant="67" id="Cjb-p3-q2v"/>
@@ -374,20 +381,20 @@ poursuivre votre commande</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merci d'avoir utilisé BarTendr !  A bientôt !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZN-cZ-7bJ">
                                 <rect key="frame" x="16" y="255" width="288" height="69"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remerciements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bc5-Wi-jtO">
                                 <rect key="frame" x="74" y="42" width="173" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2y-3A-KtG">
                                 <rect key="frame" x="61" y="518" width="198" height="30"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Passer une autre commande">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -402,7 +409,7 @@ poursuivre votre commande</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="bc5-Wi-jtO" secondAttribute="trailing" constant="57" id="3ai-xV-Mi9"/>
                             <constraint firstItem="i2B-0X-ZLc" firstAttribute="top" secondItem="x2y-3A-KtG" secondAttribute="bottom" constant="20" id="Bhx-pV-m88"/>
@@ -433,9 +440,16 @@ poursuivre votre commande</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type de boisson" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-Z2-tct">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMz-th-hdq">
                                 <rect key="frame" x="0.0" y="20" width="320" height="66"/>
                                 <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type de boisson" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-Z2-tct">
+                                <rect key="frame" x="62" y="20" width="258" height="66"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -459,12 +473,12 @@ poursuivre votre commande</string>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmA-hQ-uHT">
                                 <rect key="frame" x="89" y="515" width="142" height="23"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-220" maxY="0.0"/>
                                 <state key="normal" title="Voir mon panier" image="panier.png">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -503,7 +517,6 @@ poursuivre votre commande</string>
                             <constraint firstItem="pmA-hQ-uHT" firstAttribute="top" secondItem="nwn-L7-Zq6" secondAttribute="bottom" constant="33" id="A5R-H2-350"/>
                             <constraint firstItem="nwn-L7-Zq6" firstAttribute="trailing" secondItem="qXg-XK-TXA" secondAttribute="trailingMargin" id="Ceh-rA-a0t"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hly-ao-Oy2" secondAttribute="trailing" constant="242" id="HfX-nx-jkj"/>
-                            <constraint firstItem="q5b-Z2-tct" firstAttribute="leading" secondItem="qXg-XK-TXA" secondAttribute="leadingMargin" constant="-16" id="ITc-n3-Nzm"/>
                             <constraint firstItem="nwn-L7-Zq6" firstAttribute="top" secondItem="q5b-Z2-tct" secondAttribute="bottom" constant="1" id="Ko4-Xk-upg"/>
                             <constraint firstItem="9vY-Yj-q4X" firstAttribute="top" secondItem="pmA-hQ-uHT" secondAttribute="bottom" constant="30" id="N4X-EL-svE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pmA-hQ-uHT" secondAttribute="trailing" constant="73" id="SAm-ci-V8P"/>
@@ -511,6 +524,7 @@ poursuivre votre commande</string>
                             <constraint firstItem="nwn-L7-Zq6" firstAttribute="top" secondItem="hly-ao-Oy2" secondAttribute="bottom" constant="19" id="VIR-Lw-BCy"/>
                             <constraint firstItem="hly-ao-Oy2" firstAttribute="top" secondItem="CqW-At-Xtg" secondAttribute="bottom" constant="18" id="XI2-rI-L19"/>
                             <constraint firstItem="nwn-L7-Zq6" firstAttribute="leading" secondItem="qXg-XK-TXA" secondAttribute="leadingMargin" id="m6t-VK-5gn"/>
+                            <constraint firstItem="q5b-Z2-tct" firstAttribute="leading" secondItem="hly-ao-Oy2" secondAttribute="trailing" id="pKE-DZ-x6C"/>
                             <constraint firstItem="hly-ao-Oy2" firstAttribute="leading" secondItem="qXg-XK-TXA" secondAttribute="leadingMargin" id="rkl-Mh-gkG"/>
                             <constraint firstItem="nwn-L7-Zq6" firstAttribute="top" secondItem="CqW-At-Xtg" secondAttribute="bottom" constant="67" id="sg3-XX-psQ"/>
                         </constraints>
@@ -538,9 +552,19 @@ poursuivre votre commande</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liste de boisson" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKE-7n-MEL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvV-gM-kUj">
                                 <rect key="frame" x="0.0" y="20" width="320" height="66"/>
                                 <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liste de boisson" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKE-7n-MEL">
+                                <rect key="frame" x="61" y="20" width="259" height="66"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -562,12 +586,12 @@ poursuivre votre commande</string>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXA-mh-Vcq">
                                 <rect key="frame" x="89" y="515" width="142" height="23"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-220" maxY="0.0"/>
                                 <state key="normal" title="Voir mon panier" image="panier.png">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -625,8 +649,8 @@ poursuivre votre commande</string>
                             <constraint firstItem="rbi-Jq-rwd" firstAttribute="top" secondItem="QKE-7n-MEL" secondAttribute="bottom" constant="1" id="AqM-WA-Efw"/>
                             <constraint firstItem="TXA-mh-Vcq" firstAttribute="top" secondItem="rbi-Jq-rwd" secondAttribute="bottom" constant="17" id="DZW-WF-62r"/>
                             <constraint firstItem="QKE-7n-MEL" firstAttribute="trailing" secondItem="Y53-2S-IMa" secondAttribute="trailingMargin" constant="16" id="FnW-Y4-lzJ"/>
-                            <constraint firstItem="QKE-7n-MEL" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" constant="-16" id="H4e-wn-CVB"/>
                             <constraint firstItem="xmM-uF-egN" firstAttribute="top" secondItem="TXA-mh-Vcq" secondAttribute="bottom" constant="30" id="Kjr-9y-ae7"/>
+                            <constraint firstItem="QKE-7n-MEL" firstAttribute="leading" secondItem="ohC-FF-y7m" secondAttribute="trailing" constant="-1" id="M5y-w3-Kbx"/>
                             <constraint firstItem="ohC-FF-y7m" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" id="OGp-5W-ARl"/>
                             <constraint firstItem="rbi-Jq-rwd" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" id="aj5-ub-vIA"/>
                             <constraint firstItem="TXA-mh-Vcq" firstAttribute="leading" secondItem="Y53-2S-IMa" secondAttribute="leadingMargin" constant="73" id="cQ0-Dy-hFC"/>
