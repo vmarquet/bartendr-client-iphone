@@ -220,6 +220,10 @@ Article * article;
 
 //Action lors d'un clic sur le bouton d'ajout
 -(void)buttonPressed:(id)sender {
+    
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView2];
+    NSIndexPath *indexLocal = [self.tableView2 indexPathForRowAtPoint:buttonPosition];
+    indexSelected = indexLocal.row;
 
     Article * art = [data2 objectAtIndex:indexSelected];
     
@@ -229,7 +233,6 @@ Article * article;
     alertAddBoisson = [[UIAlertView alloc] initWithTitle:nil message:alertMessage delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
     NSLog(@"Commentaire : - %@ - ", commentaire);
     art.comment = commentaire;
-    NSLog(@"Art.comment = %@", art.comment);
     [commande.liste_article addObject:art];
     commentaire = nil;
     for (Article * article in commande.liste_article) {
