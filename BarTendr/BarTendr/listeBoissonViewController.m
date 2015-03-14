@@ -219,18 +219,14 @@ Article * article;
 
 //Action lors d'un clic sur le bouton d'ajout
 -(void)buttonPressed:(id)sender {
-    
-    // on crée un article pour récupérer les données à la case selectionné.
-    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView2];
-    NSIndexPath *indexLocal = [self.tableView2 indexPathForRowAtPoint:buttonPosition];
-    indexSelected = indexLocal.row;
-    
+
     Article * art = [data2 objectAtIndex:indexSelected];
     
     // Affichage du "TOAST" d'ajout à la commande avec message en fonction de la boisson choisie
     NSString * alertMessage = [NSString stringWithFormat:@"%@ a bien été ajouté au panier.", art.nom_boisson];
     UIAlertView * alertAddBoisson;
     alertAddBoisson = [[UIAlertView alloc] initWithTitle:nil message:alertMessage delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
+    NSLog(@"- %@ - size : %d", commentaire, commentaire.length);
     [commande.liste_article addObject:art];
     
     [alertAddBoisson show];

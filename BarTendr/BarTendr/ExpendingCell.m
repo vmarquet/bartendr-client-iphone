@@ -7,8 +7,12 @@
 //
 
 #import "ExpendingCell.h"
+#import "Globals.h"
+
+
 
 @implementation ExpendingCell
+
 
 - (void)awakeFromNib {
     // Initialization code
@@ -27,6 +31,17 @@
 - (void)buttonTapped:(id)sender
 {
     NSLog(@"Button Tapped!");
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    commentaire = self.commentTextField.text;
+    if(commentaire.length > 255)
+    {
+        commentaire = nil;
+    }
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

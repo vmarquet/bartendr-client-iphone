@@ -13,6 +13,7 @@ int numberTable;
 Commande * commande;
 NSString * numCommande;
 NSString * totalString;
+NSString * commentaire;
 
 @implementation Globals
 {

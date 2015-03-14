@@ -57,10 +57,13 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Commentaire" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lbo-OQ-gcD">
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Commentaire" textAlignment="center" minimumFontSize="13" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Lbo-OQ-gcD">
                         <rect key="frame" x="104" y="143" width="176" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
+                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                        <connections>
+                            <outlet property="delegate" destination="gNd-Zc-cAz" id="a7s-6l-QQu"/>
+                        </connections>
                     </textField>
                 </subviews>
                 <color key="backgroundColor" red="0.98465401789999996" green="0.90921873939999998" blue="0.82466376730000002" alpha="1" colorSpace="calibratedRGB"/>

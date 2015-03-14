@@ -38,11 +38,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarTendr/Globals.h"
-            timestampString = "443121580.871593"
+            timestampString = "448044391.820161"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "@interface Globals"
             landmarkType = "2">
          </BreakpointContent>

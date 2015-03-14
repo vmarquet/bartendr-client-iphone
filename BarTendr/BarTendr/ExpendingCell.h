@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExpendingCell : UITableViewCell
+@interface ExpendingCell : UITableViewCell<UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageCell;
 @property (strong, nonatomic) IBOutlet UILabel *titleCell;
