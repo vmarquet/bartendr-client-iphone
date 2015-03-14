@@ -29,6 +29,6 @@
 @property (nonatomic) unsigned int volume_boisson;
 @property (nonatomic, retain) NSString * urlImage;
 @property (nonatomic) UIImage * imgBoisson;
-@property (nonatomic, retain) NSString * comment;
+@property (nonatomic, copy) NSString * comment;
 
 @end

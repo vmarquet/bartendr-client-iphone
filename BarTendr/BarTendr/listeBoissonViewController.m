@@ -12,6 +12,7 @@
 #import "Article.h"
 #import <UIKit/UIKit.h>
 
+
 @interface listeBoissonViewController ()
 @property UIAlertView *alert;
 @property NSMutableData * donnes;
@@ -138,7 +139,7 @@ Article * article;
                     }
                     
                     [data2 addObject:article];
-                    NSLog(@"boisson : %@, url : %@", article.nom_boisson, article.urlImage);
+                    //NSLog(@"boisson : %@, url : %@", article.nom_boisson, article.urlImage);
                 }
                 [self.tableView2 reloadData];
                 [_alert dismissWithClickedButtonIndex:0 animated:YES];
@@ -226,9 +227,14 @@ Article * article;
     NSString * alertMessage = [NSString stringWithFormat:@"%@ a bien été ajouté au panier.", art.nom_boisson];
     UIAlertView * alertAddBoisson;
     alertAddBoisson = [[UIAlertView alloc] initWithTitle:nil message:alertMessage delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
-    NSLog(@"- %@ - size : %d", commentaire, commentaire.length);
+    NSLog(@"Commentaire : - %@ - ", commentaire);
+    art.comment = commentaire;
+    NSLog(@"Art.comment = %@", art.comment);
     [commande.liste_article addObject:art];
-    
+    commentaire = nil;
+    for (Article * article in commande.liste_article) {
+        NSLog(@" -- ID : %d, Nom : %@, COMMENT : %@, PRICE : %.2f --",article.id_boisson, article.nom_boisson, article.comment, article.prix);
+    }
     [alertAddBoisson show];
     [alertAddBoisson dismissWithClickedButtonIndex:0 animated:YES];
 }

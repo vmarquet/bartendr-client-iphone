@@ -36,7 +36,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     commentaire = self.commentTextField.text;
-    if(commentaire.length > 255)
+    if(commentaire.length > 255 || commentaire.length == 0)
     {
         commentaire = nil;
     }

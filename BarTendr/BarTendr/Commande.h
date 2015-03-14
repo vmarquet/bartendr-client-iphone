@@ -13,7 +13,6 @@
     
     NSMutableArray * liste_article;
     float total;
-    //Date
     int numberTable;
 }
 
